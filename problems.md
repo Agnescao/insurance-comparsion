@@ -159,6 +159,7 @@ sudo docker compose down
 安装attu
 
 docker run -d -p 8080:3000 -e MILVUS_URL=172.17.0.1:19530 --name attu zilliz/attu:v2.6
+docker start
 docker ps | grep attu
 
 检查 Attu 容器是否在运行
@@ -420,9 +421,124 @@ docker start <容器名或ID>
 
 
 
+› 文档中还有一个需求是2.2. 触发产品查找的聊天查询
+  这个有实现吗
+
+ - 你现在“能加维度并刷新表格”是成立的。
+  - 但 chat 的意图理解目前是规则，不是 LLM。
+  - Milvus embedding 目前主要用于检索层准备，当前 chat 重对比主路径还是读 SQLite 的 policy_facts。
+
+  如果你想改成“自然语言由模型解析”，最直接就是把 dimensions.py:37 (D:/新建文件夹/PythonProject/insurance-comparsion/backend/app/services/dimensions.py:37) 的规则函数换 
+  成一次 LLM 函数调用（输出 新增维度/新增计划/过滤条件 的结构化 JSON），再复用现有 build_compare。
+
+
+
 
 › 文档中还有一个需求是2.2. 触发产品查找的聊天查询
   这个有实现吗
+
+
+• 部分实现了，但不是完整形态。
+
+  当前实现情况：
+
+  1. 基础“聊天触发产品查找”已实现
+
+  - 聊天入口会解析用户输入并尝试识别计划名，然后更新已选计划。
+  - 代码在 chat.py:51 (D:/新建文件夹/PythonProject/insurance-comparsion/backend/app/services/chat.py:51) post_message 和 chat.py:107 (D:/新建文件夹/PythonProject/      
+    insurance-comparsion/backend/app/services/chat.py:107) _update_plans。
+  - 识别后会立即触发对比计算并回传前端刷新表格，见 chat.py:69 (D:/新建文件夹/PythonProject/insurance-comparsion/backend/app/services/chat.py:69)。
+                                                                                                                                                                        
+  2. 对比查询是从结构化 facts 查出来的                                                                                                                                  
+                                                                                                                                                                        
+  - 当前是查 SQLite 的 policy_facts 做对比，见 compare.py:14 (D:/新建文件夹/PythonProject/insurance-comparsion/backend/app/services/compare.py:14) 和 compare.py:31 (D:/
+    新建文件夹/PythonProject/insurance-comparsion/backend/app/services/compare.py:31)。                                                                                 
+                                                                                                                                                                        
+  3. 还没实现“检索式产品查找”                                                                                                                                           
+                                                                                                                                                                        
+  - 现在没有在聊天路径里做 Milvus 语义检索（也没有 BM25+dense 混合检索）来找产品/证据。                                                                                 
+  - 所以如果用户不说出明确计划名、而是模糊问法，命中能力有限。                                                                                                          
+                                                                                                                                                                        
+  结论：                                                                                                                                                                
+                                                                                                                                                                        
+  - 如果你把 2.2 理解为“聊天里说到产品后能触发表格查找与刷新”，当前是有的。                                                                                             
+  - 如果你把 2.2 理解为“聊天自然语言触发真正的检索式产品发现（向量/混合检索）”，当前还没完全实现。                                                                      
+                                                                                                                                                                        
+  如果你要，我可以下一步直接补一个 /api/chat/search 路径：先 Milvus 检索候选产品，再回写 session_state.selected_plans 并刷新比较表。                                    
+
+• 你这句问得很关键。现在系统里这句话的处理逻辑是“规则匹配 + 已选计划内比较”，不是“全库语义检索找最相关计划”。
+                                                                                                                                                                        
+  当前是怎么跑的                                                                                                                                                        
+                                                                                                                                                                        
+  1. 用户输入                                                                                                                                                           
+     哪个计划在我患卵巢癌时提供更好的保障？                                                                                                                             
+  2. 聊天意图解析（规则）                                                                                                                                               
+     后端会把文本送到 detect_dimensions，检测到“卵巢癌”后追加维度 condition_ovarian_cancer。                                                                            
+     见 dimensions.py:37 (D:/新建文件夹/PythonProject/insurance-comparsion/backend/app/services/dimensions.py:37)、dimensions.py:44 (D:/新建文件夹/PythonProject/       
+     insurance-comparsion/backend/app/services/dimensions.py:44)。                                                                                                      
+  3. 会话状态更新                                                                                                                                                       
+     post_message 会把新增维度写入当前 session_state.dimensions。                                                                                                       
+     见 chat.py:51 (D:/新建文件夹/PythonProject/insurance-comparsion/backend/app/services/chat.py:51)、chat.py:96 (D:/新建文件夹/PythonProject/insurance-comparsion/    
+     backend/app/services/chat.py:96)。                                                                                                                                 
+  4. 重新生成对比表                                                                                                                                                     
+     随后调用 build_compare，对“当前已选计划”按该维度查 policy_facts。                                                                                                  
+     见 chat.py:69 (D:/新建文件夹/PythonProject/insurance-comparsion/backend/app/services/chat.py:69)、compare.py:32 (D:/新建文件夹/PythonProject/insurance-comparsion/ 
+     backend/app/services/compare.py:32)。                                                                                                                              
+  5. condition_ovarian_cancer 的数据从哪来                                                                                                                              
+     在入库阶段，FactExtractor 遇到包含“卵巢癌”的行，会写入 dimension_key=condition_ovarian_cancer 的事实。                                                             
+     见 fact_extractor.py:64 (D:/新建文件夹/PythonProject/insurance-comparsion/backend/app/services/fact_extractor.py:64)、fact_extractor.py:71 (D:/新建文件夹/         
+     PythonProject/insurance-comparsion/backend/app/services/fact_extractor.py:71)。                                                                                    
+                                                                                                                                                                        
+  重点边界                                                                                                                                                              
+                                                                                                                                                                        
+  - 现在不是“先在所有计划里找和卵巢癌最相关的计划再比较”。                                                                                                              
+  - 现在是“在你当前会话已选的计划里，新增一个卵巢癌维度并比较”。                                                                                                        
+  - 如果某计划文档里没抽到卵巢癌相关事实，该单元格会显示“未提取到”。                                                                                                    
+                                                                                                                                                                        
+  如果你要变成“全量计划里自动找最相关产品”，下一步要在 chat 路径补一层检索（Milvus hybrid search）再自动更新 selected_plans。                                           
+ 
+
+ 那这个能识别表格吗，能理解上下文意思吗
+
+
+• 短答：现在只能“部分识别”，谈不上真正理解表格和上下文语义。
+                                                                                                                                                                        
+  1. 表格识别能力                                                                                                                                                       
+                                                                                                                                                                        
+  - 你当前流程是 PyMuPDF get_text("dict") 抽文本块，不是表格结构化解析。                                                                                                
+  - 能拿到表格里的文字片段，但常见问题是：                                                                                                                              
+      - 列对齐丢失                                                                                                                                                      
+      - 单元格关系丢失                                                                                                                                                  
+      - 跨行数值和单位可能断开                                                                                                                                          
+  - 所以“看得到字”，但不稳定地知道“哪行哪列对应什么字段”。                                                                                                              
+                                                                                                                                                                        
+  2. 上下文“理解”能力                                                                                                                                                   
+                                                                                                                                                                        
+  - 聊天侧目前是规则匹配（关键词识别维度/计划），不是大模型语义理解。                                                                                                   
+  - 它能记住会话状态（已选计划、维度），这是“上下文记忆”；                                                                                                              
+  - 但对复杂问法、隐含条件、多跳推理，能力有限。
+                                                                                                                                                                        
+  3. 对你当前业务意味着什么                                                                                                                                             
+                                                                                                                                                                        
+  - 标准维度对比：可用                                                                                                                                                  
+  - 复杂条款、表格细粒度比对、隐含语义：有风险（可能漏或错）                                                                                                            
+                                                                                                                                                                        
+  如果要“能识别表格 + 理解上下文”达到业务级，建议最小升级：                                                                                                             
+                                                                                                                                                                        
+  1. 解析层上 OCR+Layout/Table 模型（产出真正表格结构）                                                                                                                 
+  2. 事实抽取层用 LLM（从 chunk/table 归一化成 facts）                                                                                                                  
+  3. 聊天意图解析改成 LLM 函数调用（替代纯关键词）                                                                                                                      
+  4. 保留来源定位（页码/section/单元格坐标）用于可解释性                                                                                                                
+                                                                                                                                                                        
+  你如果愿意，我可以给你一版“先补表格抽取”的最小改造方案，优先提升对比准确率。                                                                                          
+
+
+› Find and fix a bug in @filename
+
+  gpt-5.3-codex high · 51% left · D:\新建文件夹\PythonProject\insurance-comparsion
+
+
+
 
 
 
