@@ -418,8 +418,6 @@ docker start <容器名或ID>
   如果你想改成“自然语言由模型解析”，最直接就是把 dimensions.py:37 (D:/新建文件夹/PythonProject/insurance-comparsion/backend/app/services/dimensions.py:37) 的规则函数换 
   成一次 LLM 函数调用（输出 新增维度/新增计划/过滤条件 的结构化 JSON），再复用现有 build_compare。
 
-
-
 › 文档中还有一个需求是2.2. 触发产品查找的聊天查询
   这个有实现吗
 
