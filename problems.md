@@ -419,12 +419,15 @@ docker start <容器名或ID>
   如果你想改成“自然语言由模型解析”，最直接就是把 dimensions.py:37 (D:/新建文件夹/PythonProject/insurance-comparsion/backend/app/services/dimensions.py:37) 的规则函数换 
   成一次 LLM 函数调用（输出 新增维度/新增计划/过滤条件 的结构化 JSON），再复用现有 build_compare。
 
+
+
+
 › 文档中还有一个需求是2.2. 触发产品查找的聊天查询
   这个有实现吗
 
  - 你现在“能加维度并刷新表格”是成立的。
   - 但 chat 的意图理解目前是规则，不是 LLM。
-  - Milvus embedding 目前主要用于检索层准备，当前 chat 重对比主路径还是读 SQLite 的 policy_facts。
+  - Milvus embedding 目前主要用于检索层准备，当前 chat 重对比主路径还是读 SQLite 的 policy_facts。r
 
   如果你想改成“自然语言由模型解析”，最直接就是把 dimensions.py:37 (D:/新建文件夹/PythonProject/insurance-comparsion/backend/app/services/dimensions.py:37) 的规则函数换 
   成一次 LLM 函数调用（输出 新增维度/新增计划/过滤条件 的结构化 JSON），再复用现有 build_compare。
