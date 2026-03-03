@@ -1,7 +1,8 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import hashlib
 import math
+import time
 from abc import ABC, abstractmethod
 
 import requests
@@ -33,23 +34,71 @@ class HashEmbeddingProvider(EmbeddingProvider):
 
 
 class QwenEmbeddingProvider(EmbeddingProvider):
-    def __init__(self, api_key: str, model: str, url: str):
+    def __init__(
+        self,
+        api_key: str,
+        model: str,
+        url: str,
+        *,
+        timeout_sec: int = 30,
+        max_retries: int = 4,
+        retry_backoff_sec: float = 1.2,
+        batch_size: int = 8,
+        trust_env_proxy: bool = False,
+    ):
         self.api_key = api_key
         self.model = model
         self.url = url
+        self.timeout_sec = int(timeout_sec)
+        self.max_retries = max(0, int(max_retries))
+        self.retry_backoff_sec = max(0.0, float(retry_backoff_sec))
+        self.batch_size = max(1, int(batch_size))
+        self.session = requests.Session()
+        # Keep false by default to avoid stale HTTP(S)_PROXY causing connection resets.
+        self.session.trust_env = bool(trust_env_proxy)
+
+    def _embed_batch(self, batch: list[str], headers: dict[str, str]) -> list[list[float]]:
+        payload = {"model": self.model, "input": {"texts": batch}}
+        last_error: Exception | None = None
+
+        for attempt in range(self.max_retries + 1):
+            try:
+                response = self.session.post(self.url, headers=headers, json=payload, timeout=self.timeout_sec)
+                if response.status_code in (429, 500, 502, 503, 504):
+                    raise requests.HTTPError(
+                        f"transient status={response.status_code}, body={response.text[:200]}",
+                        response=response,
+                    )
+                response.raise_for_status()
+
+                data = response.json()
+                rows = data["output"]["embeddings"]
+                vectors = [[float(x) for x in row["embedding"]] for row in rows]
+                if len(vectors) != len(batch):
+                    raise ValueError(f"Qwen embedding size mismatch: expected {len(batch)}, got {len(vectors)}")
+                return vectors
+            except Exception as exc:
+                last_error = exc
+                if attempt >= self.max_retries:
+                    break
+                sleep_sec = self.retry_backoff_sec * (2**attempt)
+                if sleep_sec > 0:
+                    time.sleep(sleep_sec)
+
+        assert last_error is not None
+        raise RuntimeError(
+            "Qwen embedding request failed after retries. "
+            "If you use local proxy tooling, check HTTP_PROXY/HTTPS_PROXY or set qwen_trust_env_proxy=true."
+        ) from last_error
 
     def embed(self, texts: list[str]) -> list[list[float]]:
         if not texts:
             return []
         vectors: list[list[float]] = []
         headers = {"Authorization": f"Bearer {self.api_key}", "Content-Type": "application/json"}
-        for text in texts:
-            payload = {"model": self.model, "input": {"texts": [text]}}
-            response = requests.post(self.url, headers=headers, json=payload, timeout=20)
-            response.raise_for_status()
-            data = response.json()
-            emb = data["output"]["embeddings"][0]["embedding"]
-            vectors.append([float(x) for x in emb])
+        for i in range(0, len(texts), self.batch_size):
+            batch = texts[i : i + self.batch_size]
+            vectors.extend(self._embed_batch(batch, headers))
         return vectors
 
 
@@ -59,6 +108,11 @@ def build_embedding_provider() -> EmbeddingProvider:
             api_key=settings.qwen_api_key,
             model=settings.qwen_embedding_model,
             url=settings.qwen_embedding_url,
+            timeout_sec=settings.qwen_timeout_sec,
+            max_retries=settings.qwen_max_retries,
+            retry_backoff_sec=settings.qwen_retry_backoff_sec,
+            batch_size=settings.qwen_batch_size,
+            trust_env_proxy=settings.qwen_trust_env_proxy,
         )
     return HashEmbeddingProvider(dim=settings.embedding_dim)
 

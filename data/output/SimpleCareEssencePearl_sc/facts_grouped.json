@@ -1,0 +1,393 @@
+{
+  "annual_limit": [
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "个人最高赔偿限额为400,000港元/50,000美元",
+      "normalized_value": "400000",
+      "numeric_value": 400000.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 8,
+      "source_section": "page-8",
+      "source_quote": "个人最高赔偿限额为\n400,000 港元/ 50,000 美元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 11,
+        "limit_values": [
+          "400,000港元",
+          "50,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "个人最高赔偿限额为400,000港元/50,000美元",
+      "normalized_value": "400000",
+      "numeric_value": 400000.0,
+      "unit": "港元",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 9,
+      "source_section": "page-9",
+      "source_quote": "每项疾病个人最高赔偿限额为\n400,000 港元/ 50,000 美元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 12,
+        "limit_values": [
+          "400,000港元",
+          "50,000美元"
+        ]
+      }
+    }
+  ],
+  "itemized_limit": [
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "每项疾病个人最高赔偿额为400,000港元/50,000美元",
+      "normalized_value": "400000",
+      "numeric_value": 400000.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 8,
+      "source_section": "page-8",
+      "source_quote": "每项疾病\n个人最高赔偿额为\n400,000 港元/ 50,000 美元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 11,
+        "limit_values": [
+          "400,000港元",
+          "50,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "每项疾病个人最高赔偿限额为400,000港元/50,000美元",
+      "normalized_value": "400000",
+      "numeric_value": 400000.0,
+      "unit": "港元",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 9,
+      "source_section": "page-9",
+      "source_quote": "每项疾病个人最高赔偿限额为\n400,000 港元/ 50,000 美元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 12,
+        "limit_values": [
+          "400,000港元",
+          "50,000美元"
+        ]
+      }
+    }
+  ],
+  "coverage_surgery": [
+    {
+      "dimension_key": "coverage_surgery",
+      "dimension_label": "手术保障",
+      "value_text": "须作手术之脑动脉瘤；微创进行直接的冠状动脉搭桥手术；经皮穿刺冠状动脉介入（俗称「通波仔」）；周围动脉疾病的血管介入治疗",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 8,
+      "source_section": "page-8",
+      "source_quote": "•\n须作手术之脑动脉瘤\n•\n微创进行直接的冠状动脉搭桥手术\n•\n经皮穿刺冠状动脉介入 (俗称「通波仔」）\n•\n周围动脉疾病的血管介入治疗",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 11
+      }
+    }
+  ],
+  "coverage_hospitalization": [
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "不能独立生活",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.7,
+      "source_page": 8,
+      "source_section": "page-8",
+      "source_quote": "•\n不能独立生活",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 11
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "原位癌除外",
+      "normalized_value": "原位癌",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 9,
+      "source_section": "page-9",
+      "source_quote": "在保单有效期内，每种受保疾病(原位癌除外)可获 1 次预支赔偿，而原位癌在不同受保器官最多可获 2 次预支赔偿。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 12
+      }
+    }
+  ],
+  "premium_payment": [
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "可获永久保费 8 折优惠 ^ ，加入「 AIA Vitality 健康",
+      "normalized_value": "可获永久保费 8 折优惠 ^ ，加入「 aia vitality 健康",
+      "numeric_value": 8.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 2,
+      "source_section": "page-2",
+      "source_quote": "可获永久保费 8 折优惠 ^ ，加入「 AIA Vitality 健康",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "缴费方式：年缴 / 半年缴 / 季缴 / 月缴",
+      "normalized_value": "payment_modes:年缴,半年缴,季缴,月缴",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 4,
+      "source_section": "page-4",
+      "source_quote": "基本计划：年缴/半年缴/季缴/月缴",
+      "metadata_json": {
+        "annual_premium_values": [],
+        "payment_terms_years": [],
+        "payment_modes": [
+          "年缴",
+          "半年缴",
+          "季缴",
+          "月缴"
+        ],
+        "derived_from": "plan_aggregate",
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "保费永久 8 折",
+      "normalized_value": "保费永久 8 折",
+      "numeric_value": 8.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 5,
+      "source_section": "page-5",
+      "source_quote": "保费永久 8 折",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "您加入成为会员，便可即时享有 「 简护危疾明珠保 」 首年保费 9 折。只要",
+      "normalized_value": "您加入成为会员，便可即时享有 「 简护危疾明珠保 」 首年保费 9 折。只要",
+      "numeric_value": 9.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 5,
+      "source_section": "page-5",
+      "source_quote": "您加入成为会员，便可即时享有 「 简护危疾明珠保 」 首年保费 9 折。只要",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "本计划为保险计划，并不包括任何储蓄成份。所有缴付的保费都",
+      "normalized_value": "本计划为保险计划，并不包括任何储蓄成份。所有缴付的保费都",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "本计划为保险计划，并不包括任何储蓄成份。所有缴付的保费都",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "为了持续向您提供保障，我们会不时复核您计划下的保费。如有",
+      "normalized_value": "为了持续向您提供保障，我们会不时复核您计划下的保费。如有",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "为了持续向您提供保障，我们会不时复核您计划下的保费。如有",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "由 2018 年 1 月 1 日起，所有保单持有人均需向保险业监管局为其新缮发及现行香港保单缴付的每笔保费缴交征费。有关保费征费详情，",
+      "normalized_value": "由 2018 年 1 月 1 日起，所有保单持有人均需向保险业监管局为其新缮发及现行香港保单缴付的每笔保费缴交征费。有关保费征费详情，",
+      "numeric_value": 201.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "由 2018 年 1 月 1 日起，所有保单持有人均需向保险业监管局为其新缮发及现行香港保单缴付的每笔保费缴交征费。有关保费征费详情，",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    }
+  ],
+  "riders_benefits": [
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "附加契约：根据所附加于的基本计划而定",
+      "normalized_value": "附加契约：根据所附加于的基本计划而定",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 4,
+      "source_section": "page-4",
+      "source_quote": "附加契约：根据所附加于的基本计划而定",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "「简护危疾明珠保」 除可作为一份独立保单外，亦可以附加",
+      "normalized_value": "「简护危疾明珠保」 除可作为一份独立保单外，亦可以附加",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 5,
+      "source_section": "page-5",
+      "source_quote": "「简护危疾明珠保」 除可作为一份独立保单外，亦可以附加",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "此产品简介应与包括本产品附加资料及",
+      "normalized_value": "此产品简介应与包括本产品附加资料及",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "此产品简介应与包括本产品附加资料及",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "此条文并不适用于任何提供意外、住院或残废保障的附加契约。",
+      "normalized_value": "此条文并不适用于任何提供意外、住院或残废保障的附加契约。",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "此条文并不适用于任何提供意外、住院或残废保障的附加契约。",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "此产品简介应与包括本产品附加资料及；附加契约：根据所附加于的基本计划而定；「简护危疾明珠保」 除可作为一份独立保单外，亦可以附加；此条文并不适用于任何提供意外、住院或残废保障的附加契约。",
+      "normalized_value": "此产品简介应与包括本产品附加资料及|附加契约：根据所附加于的基本计划而定|「简护危疾明珠保」 除可作为一份独立保单外，亦可以附加|此条文并不适用于任何提供意外、住院或残废保障的附加契约。",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.86,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "此产品简介应与包括本产品附加资料及",
+      "metadata_json": {
+        "value_list": [
+          "此产品简介应与包括本产品附加资料及",
+          "附加契约：根据所附加于的基本计划而定",
+          "「简护危疾明珠保」 除可作为一份独立保单外，亦可以附加",
+          "此条文并不适用于任何提供意外、住院或残废保障的附加契约。"
+        ],
+        "derived_from": "plan_dimension_group",
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "此产品简介应与包括本产品附加资料及；附加契约：根据所附加于的基本计划而定；「简护危疾明珠保」 除可作为一份独立保单外，亦可以附加；此条文并不适用于任何提供意外、住院或残废保障的附加契约。；此产品简介应与包括本产品附加资料及；附加契约：根据所附加于的基本计划而定；「简护危疾明珠保」 除可作为一份独立保单外，亦可以附加",
+      "normalized_value": "此产品简介应与包括本产品附加资料及|附加契约：根据所附加于的基本计划而定|「简护危疾明珠保」 除可作为一份独立保单外，亦可以附加|此条文并不适用于任何提供意外、住院或残废保障的附加契约。|此产品简介应与包括本产品附加资料及|附加契约：根据所附加于的基本计划而定|「简护危疾明珠保」 除可作为一份独立保单外，亦可以附加",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.94,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "此产品简介应与包括本产品附加资料及",
+      "metadata_json": {
+        "value_list": [
+          "此产品简介应与包括本产品附加资料及；附加契约：根据所附加于的基本计划而定；「简护危疾明珠保」 除可作为一份独立保单外，亦可以附加；此条文并不适用于任何提供意外、住院或残废保障的附加契约。",
+          "此产品简介应与包括本产品附加资料及",
+          "附加契约：根据所附加于的基本计划而定",
+          "「简护危疾明珠保」 除可作为一份独立保单外，亦可以附加"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ]
+}

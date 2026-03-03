@@ -1,14 +1,16 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
+import json
 from functools import lru_cache
 
 from fastapi import Depends, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import StreamingResponse
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.config import settings
-from app.database import Base, engine, get_db
+from app.database import Base, engine, get_db, session_scope
 from app.models import Plan
 from app.schemas import (
     ChatMessageRequest,
@@ -49,7 +51,6 @@ def get_ingestion_service() -> IngestionService:
 
 @app.on_event("startup")
 def startup_event() -> None:
-    # Keep startup lightweight; ingestion is explicit via /api/ingest/run.
     Base.metadata.create_all(bind=engine)
 
 
@@ -99,4 +100,36 @@ def get_chat_state(session_id: str, db: Session = Depends(get_db)) -> SessionSta
 
 @app.post("/api/chat/message", response_model=ChatMessageResponse)
 def chat_message(req: ChatMessageRequest, db: Session = Depends(get_db)) -> ChatMessageResponse:
-    return chat_service.post_message(db, req.session_id, req.content)
+    return chat_service.post_message(
+        db,
+        req.session_id,
+        req.content,
+        selected_plans=req.selected_plans,
+        dimensions=req.dimensions,
+    )
+
+
+@app.post("/api/chat/message/stream")
+def chat_message_stream(req: ChatMessageRequest) -> StreamingResponse:
+    def event_gen():
+        yield f"event: token\ndata: {json.dumps({'text': '正在分析中，请稍候...\\n'}, ensure_ascii=False)}\n\n"
+        try:
+            with session_scope() as db:
+                result = chat_service.post_message(
+                    db,
+                    req.session_id,
+                    req.content,
+                    selected_plans=req.selected_plans,
+                    dimensions=req.dimensions,
+                )
+            text = result.reply or ""
+            step = 24
+            for i in range(0, len(text), step):
+                piece = text[i : i + step]
+                yield f"event: token\ndata: {json.dumps({'text': piece}, ensure_ascii=False)}\n\n"
+            yield f"event: done\ndata: {json.dumps(result.model_dump(mode='json'), ensure_ascii=False)}\n\n"
+        except Exception as exc:
+            payload = {"error": str(exc)}
+            yield f"event: error\ndata: {json.dumps(payload, ensure_ascii=False)}\n\n"
+
+    return StreamingResponse(event_gen(), media_type="text/event-stream")

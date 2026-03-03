@@ -99,7 +99,7 @@ class MilvusStore:
                 FieldSchema(name="dimension_key", dtype=DataType.VARCHAR, max_length=128),
                 FieldSchema(name="dimension_label", dtype=DataType.VARCHAR, max_length=255),
                 FieldSchema(name="value_text", dtype=DataType.VARCHAR, max_length=2048),
-                FieldSchema(name="normalized_value", dtype=DataType.VARCHAR, max_length=1024),
+                FieldSchema(name="normalized_value", dtype=DataType.VARCHAR, max_length=2048),
                 FieldSchema(name="unit", dtype=DataType.VARCHAR, max_length=64),
                 FieldSchema(name="condition_text", dtype=DataType.VARCHAR, max_length=1024),
                 FieldSchema(name="applicability", dtype=DataType.VARCHAR, max_length=255),

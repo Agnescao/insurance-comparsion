@@ -1,0 +1,223 @@
+{
+  "started_at": "2026-03-01T07:41:20.938138+00:00",
+  "args": {
+    "uri": "tcp://121.41.85.215:19530",
+    "user": "root",
+    "password": "Milvus",
+    "token": null,
+    "db_name": "default",
+    "chunk_collection": "policy_chunks_hybrid",
+    "fact_collection": "policy_facts_hybrid",
+    "sqlite": "backend/data/app.sqlite3",
+    "dataset": "backend/data/retrieval_eval.sample.jsonl",
+    "k": 3,
+    "target_hit_rate": 0.9,
+    "recreate": false,
+    "skip_sync": true,
+    "output": "backend/data/acceptance_report.json"
+  },
+  "steps": {
+    "sqlite_counts": {
+      "plans": 7,
+      "policy_chunks": 263,
+      "policy_facts": 255
+    },
+    "sync_hybrid": {
+      "ok": true,
+      "skipped": true
+    },
+    "milvus_check": {
+      "ok": false,
+      "error": "MilvusException: <MilvusException: (code=2, message=Fail connecting to server on 121.41.85.215:19530, illegal connection params or server unavailable)>"
+    },
+    "api_smoke": {
+      "checks": {
+        "health": {
+          "status_code": 200,
+          "body": {
+            "status": "ok"
+          }
+        },
+        "plans": {
+          "status_code": 200,
+          "count": 7
+        },
+        "dimensions": {
+          "status_code": 200,
+          "count": 9
+        },
+        "compare": {
+          "status_code": 200,
+          "rows": 6
+        },
+        "chat_session": {
+          "status_code": 200,
+          "session_id": "b160a93786af457cb2ba110d21b8cee8"
+        },
+        "chat_message": {
+          "status_code": 200,
+          "selected_plans_count": 2,
+          "has_ovarian_dimension": true
+        },
+        "chat_stream": {
+          "status_code": 200,
+          "has_done_event": true
+        }
+      },
+      "ok": true
+    },
+    "retrieval_eval": {
+      "ok": true,
+      "hit": 9,
+      "total": 10,
+      "hit_rate": 0.9,
+      "k": 3,
+      "detail": [
+        {
+          "query": "卵巢癌保障更好的计划",
+          "predicted_plan_ids": [
+            "bc8592e0dbf440ba96223932ef3542c8",
+            "dfdcb8ef378846f08da43b06530cf67a",
+            "4ba6f2c2e66443ca9a3bab58b446e879"
+          ],
+          "relevant_plan_ids": [
+            "4ba6f2c2e66443ca9a3bab58b446e879",
+            "b66d2e44b69b42fe9401440046b4f540"
+          ],
+          "hit": true
+        },
+        {
+          "query": "危疾多重赔付更强的计划",
+          "predicted_plan_ids": [
+            "bc8592e0dbf440ba96223932ef3542c8",
+            "4ba6f2c2e66443ca9a3bab58b446e879",
+            "b66d2e44b69b42fe9401440046b4f540"
+          ],
+          "relevant_plan_ids": [
+            "bc8592e0dbf440ba96223932ef3542c8"
+          ],
+          "hit": true
+        },
+        {
+          "query": "医疗计划保费和缴费方式",
+          "predicted_plan_ids": [
+            "4ba6f2c2e66443ca9a3bab58b446e879",
+            "b66d2e44b69b42fe9401440046b4f540",
+            "6810769b739c462fb766c1d6d1dbac87"
+          ],
+          "relevant_plan_ids": [
+            "5276c763656547dfa2221a05665b38ac",
+            "6810769b739c462fb766c1d6d1dbac87",
+            "dfdcb8ef378846f08da43b06530cf67a"
+          ],
+          "hit": true
+        },
+        {
+          "query": "住院和手术保障的比较",
+          "predicted_plan_ids": [
+            "6810769b739c462fb766c1d6d1dbac87",
+            "dfdcb8ef378846f08da43b06530cf67a",
+            "4ba6f2c2e66443ca9a3bab58b446e879"
+          ],
+          "relevant_plan_ids": [
+            "5276c763656547dfa2221a05665b38ac",
+            "6810769b739c462fb766c1d6d1dbac87"
+          ],
+          "hit": true
+        },
+        {
+          "query": "门诊保障和年度限额",
+          "predicted_plan_ids": [
+            "dfdcb8ef378846f08da43b06530cf67a",
+            "6810769b739c462fb766c1d6d1dbac87",
+            "5276c763656547dfa2221a05665b38ac"
+          ],
+          "relevant_plan_ids": [
+            "5276c763656547dfa2221a05665b38ac",
+            "6810769b739c462fb766c1d6d1dbac87"
+          ],
+          "hit": true
+        },
+        {
+          "query": "附加险和附加福利更全面",
+          "predicted_plan_ids": [
+            "c320c25b4c844bdc90655a1bf3962b50",
+            "b66d2e44b69b42fe9401440046b4f540",
+            "4ba6f2c2e66443ca9a3bab58b446e879"
+          ],
+          "relevant_plan_ids": [
+            "4ba6f2c2e66443ca9a3bab58b446e879",
+            "b66d2e44b69b42fe9401440046b4f540"
+          ],
+          "hit": true
+        },
+        {
+          "query": "除外责任和特殊条件",
+          "predicted_plan_ids": [
+            "dfdcb8ef378846f08da43b06530cf67a",
+            "bc8592e0dbf440ba96223932ef3542c8",
+            "b66d2e44b69b42fe9401440046b4f540"
+          ],
+          "relevant_plan_ids": [
+            "bc8592e0dbf440ba96223932ef3542c8",
+            "c320c25b4c844bdc90655a1bf3962b50"
+          ],
+          "hit": true
+        },
+        {
+          "query": "自付额和共付结构",
+          "predicted_plan_ids": [
+            "5276c763656547dfa2221a05665b38ac",
+            "6810769b739c462fb766c1d6d1dbac87",
+            "bc8592e0dbf440ba96223932ef3542c8"
+          ],
+          "relevant_plan_ids": [
+            "5276c763656547dfa2221a05665b38ac",
+            "6810769b739c462fb766c1d6d1dbac87",
+            "dfdcb8ef378846f08da43b06530cf67a"
+          ],
+          "hit": true
+        },
+        {
+          "query": "癌症治疗保障和理赔额度",
+          "predicted_plan_ids": [
+            "dfdcb8ef378846f08da43b06530cf67a",
+            "5276c763656547dfa2221a05665b38ac",
+            "4ba6f2c2e66443ca9a3bab58b446e879"
+          ],
+          "relevant_plan_ids": [
+            "bc8592e0dbf440ba96223932ef3542c8",
+            "c320c25b4c844bdc90655a1bf3962b50"
+          ],
+          "hit": false
+        },
+        {
+          "query": "适合家庭的危疾计划推荐",
+          "predicted_plan_ids": [
+            "bc8592e0dbf440ba96223932ef3542c8",
+            "4ba6f2c2e66443ca9a3bab58b446e879",
+            "dfdcb8ef378846f08da43b06530cf67a"
+          ],
+          "relevant_plan_ids": [
+            "4ba6f2c2e66443ca9a3bab58b446e879",
+            "bc8592e0dbf440ba96223932ef3542c8"
+          ],
+          "hit": true
+        }
+      ],
+      "dataset": "D:\\新建文件夹\\PythonProject\\insurance-comparsion\\backend\\data\\retrieval_eval.sample.jsonl",
+      "target_hit_rate": 0.9,
+      "pass_target": true
+    }
+  },
+  "summary": {
+    "ok": false,
+    "failures": [
+      "Milvus check failed: MilvusException: <MilvusException: (code=2, message=Fail connecting to server on 121.41.85.215:19530, illegal connection params or server unavailable)>"
+    ],
+    "warnings": [
+      "Milvus unavailable during acceptance, switched follow-up checks to SQLite fallback"
+    ],
+    "finished_at": "2026-03-01T07:41:33.516594+00:00"
+  }
+}

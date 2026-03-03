@@ -1,0 +1,1156 @@
+{
+  "annual_limit": [
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "每年保障限额高达1,200万港元",
+      "normalized_value": "12000000",
+      "numeric_value": 12000000.0,
+      "unit": "港元",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 3,
+      "source_section": "page-3",
+      "source_quote": "终身保障限额及每年保障限额分别高达\n6,000 万港元及 1,200 万港元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 2,
+        "limit_values": [
+          "1,200"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "1,200万港元或150万美元",
+      "normalized_value": "12000000",
+      "numeric_value": 12000000.0,
+      "unit": "港元",
+      "condition_text": null,
+      "confidence": 0.98,
+      "source_page": 4,
+      "source_section": "page-4",
+      "source_quote": "「尊耀明珠」医疗计划 提供高达 6,000 万港元或 750 万美元的\n终身保障限额及 1,200 万港元或 150 万美元的每年保障限额",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 3,
+        "limit_values": [
+          "1,200"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "每保单年度 500,000 港元或 62,500 美元",
+      "normalized_value": "500000",
+      "numeric_value": 500000.0,
+      "unit": "港元",
+      "condition_text": "第三期及第四期指定癌症及无法治愈的血液系统恶性肿瘤之第三期临床试验药物赔偿",
+      "confidence": 0.95,
+      "source_page": 7,
+      "source_section": "page-7",
+      "source_quote": "在计算应付赔偿总额时，该招致的合理及惯常的收费将减少至 60% ，且不多于每保单年度 500,000 港元或 62,500 美元。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 8,
+        "limit_values": [
+          "500,000港元",
+          "62,500美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "每年保障限额高达 12,000,000 港元／1,500,000 美元",
+      "normalized_value": "12000000",
+      "numeric_value": 12000000.0,
+      "unit": "港元",
+      "condition_text": null,
+      "confidence": 1.0,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "每年保障限额高达 12,000,000 港元／1,500,000 美元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 12,
+        "limit_values": [
+          "12,000,000港元",
+          "1,500,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "每年保障限额",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "索赔金额受限于保单的每年保障限额及终身保障限额，全数赔偿是指不设分项赔偿限额。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 13
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "每年保障限额：12,000,000港元（以每保单年度计）；1,500,000美元（以每保单年度计）",
+      "normalized_value": "12000000",
+      "numeric_value": 12000000.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 1.0,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "每年保障限额\n涵盖保障表第 I (a) 至 (r) 及 II (a) 至 (i) 、 (k) 及 (m) 项\n12,000,000\n以每保单年度计\n1,500,000\n以每保单年度计",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 15,
+        "limit_values": [
+          "12,000,000港元",
+          "1,500,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "500,000港元或62,500美元每保单年度",
+      "normalized_value": "500000",
+      "numeric_value": 500000.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 15,
+      "source_section": "page-15",
+      "source_quote": "就香港、澳门及中国大陆以外的地方所招致并可在此保障项目下获赔偿的任何合理及惯常的收费而言，在计算应付赔偿总额时，该招致的合理及惯常的收费将减少至 60% ，且不多于每保单年度 500,000 港元或 62,500 美元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 20,
+        "limit_values": [
+          "500,000港元",
+          "62,500美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "每年保障限额高达 12,000,000 港元／1,500,000 美元；500,000港元或62,500美元每保单年度；每年保障限额",
+      "normalized_value": "12000000|500000|每年保障限额",
+      "numeric_value": 12000000.0,
+      "unit": "港元",
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "每年保障限额高达 12,000,000 港元／1,500,000 美元",
+      "metadata_json": {
+        "value_list": [
+          "每年保障限额高达 12,000,000 港元／1,500,000 美元",
+          "500,000港元或62,500美元每保单年度",
+          "每年保障限额"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "itemized_limit": [
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "不设分项赔偿限额",
+      "normalized_value": "none",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.98,
+      "source_page": 3,
+      "source_section": "page-3",
+      "source_quote": "全数赔偿 7 主要医疗费用，\n不设分项赔偿限额",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 2
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "不设分项赔偿限额",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 4,
+      "source_section": "page-4",
+      "source_quote": "其涵盖的主要医疗费用不设分项赔偿限额，由诊断检测以至\n治疗后护理，为您全数支付 7 以下一系列主要保障项目：",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 3
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "不设分项赔偿限额",
+      "normalized_value": "none",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 1.0,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "不设分项赔偿限额",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 12
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "终身保障限额：60,000,000港元（以个人计）；7,500,000美元（以个人计）",
+      "normalized_value": "60000000",
+      "numeric_value": 60000000.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 0.98,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "终身保障限额\n涵盖保障表第 I (a) 至 (r) 及 II (a) 至 (i) 、 (k) 及 (m) 项\n60,000,000\n以个人计\n7,500,000\n以个人计",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 15,
+        "limit_values": [
+          "60,000,000港元",
+          "7,500,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "500,000港元或62,500美元每保单年度（针对第三期及第四期指定癌症及无法治愈的血液系统恶性肿瘤之第三期临床试验药物）",
+      "normalized_value": "500000",
+      "numeric_value": 500000.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 0.98,
+      "source_page": 15,
+      "source_section": "page-15",
+      "source_quote": "k. 第三期及第四期指定癌症 3 及无法治愈的血液系统恶性肿瘤之第三期临床试验药物赔偿 5,9\n500,000\n每保单年度\n62,500\n每保单年度",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 20,
+        "limit_values": [
+          "500,000港元",
+          "62,500美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "不设分项赔偿限额；终身保障限额：60,000,000港元（以个人计）；7,500,000美元（以个人计）；500,000港元或62,500美元每保单年度（针对第三期及第四期指定癌症及无法治愈的血液系统恶性肿瘤之第三期临床试验药物）；不设分项赔偿限额",
+      "normalized_value": "none|60000000|500000|不设分项赔偿限额",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "不设分项赔偿限额",
+      "metadata_json": {
+        "value_list": [
+          "不设分项赔偿限额",
+          "终身保障限额：60,000,000港元（以个人计）；7,500,000美元（以个人计）",
+          "500,000港元或62,500美元每保单年度（针对第三期及第四期指定癌症及无法治愈的血液系统恶性肿瘤之第三期临床试验药物）",
+          "不设分项赔偿限额"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "deductible_copay": [
+    {
+      "dimension_key": "deductible_copay",
+      "dimension_label": "自付额与共付",
+      "value_text": "年满75岁或以上的受保人所接受由指定癌症引起的医疗服务之每年自付费可获豁免",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.92,
+      "source_page": 3,
+      "source_section": "page-3",
+      "source_quote": "年满 75 岁或以上的受保人所接受由\n指定癌症引起的医疗服务之\n每年自付费可获豁免",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 2
+      }
+    },
+    {
+      "dimension_key": "deductible_copay",
+      "dimension_label": "自付额与共付",
+      "value_text": "每年自付费：0 / 16,000港元 / 25,000港元 / 50,000港元；或0 / 2,000美元 / 3,125美元 / 6,250美元",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 4,
+      "source_section": "page-4",
+      "source_quote": "每年自付费金额选择\n港元\n美元\n0\n0\n16,000\n2,000\n25,000\n3,125\n50,000\n6,250",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 3
+      }
+    },
+    {
+      "dimension_key": "deductible_copay",
+      "dimension_label": "自付额与共付",
+      "value_text": "每年自付费为 16,000 港元／2,000 美元",
+      "normalized_value": "16000",
+      "numeric_value": 16000.0,
+      "unit": "港元",
+      "condition_text": null,
+      "confidence": 1.0,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "每年自付费为 16,000 港元／2,000 美元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 12
+      }
+    },
+    {
+      "dimension_key": "deductible_copay",
+      "dimension_label": "自付额与共付",
+      "value_text": "每年自付费选择：0 / 16,000 / 25,000 / 50,000港元（以每保单年度计）；0 / 2,000 / 3,125 / 6,250美元（以每保单年度计）",
+      "normalized_value": "0/16000/25000/50000",
+      "numeric_value": 50000.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 0.99,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "每年自付费选择\n涵盖保障表第 I (a) 至 (r) 及 II (a) 至 (e) 、 (h) (i) 、 (h) (ii) 、 (i) 、 (k) 及 (m) 项\n0 / 16,000 / 25,000 / 50,000\n以每保单年度计\n0 / 2,000 / 3,125 / 6,250\n以每保单年度计",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 15
+      }
+    },
+    {
+      "dimension_key": "deductible_copay",
+      "dimension_label": "自付额与共付",
+      "value_text": "每年自付费为 16,000 港元／2,000 美元；每年自付费选择：0 / 16,000 / 25,000 / 50,000港元（以每保单年度计）；0 / 2,000 / 3,125 / 6,250美元（以每保单年度计）；每年自付费：0 / 16,000港元 / 25,000港元 / 50,000港元；或0 / 2,000美元 / 3,125美元 / 6,250美元；年满75岁或以上的受保人所接受由指定癌症引起的医疗服务之每年自付费可获豁免",
+      "normalized_value": "16000|0/16000/25000/50000|每年自付费：0 / 16,000港元 / 25,000港元 / 50,000港元；或0 / 2,000美元 / 3,125美元 / 6,250美元|年满75岁或以上的受保人所接受由指定癌症引起的医疗服务之每年自付费可获豁免",
+      "numeric_value": 16000.0,
+      "unit": "港元",
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "每年自付费为 16,000 港元／2,000 美元",
+      "metadata_json": {
+        "value_list": [
+          "每年自付费为 16,000 港元／2,000 美元",
+          "每年自付费选择：0 / 16,000 / 25,000 / 50,000港元（以每保单年度计）；0 / 2,000 / 3,125 / 6,250美元（以每保单年度计）",
+          "每年自付费：0 / 16,000港元 / 25,000港元 / 50,000港元；或0 / 2,000美元 / 3,125美元 / 6,250美元",
+          "年满75岁或以上的受保人所接受由指定癌症引起的医疗服务之每年自付费可获豁免"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "riders_benefits": [
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "增设延伸癌症保障：每保单年度高达50万港元，涵盖第三期及第四期指定癌症及无法治愈的血液系统恶性肿瘤之第三期临床试验药物赔偿；新增人生阶段检查保障：每连续3个保单年度提供一次指定的检查服务；长者癌症支援：指定癌症豁免自付费",
+      "normalized_value": "clinical_trial_drug_coverage,wellness_checkup,deductible_waiver_for_elderly_cancer",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.96,
+      "source_page": 3,
+      "source_section": "page-3",
+      "source_quote": "增设延伸癌症保障 -\n临床试验药物赔偿\n每保单年度高达 50 万港元，涵盖第三期\n及第四期指定癌症及无法治愈的血液系\n统恶性肿瘤之第三期临床试验药物赔偿\n新增人生阶段检查保障 -\n每连续 3 个保单年度，提供一次指定的\n检查服务助您把握身体状况\n长者癌症支援 -\n指定癌症豁免自付费",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 2
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "第三期及第四期指定癌症及无法治愈的血液系统恶性肿瘤之第三期临床试验药物赔偿；人生阶段检查保障；个人疗程管理服务",
+      "normalized_value": "临床试验药物赔偿；人生阶段检查；个人疗程管理",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "提供第三期及第四期指定癌症及无法治愈的血液系统恶性肿瘤之第三期临床试验药物赔偿和人生阶段检查保障",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 12
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "标靶疗程；手术后家中看护惠益",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "标靶疗程\n手术后家中看护惠益",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 13
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "长者癌症支援 – 指定癌症豁免自付费：年届75岁或以上且罹患指定癌症者，因该癌症接受医疗服务时，相关保单年度的每年自付费余额减少至$0",
+      "normalized_value": "长者癌症支援",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": "年届75岁或以上；罹患指定癌症；因该指定癌症接受医疗服务",
+      "confidence": 0.97,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "长者癌症支援 – 指定癌症豁免自付费 2\n如受保人：\n•年届 75 岁或以上；\n•罹患指定癌症 3 ；及\n•\t因该指定癌症 3 而接受任何医疗服务，\n在相关保单年度与受保人罹患的指定癌症 3 所引起的该医疗服务有关的每年\n自付费余额（如有）将被减少至 $0",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 15
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "人生阶段检查保障（每逢保单第3次连续续保后紧随的保单年度可获检查1次）；妊娠并发症惠益；环球紧急支援服务（含紧急医疗运送、运返遗体、安排家属探访、送返未成年人、24小时全球电话咨询服务）",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 15,
+      "source_section": "page-15",
+      "source_quote": "l. 人生阶段检查保障\n每逢保单第 3 次连续续保后紧随的保单年度可获检查 1 次\nm. 妊娠并发症惠益 5,10\n医院住院及 ／ 或进行手术\n(等候期：于保单生效后起计 300 日)\n全数赔偿 *\nn. 环球紧急支援服务\n(i) 紧急医疗运送\n(ii) 运返遗体\n(iii) 安排家属探访\n如须连续住院超过 5 日\n(iv) 送返未成年人\n如须连续住院超过 5 日\n(v)\t 24 小时全球电话咨询服务\n5,000,000\n以个人计\n625,000\n以个人计\n已包括",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 20
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "长者癌症支援 – 指定癌症豁免自付费：年届75岁或以上且罹患指定癌症者，因该癌症接受医疗服务时，相关保单年度的每年自付费余额减少至$0；增设延伸癌症保障：每保单年度高达50万港元，涵盖第三期及第四期指定癌症及无法治愈的血液系统恶性肿瘤之第三期临床试验药物赔偿；新增人生阶段检查保障：每连续3个保单年度提供一次指定的检查服务；长者癌症支援：指定癌症豁免自付费；第三期及第四期指定癌症及无法治愈的血液系统恶性肿瘤之第三期临床试验药物赔偿；人生阶段检查保障；个人疗程管理服务；人生阶段检查保障（每逢保单第3次连续续保后紧随的保单年度可获检查1次）；妊娠并发症惠益；环球紧急支援服务（含紧急医疗运送、运返遗体、安排家属探访、送返未成年人、24小时全球电话咨询服务）",
+      "normalized_value": "长者癌症支援|clinical_trial_drug_coverage,wellness_checkup,deductible_waiver_for_elderly_cancer|临床试验药物赔偿；人生阶段检查；个人疗程管理|人生阶段检查保障（每逢保单第3次连续续保后紧随的保单年度可获检查1次）；妊娠并发症惠益；环球紧急支援服务（含紧急医疗运送、运返遗体、安排家属探访、送返未成年人、24小时全球电话咨询服务）",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "长者癌症支援 – 指定癌症豁免自付费 2\n如受保人：\n•年届 75 岁或以上；\n•罹患指定癌症 3 ；及\n•\t因该指定癌症 3 而接受任何医疗服务，\n在相关保单年度与受保人罹患的指定癌症 3 所引起的该医疗服务有关的每年\n自付费余额（如有）将被减少至 $0",
+      "metadata_json": {
+        "value_list": [
+          "长者癌症支援 – 指定癌症豁免自付费：年届75岁或以上且罹患指定癌症者，因该癌症接受医疗服务时，相关保单年度的每年自付费余额减少至$0",
+          "增设延伸癌症保障：每保单年度高达50万港元，涵盖第三期及第四期指定癌症及无法治愈的血液系统恶性肿瘤之第三期临床试验药物赔偿；新增人生阶段检查保障：每连续3个保单年度提供一次指定的检查服务；长者癌症支援：指定癌症豁免自付费",
+          "第三期及第四期指定癌症及无法治愈的血液系统恶性肿瘤之第三期临床试验药物赔偿；人生阶段检查保障；个人疗程管理服务",
+          "人生阶段检查保障（每逢保单第3次连续续保后紧随的保单年度可获检查1次）；妊娠并发症惠益；环球紧急支援服务（含紧急医疗运送、运返遗体、安排家属探访、送返未成年人、24小时全球电话咨询服务）"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "地域保障范围为亚洲或全球（美国除外）",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 3,
+      "source_section": "page-3",
+      "source_quote": "每种保单货币特设亚洲或全球（美国除\n外）两个地域保障范围",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 2
+      }
+    },
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "详情请参阅本产品简介第15至16页的主要不保事项",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 4,
+      "source_section": "page-4",
+      "source_quote": "详情请参阅本产品简介第 11\n至 14 页的保障表及第 15 至 16 页的主要不保事项。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 3
+      }
+    },
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "保单生效日起计首 90 日内已察觉或理应察觉该指定癌症，此长者癌症支援 – 豁免自付费将不适用；此豁免自付费将不适用于每年自付费选项为 $0 的保单",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": "指定癌症",
+      "confidence": 0.9,
+      "source_page": 7,
+      "source_section": "page-7",
+      "source_quote": "若保单持有人或受保人在保单生效日起计首 90 日内已察觉或理应察觉该指定癌症，此长者癌症支援 – 豁免自付费将不适用。此豁免自付费将不适用于每年自付费选项为 $0 的保单。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 8
+      }
+    },
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "地域保障范围：全球（美国除外）",
+      "normalized_value": "美国除外",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "地域保障范围：全球﹙美国除外﹚",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 12
+      }
+    },
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "地域保障范围：全球（美国除外）；保单生效日起计首 90 日内已察觉或理应察觉该指定癌症，此长者癌症支援 – 豁免自付费将不适用；此豁免自付费将不适用于每年自付费选项为 $0 的保单；地域保障范围为亚洲或全球（美国除外）；详情请参阅本产品简介第15至16页的主要不保事项",
+      "normalized_value": "美国除外|保单生效日起计首 90 日内已察觉或理应察觉该指定癌症，此长者癌症支援 – 豁免自付费将不适用；此豁免自付费将不适用于每年自付费选项为 $0 的保单|地域保障范围为亚洲或全球（美国除外）|详情请参阅本产品简介第15至16页的主要不保事项",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "地域保障范围：全球﹙美国除外﹚",
+      "metadata_json": {
+        "value_list": [
+          "地域保障范围：全球（美国除外）",
+          "保单生效日起计首 90 日内已察觉或理应察觉该指定癌症，此长者癌症支援 – 豁免自付费将不适用；此豁免自付费将不适用于每年自付费选项为 $0 的保单",
+          "地域保障范围为亚洲或全球（美国除外）",
+          "详情请参阅本产品简介第15至16页的主要不保事项"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "coverage_hospitalization": [
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "病房及膳食、专科医生费、外科医生费、麻醉科医生费、深切治疗",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 4,
+      "source_section": "page-4",
+      "source_quote": "住院保障\n病房及膳食、专科医生费、外科医生费、麻醉科医生费、深切治疗",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 3
+      }
+    },
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "根据住院地区享半私家房或标准私家房级别住院保障",
+      "normalized_value": "半私家房或标准私家房",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "根据住院地区享半私家房或标准私家房级别住院保障",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 12
+      }
+    },
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "住院(于香港入住半私家房及新加坡入住标准私家房)",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "住院(于香港入住半私家房及新加坡入住标准私家房)",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 13
+      }
+    },
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "妊娠并发症惠益涵盖医院住院",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 15,
+      "source_section": "page-15",
+      "source_quote": "m. 妊娠并发症惠益 5,10\n医院住院及 ／ 或进行手术\n(等候期：于保单生效后起计 300 日)\n全数赔偿 *",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 20
+      }
+    },
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "根据住院地区享半私家房或标准私家房级别住院保障；住院(于香港入住半私家房及新加坡入住标准私家房)；病房及膳食、专科医生费、外科医生费、麻醉科医生费、深切治疗；妊娠并发症惠益涵盖医院住院",
+      "normalized_value": "半私家房或标准私家房|住院(于香港入住半私家房及新加坡入住标准私家房)|病房及膳食、专科医生费、外科医生费、麻醉科医生费、深切治疗|妊娠并发症惠益涵盖医院住院",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "根据住院地区享半私家房或标准私家房级别住院保障",
+      "metadata_json": {
+        "value_list": [
+          "根据住院地区享半私家房或标准私家房级别住院保障",
+          "住院(于香港入住半私家房及新加坡入住标准私家房)",
+          "病房及膳食、专科医生费、外科医生费、麻醉科医生费、深切治疗",
+          "妊娠并发症惠益涵盖医院住院"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "coverage_surgery": [
+    {
+      "dimension_key": "coverage_surgery",
+      "dimension_label": "手术保障",
+      "value_text": "日间手术、大型或复杂手术",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 4,
+      "source_section": "page-4",
+      "source_quote": "入院前及出院后/日间手术前后的门诊护理\n住院或日间手术前后指定期间内的门诊，包括大型或复杂手术后 365 日内的门诊",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 3
+      }
+    },
+    {
+      "dimension_key": "coverage_surgery",
+      "dimension_label": "手术保障",
+      "value_text": "第三期临床试验药物是由专科医生处方及由专科医生认为处方第三期临床试验药物是对受保人罹患的指定癌症为合适或建议的积极治疗或纾缓治疗",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": "指定癌症",
+      "confidence": 0.7,
+      "source_page": 7,
+      "source_section": "page-7",
+      "source_quote": "若受保人由专科医生确诊有第三期或第四期恶性瘤，或现有的非实验性治疗无法治愈的末期血癌，并有由专科医生签发医生证明书，证明第三期临床试验药物是由专科医生处方及由专科医生认为处方第三期临床试验药物是对受保人罹患的指定癌症为合适或建议的积极治疗或纾缓治疗，我们将支付此赔偿。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 8
+      }
+    },
+    {
+      "dimension_key": "coverage_surgery",
+      "dimension_label": "手术保障",
+      "value_text": "全数赔偿主要医疗开支，不设分项赔偿限额；全数赔偿订明非手术癌症治疗",
+      "normalized_value": "全数赔偿主要医疗开支；全数赔偿订明非手术癌症治疗",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "此计划全数赔偿主要医疗开支，不设分项赔偿限额、根据住院地区享半私家房或标准私家房级别住院保障、全数赔偿 ^ 订明非手术癌症治疗",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 12
+      }
+    },
+    {
+      "dimension_key": "coverage_surgery",
+      "dimension_label": "手术保障",
+      "value_text": "结肠切除手术",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "及结肠切除手术",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 13
+      }
+    },
+    {
+      "dimension_key": "coverage_surgery",
+      "dimension_label": "手术保障",
+      "value_text": "妊娠并发症惠益涵盖住院及／或进行手术",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 15,
+      "source_section": "page-15",
+      "source_quote": "m. 妊娠并发症惠益 5,10\n医院住院及 ／ 或进行手术\n(等候期：于保单生效后起计 300 日)\n全数赔偿 *",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 20
+      }
+    },
+    {
+      "dimension_key": "coverage_surgery",
+      "dimension_label": "手术保障",
+      "value_text": "结肠切除手术；日间手术、大型或复杂手术；全数赔偿主要医疗开支，不设分项赔偿限额；全数赔偿订明非手术癌症治疗；妊娠并发症惠益涵盖住院及／或进行手术",
+      "normalized_value": "结肠切除手术|日间手术、大型或复杂手术|全数赔偿主要医疗开支；全数赔偿订明非手术癌症治疗|妊娠并发症惠益涵盖住院及／或进行手术",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "及结肠切除手术",
+      "metadata_json": {
+        "value_list": [
+          "结肠切除手术",
+          "日间手术、大型或复杂手术",
+          "全数赔偿主要医疗开支，不设分项赔偿限额；全数赔偿订明非手术癌症治疗",
+          "妊娠并发症惠益涵盖住院及／或进行手术"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "coverage_outpatient": [
+    {
+      "dimension_key": "coverage_outpatient",
+      "dimension_label": "门诊保障",
+      "value_text": "入院前及出院后/日间手术前后的门诊护理；住院或日间手术前后指定期间内的门诊；大型或复杂手术后365日内的门诊",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 4,
+      "source_section": "page-4",
+      "source_quote": "入院前及出院后/日间手术前后的门诊护理\n住院或日间手术前后指定期间内的门诊，包括大型或复杂手术后 365 日内的门诊",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 3
+      }
+    },
+    {
+      "dimension_key": "coverage_outpatient",
+      "dimension_label": "门诊保障",
+      "value_text": "入院前门诊护理；出院后门诊护理；包括物理治疗师及职业治疗师的跟进门诊",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "入院前门诊护理\n~\n出院后门诊护理\n~ ：\n包括物理治疗师及职业治疗师的跟进门诊",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 13
+      }
+    },
+    {
+      "dimension_key": "coverage_outpatient",
+      "dimension_label": "门诊保障",
+      "value_text": "入院前门诊护理；出院后门诊护理；包括物理治疗师及职业治疗师的跟进门诊；入院前及出院后/日间手术前后的门诊护理；住院或日间手术前后指定期间内的门诊；大型或复杂手术后365日内的门诊",
+      "normalized_value": "入院前门诊护理；出院后门诊护理；包括物理治疗师及职业治疗师的跟进门诊|入院前及出院后/日间手术前后的门诊护理；住院或日间手术前后指定期间内的门诊；大型或复杂手术后365日内的门诊",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "入院前门诊护理\n~\n出院后门诊护理\n~ ：\n包括物理治疗师及职业治疗师的跟进门诊",
+      "metadata_json": {
+        "value_list": [
+          "入院前门诊护理；出院后门诊护理；包括物理治疗师及职业治疗师的跟进门诊",
+          "入院前及出院后/日间手术前后的门诊护理；住院或日间手术前后指定期间内的门诊；大型或复杂手术后365日内的门诊"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "premium_payment": [
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "保费缴付模式：年缴/半年缴/季缴/月缴",
+      "normalized_value": "年缴/半年缴/季缴/月缴",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "保费缴付模式\n年缴 / 半年缴 / 季缴 / 月缴",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 15,
+        "payment_modes": [
+          "年缴",
+          "半年缴",
+          "季缴",
+          "月缴"
+        ]
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "外）两个地域保障范围及 4 种每年自付费",
+      "normalized_value": "外）两个地域保障范围及 4 种每年自付费",
+      "numeric_value": 4.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 3,
+      "source_section": "page-3",
+      "source_quote": "外）两个地域保障范围及 4 种每年自付费",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "付费金额以供选择，务求能切合您的需要：",
+      "normalized_value": "付费金额以供选择，务求能切合您的需要：",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 4,
+      "source_section": "page-4",
+      "source_quote": "付费金额以供选择，务求能切合您的需要：",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "疗服务的每年自付费余额，以减轻您的财务",
+      "normalized_value": "疗服务的每年自付费余额，以减轻您的财务",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 5,
+      "source_section": "page-5",
+      "source_quote": "疗服务的每年自付费余额，以减轻您的财务",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "当受保人在世时，您的保单可获保证续保。续保保费将按续",
+      "normalized_value": "当受保人在世时，您的保单可获保证续保。续保保费将按续",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 6,
+      "source_section": "page-6",
+      "source_quote": "当受保人在世时，您的保单可获保证续保。续保保费将按续",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "每年自付费选项为 $0 的保单。",
+      "normalized_value": "每年自付费选项为 $0 的保单。",
+      "numeric_value": 0.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 7,
+      "source_section": "page-7",
+      "source_quote": "每年自付费选项为 $0 的保单。",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "缴付您住院期间招致的医疗开支，让您专注康复治疗，",
+      "normalized_value": "缴付您住院期间招致的医疗开支，让您专注康复治疗，",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 8,
+      "source_section": "page-8",
+      "source_quote": "缴付您住院期间招致的医疗开支，让您专注康复治疗，",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "即享首年保费 9 折",
+      "normalized_value": "即享首年保费 9 折",
+      "numeric_value": 9.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 9,
+      "source_section": "page-9",
+      "source_quote": "即享首年保费 9 折",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "保障范围及每年自付费为 16,000 港元 ／ 2,000 美元。",
+      "normalized_value": "保障范围及每年自付费为 16,000 港元 ／ 2,000 美元。",
+      "numeric_value": 16000.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "保障范围及每年自付费为 16,000 港元 ／ 2,000 美元。",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "•\t在长者癌症支援 – 指定癌症豁免自付费下，就治疗 Jack",
+      "normalized_value": "•\t在长者癌症支援 – 指定癌症豁免自付费下，就治疗 jack",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "•\t在长者癌症支援 – 指定癌症豁免自付费下，就治疗 Jack",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "缴费方式：年缴 / 半年缴 / 季缴 / 月缴",
+      "normalized_value": "payment_modes:年缴,半年缴,季缴,月缴",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "年缴 / 半年缴 / 季缴 / 月缴",
+      "metadata_json": {
+        "annual_premium_values": [],
+        "payment_terms_years": [],
+        "payment_modes": [
+          "年缴",
+          "半年缴",
+          "季缴",
+          "月缴"
+        ],
+        "derived_from": "plan_aggregate",
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "参阅本产品简介第 17 页之「产品限制」第 9 项及每年自付费选择（如适用）所限； (b) 于保障项目 I (l) 至 (r) 及 II(a) 至 (i) 、 (k) 及 (m) 的保障不会作出赔偿，及受",
+      "normalized_value": "参阅本产品简介第 17 页之「产品限制」第 9 项及每年自付费选择（如适用）所限； (b) 于保障项目 i (l) 至 (r) 及 ii(a) 至 (i) 、 (k) 及 (m) 的保障不会作出赔偿，及受",
+      "numeric_value": 17.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 15,
+      "source_section": "page-15",
+      "source_quote": "参阅本产品简介第 17 页之「产品限制」第 9 项及每年自付费选择（如适用）所限； (b) 于保障项目 I (l) 至 (r) 及 II(a) 至 (i) 、 (k) 及 (m) 的保障不会作出赔偿，及受",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "并产生合资格费用，该合资格费用将受限于每年自付费余额（如有），长者癌症支援 – 指定癌症豁免自付费不适用于 $0 每年自付费选项的保单。",
+      "normalized_value": "并产生合资格费用，该合资格费用将受限于每年自付费余额（如有），长者癌症支援 – 指定癌症豁免自付费不适用于 $0 每年自付费选项的保单。",
+      "numeric_value": 0.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 15,
+      "source_section": "page-15",
+      "source_quote": "并产生合资格费用，该合资格费用将受限于每年自付费余额（如有），长者癌症支援 – 指定癌症豁免自付费不适用于 $0 每年自付费选项的保单。",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "本计划为保险计划，并不包括任何储蓄成分。所有缴付的保费都用",
+      "normalized_value": "本计划为保险计划，并不包括任何储蓄成分。所有缴付的保费都用",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 16,
+      "source_section": "page-16",
+      "source_quote": "本计划为保险计划，并不包括任何储蓄成分。所有缴付的保费都用",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "为了持续向您提供保障，我们会每年覆核您计划下的保费。如",
+      "normalized_value": "为了持续向您提供保障，我们会每年覆核您计划下的保费。如",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 17,
+      "source_section": "page-17",
+      "source_quote": "为了持续向您提供保障，我们会每年覆核您计划下的保费。如",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "9. 于作出上述第 (7) 及／或第 (8) 项的保障调整 ( 于扣除每年自付费",
+      "normalized_value": "9. 于作出上述第 (7) 及／或第 (8) 项的保障调整 ( 于扣除每年自付费",
+      "numeric_value": 9.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 18,
+      "source_section": "page-18",
+      "source_quote": "9. 于作出上述第 (7) 及／或第 (8) 项的保障调整 ( 于扣除每年自付费",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "由 2018 年 1 月 1 日起，所有保单持有人均须向保险业监管局为其新缮发及现行香港保单缴付的每笔保费缴交征费。有关保费征费详情，",
+      "normalized_value": "由 2018 年 1 月 1 日起，所有保单持有人均须向保险业监管局为其新缮发及现行香港保单缴付的每笔保费缴交征费。有关保费征费详情，",
+      "numeric_value": 201.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 19,
+      "source_section": "page-19",
+      "source_quote": "由 2018 年 1 月 1 日起，所有保单持有人均须向保险业监管局为其新缮发及现行香港保单缴付的每笔保费缴交征费。有关保费征费详情，",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "您有权以书面通知我们取消保单并取回已缴保费及保费征费。有关",
+      "normalized_value": "您有权以书面通知我们取消保单并取回已缴保费及保费征费。有关",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 19,
+      "source_section": "page-19",
+      "source_quote": "您有权以书面通知我们取消保单并取回已缴保费及保费征费。有关",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    }
+  ]
+}
