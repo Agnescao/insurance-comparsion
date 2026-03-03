@@ -1,8 +1,5 @@
 ## 项目demo
-
-<video controls width="800">
-  <source src="leicao-demo-insurancecomparsion.mp4" type="video/mp4">
-</video>
+[点击查看 Demo 视频](leicao-demo-insurancecomparsion.mp4)
 
 
 # 保险产品比较工具原型
