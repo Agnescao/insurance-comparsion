@@ -108,6 +108,15 @@ npm run dev
 
 默认访问：`http://localhost:5173`（若占用会自动切到 5174/5175）
 
+### milvus 云服务启动
+
+# 1、启动Milvus数据库的docker容器
+sudo docker compose up -d
+docker restart milvus-standalone
+
+# 2 验证Milvus数据库是否成功启动
+docker ps
+
 ## 环境变量
 
 参考 `backend/.env.example`：
