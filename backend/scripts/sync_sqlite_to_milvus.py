@@ -3,27 +3,43 @@ from __future__ import annotations
 import argparse
 import json
 import sqlite3
+import sys
 import time
 from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-from pymilvus import Collection, CollectionSchema, DataType, FieldSchema, MilvusClient, connections, utility
+BACKEND_ROOT = Path(__file__).resolve().parents[1]
+if str(BACKEND_ROOT) not in sys.path:
+    sys.path.insert(0, str(BACKEND_ROOT))
+
+from app.services.milvus_hybrid_store import HybridMilvusStore
+from app.services.sparse_bm25 import BM25SparseEncoder, tokenize
+
+DEFAULT_SQLITE = "backend/data/app.sqlite3"
+DEFAULT_MILVUS_URI = "tcp://121.41.85.215:19530"
+DEFAULT_MILVUS_USER = "root"
+DEFAULT_MILVUS_PASSWORD = "Milvus"
+DEFAULT_MILVUS_DB_NAME = "default"
+DEFAULT_CHUNK_COLLECTION = "policy_chunks_hybrid"
+DEFAULT_FACT_COLLECTION = "policy_facts_hybrid"
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Sync parsed SQLite chunks/facts into Milvus.")
-    parser.add_argument("--sqlite", default="backend/data/app.sqlite3", help="Path to SQLite file")
-    parser.add_argument("--uri", required=True, help="Milvus URI, e.g. tcp://121.41.85.215:19530")
-    parser.add_argument("--user", default="root", help="Milvus user")
-    parser.add_argument("--password", default="Milvus", help="Milvus password")
+    parser = argparse.ArgumentParser(description="Sync parsed SQLite chunks/facts into Milvus hybrid collections.")
+    parser.add_argument("--sqlite", default=DEFAULT_SQLITE, help="Path to SQLite file")
+    parser.add_argument("--uri", default=DEFAULT_MILVUS_URI, help="Milvus URI, e.g. tcp://121.41.85.215:19530")
+    parser.add_argument("--user", default=DEFAULT_MILVUS_USER, help="Milvus user")
+    parser.add_argument("--password", default=DEFAULT_MILVUS_PASSWORD, help="Milvus password")
     parser.add_argument("--token", default=None, help="Milvus token, e.g. root:Milvus")
-    parser.add_argument("--db-name", default="default", help="Milvus db name")
-    parser.add_argument("--chunk-collection", default="policy_chunks_hybrid")
-    parser.add_argument("--fact-collection", default="policy_facts_hybrid")
-    parser.add_argument("--dim", type=int, default=256, help="Dense embedding dimension")
+    parser.add_argument("--db-name", default=DEFAULT_MILVUS_DB_NAME, help="Milvus db name")
+    parser.add_argument("--chunk-collection", default=DEFAULT_CHUNK_COLLECTION)
+    parser.add_argument("--fact-collection", default=DEFAULT_FACT_COLLECTION)
+    parser.add_argument("--dim", type=int, default=0, help="Dense embedding dimension, 0 means auto-detect from SQLite")
     parser.add_argument("--batch-size", type=int, default=200)
     parser.add_argument("--recreate", action="store_true", help="Drop and recreate collections")
+    parser.add_argument("--k1", type=float, default=1.5)
+    parser.add_argument("--b", type=float, default=0.75)
     return parser.parse_args()
 
 
@@ -50,7 +66,12 @@ def _to_unix_ts(v: Any) -> int:
         return int(v)
     if isinstance(v, str):
         s = v.strip().replace("Z", "")
-        for fmt in ("%Y-%m-%d %H:%M:%S.%f", "%Y-%m-%d %H:%M:%S", "%Y-%m-%dT%H:%M:%S.%f", "%Y-%m-%dT%H:%M:%S"):
+        for fmt in (
+            "%Y-%m-%d %H:%M:%S.%f",
+            "%Y-%m-%d %H:%M:%S",
+            "%Y-%m-%dT%H:%M:%S.%f",
+            "%Y-%m-%dT%H:%M:%S",
+        ):
             try:
                 return int(datetime.strptime(s, fmt).timestamp())
             except ValueError:
@@ -58,92 +79,26 @@ def _to_unix_ts(v: Any) -> int:
     return int(time.time())
 
 
-def _connect_client(args: argparse.Namespace) -> MilvusClient:
-    kwargs: dict[str, Any] = {"uri": args.uri, "db_name": args.db_name}
-    if args.token:
-        kwargs["token"] = args.token
-    else:
-        kwargs["user"] = args.user
-        kwargs["password"] = args.password
-
-    connections.connect(alias="default", **kwargs)
-    return MilvusClient(**kwargs)
-
-
-def _ensure_collections(args: argparse.Namespace) -> None:
-    if args.recreate:
-        if utility.has_collection(args.chunk_collection):
-            utility.drop_collection(args.chunk_collection)
-        if utility.has_collection(args.fact_collection):
-            utility.drop_collection(args.fact_collection)
-
-    if not utility.has_collection(args.chunk_collection):
-        chunk_fields = [
-            FieldSchema(name="chunk_id", dtype=DataType.VARCHAR, is_primary=True, auto_id=False, max_length=64),
-            FieldSchema(name="plan_id", dtype=DataType.VARCHAR, max_length=64),
-            FieldSchema(name="plan_name", dtype=DataType.VARCHAR, max_length=255),
-            FieldSchema(name="section_path", dtype=DataType.VARCHAR, max_length=512),
-            FieldSchema(name="page_start", dtype=DataType.INT64),
-            FieldSchema(name="page_end", dtype=DataType.INT64),
-            FieldSchema(name="source_ref", dtype=DataType.VARCHAR, max_length=512),
-            FieldSchema(name="language", dtype=DataType.VARCHAR, max_length=16),
-            FieldSchema(name="text", dtype=DataType.VARCHAR, max_length=8192),
-            FieldSchema(name="created_at", dtype=DataType.INT64),
-            FieldSchema(name="embedding", dtype=DataType.FLOAT_VECTOR, dim=args.dim),
-        ]
-        chunk_schema = CollectionSchema(fields=chunk_fields, enable_dynamic_field=True)
-        chunk_coll = Collection(name=args.chunk_collection, schema=chunk_schema)
-        chunk_coll.create_index(
-            field_name="embedding",
-            index_params={"index_type": "HNSW", "metric_type": "COSINE", "params": {"M": 16, "efConstruction": 200}},
-        )
-        chunk_coll.load()
-
-    if not utility.has_collection(args.fact_collection):
-        fact_fields = [
-            FieldSchema(name="fact_id", dtype=DataType.VARCHAR, is_primary=True, auto_id=False, max_length=64),
-            FieldSchema(name="plan_id", dtype=DataType.VARCHAR, max_length=64),
-            FieldSchema(name="plan_name", dtype=DataType.VARCHAR, max_length=255),
-            FieldSchema(name="dimension_key", dtype=DataType.VARCHAR, max_length=128),
-            FieldSchema(name="dimension_label", dtype=DataType.VARCHAR, max_length=255),
-            FieldSchema(name="value_text", dtype=DataType.VARCHAR, max_length=2048),
-            FieldSchema(name="normalized_value", dtype=DataType.VARCHAR, max_length=1024),
-            FieldSchema(name="unit", dtype=DataType.VARCHAR, max_length=64),
-            FieldSchema(name="condition_text", dtype=DataType.VARCHAR, max_length=1024),
-            FieldSchema(name="applicability", dtype=DataType.VARCHAR, max_length=255),
-            FieldSchema(name="source_chunk_id", dtype=DataType.VARCHAR, max_length=64),
-            FieldSchema(name="source_page", dtype=DataType.INT64),
-            FieldSchema(name="source_section", dtype=DataType.VARCHAR, max_length=512),
-            FieldSchema(name="confidence", dtype=DataType.FLOAT),
-            FieldSchema(name="created_at", dtype=DataType.INT64),
-            FieldSchema(name="embedding", dtype=DataType.FLOAT_VECTOR, dim=args.dim),
-        ]
-        fact_schema = CollectionSchema(fields=fact_fields, enable_dynamic_field=True)
-        fact_coll = Collection(name=args.fact_collection, schema=fact_schema)
-        fact_coll.create_index(
-            field_name="embedding",
-            index_params={"index_type": "HNSW", "metric_type": "COSINE", "params": {"M": 16, "efConstruction": 200}},
-        )
-        fact_coll.load()
-
-
-def _upsert_batches(client: MilvusClient, collection_name: str, records: list[dict[str, Any]], batch_size: int) -> int:
-    total = 0
-    for start in range(0, len(records), batch_size):
-        batch = records[start : start + batch_size]
-        client.upsert(collection_name=collection_name, data=batch)
-        total += len(batch)
-    return total
+def _infer_dim(chunk_rows: list[sqlite3.Row], fallback_dim: int = 256) -> int:
+    for r in chunk_rows:
+        emb = _parse_json(r["embedding"])
+        if isinstance(emb, list) and emb:
+            try:
+                return int(len(emb))
+            except Exception:
+                continue
+    return fallback_dim
 
 
 def main() -> None:
     args = parse_args()
+    print(
+        f"[sync_sqlite_to_milvus] sqlite={args.sqlite}, uri={args.uri}, db={args.db_name}, "
+        f"chunk_collection={args.chunk_collection}, fact_collection={args.fact_collection}"
+    )
     sqlite_path = Path(args.sqlite)
     if not sqlite_path.exists():
         raise FileNotFoundError(f"SQLite file not found: {sqlite_path}")
-
-    client = _connect_client(args)
-    _ensure_collections(args)
 
     conn = sqlite3.connect(str(sqlite_path))
     conn.row_factory = sqlite3.Row
@@ -158,14 +113,44 @@ def main() -> None:
         FROM policy_chunks
         """
     ).fetchall()
+
+    dim = args.dim if args.dim and args.dim > 0 else _infer_dim(chunk_rows, fallback_dim=256)
+    print(f"[sync_sqlite_to_milvus] resolved dense dim={dim}")
+
+    store = HybridMilvusStore(
+        uri=args.uri,
+        user=args.user,
+        password=args.password,
+        token=args.token,
+        db_name=args.db_name,
+        dim=dim,
+        chunk_collection=args.chunk_collection,
+        fact_collection=args.fact_collection,
+        force_enabled=True,
+    )
+    store.connect()
+    store.ensure_collections(recreate=args.recreate)
+
+    # Build BM25 statistics on chunk corpus.
+    chunk_tokens = [tokenize(r["text"] or "") for r in chunk_rows]
+    bm25 = BM25SparseEncoder(chunk_tokens, k1=args.k1, b=args.b)
+
     chunk_records: list[dict[str, Any]] = []
-    chunk_embedding_map: dict[str, list[float]] = {}
-    for r in chunk_rows:
+    chunk_dense_map: dict[str, list[float]] = {}
+    chunk_sparse_map: dict[str, dict[int, float]] = {}
+
+    for r, toks in zip(chunk_rows, chunk_tokens):
         plan = plan_map.get(r["plan_id"], {})
-        emb = _parse_json(r["embedding"]) or [0.0] * args.dim
-        if len(emb) != args.dim:
-            emb = [0.0] * args.dim
-        chunk_embedding_map[r["chunk_id"]] = emb
+        dense = _parse_json(r["embedding"]) or [0.0] * dim
+        if len(dense) > dim:
+            dense = dense[:dim]
+        elif len(dense) < dim:
+            dense = dense + [0.0] * (dim - len(dense))
+        sparse = bm25.encode_doc(toks)
+
+        chunk_dense_map[r["chunk_id"]] = dense
+        chunk_sparse_map[r["chunk_id"]] = sparse
+
         chunk_records.append(
             {
                 "chunk_id": r["chunk_id"],
@@ -178,7 +163,8 @@ def main() -> None:
                 "language": (plan.get("language") or "zh")[:16],
                 "text": (r["text"] or "")[:8192],
                 "created_at": _to_unix_ts(r["created_at"]),
-                "embedding": emb,
+                "dense_embedding": dense,
+                "sparse_embedding": sparse,
             }
         )
 
@@ -189,12 +175,16 @@ def main() -> None:
         FROM policy_facts
         """
     ).fetchall()
+
     fact_records: list[dict[str, Any]] = []
     for r in fact_rows:
         plan = plan_map.get(r["plan_id"], {})
-        emb = chunk_embedding_map.get(r["source_chunk_id"], [0.0] * args.dim)
-        if len(emb) != args.dim:
-            emb = [0.0] * args.dim
+        dense = chunk_dense_map.get(r["source_chunk_id"], [0.0] * dim)
+        sparse = chunk_sparse_map.get(r["source_chunk_id"], {})
+        if len(dense) > dim:
+            dense = dense[:dim]
+        elif len(dense) < dim:
+            dense = dense + [0.0] * (dim - len(dense))
         fact_records.append(
             {
                 "fact_id": r["fact_id"],
@@ -203,7 +193,7 @@ def main() -> None:
                 "dimension_key": (r["dimension_key"] or "")[:128],
                 "dimension_label": (r["dimension_label"] or "")[:255],
                 "value_text": (r["value_text"] or "")[:2048],
-                "normalized_value": (r["normalized_value"] or "")[:1024],
+                "normalized_value": (r["normalized_value"] or "")[:2048],
                 "unit": (r["unit"] or "")[:64],
                 "condition_text": (r["condition_text"] or "")[:1024],
                 "applicability": (r["applicability"] or "")[:255],
@@ -212,18 +202,24 @@ def main() -> None:
                 "source_section": (r["source_section"] or "")[:512],
                 "confidence": float(r["confidence"] or 0.0),
                 "created_at": _to_unix_ts(r["created_at"]),
-                "embedding": emb,
+                "dense_embedding": dense,
+                "sparse_embedding": sparse,
             }
         )
 
     conn.close()
 
-    n_chunks = _upsert_batches(client, args.chunk_collection, chunk_records, args.batch_size)
-    n_facts = _upsert_batches(client, args.fact_collection, fact_records, args.batch_size)
+    n_chunks = store.upsert_chunks(chunk_records, batch_size=args.batch_size)
+    n_facts = store.upsert_facts(fact_records, batch_size=args.batch_size)
+
+    chunk_stats = store.collection_stats(args.chunk_collection)
+    fact_stats = store.collection_stats(args.fact_collection)
 
     print(f"synced chunks={n_chunks} -> {args.chunk_collection}")
     print(f"synced facts={n_facts} -> {args.fact_collection}")
-    print("collections:", client.list_collections())
+    print("chunk_stats:", chunk_stats)
+    print("fact_stats:", fact_stats)
+    print("collections:", store.list_collections())
 
 
 if __name__ == "__main__":

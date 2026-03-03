@@ -1,7 +1,12 @@
 ﻿from __future__ import annotations
 
 import json
+import logging
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from collections import Counter
+from dataclasses import dataclass
 from pathlib import Path
+from time import perf_counter
 from uuid import uuid4
 
 from sqlalchemy import delete, select
@@ -12,8 +17,10 @@ from app.models import Plan, PolicyChunk, PolicyFact
 from app.services.chunking import ChunkDoc, HybridChunker
 from app.services.embeddings import build_embedding_provider
 from app.services.fact_extractor import FactExtractor, FactRecord
-from app.services.milvus_store import MilvusStore
+from app.services.llm_fact_extractor import LLMFactExtractor
+from app.services.milvus_hybrid_store import HybridMilvusStore
 from app.services.parser import PDFParser, ParsedPolicy
+from app.services.sparse_bm25 import BM25SparseEncoder, tokenize
 
 
 def _to_jsonable(value: object) -> object:
@@ -30,32 +37,108 @@ def _to_jsonable(value: object) -> object:
     return str(value)
 
 
+@dataclass
+class PreparedPolicyDoc:
+    pdf_path: Path
+    parsed: ParsedPolicy
+    chunk_docs: list[ChunkDoc]
+    facts: list[FactRecord]
+
+
 class IngestionService:
-    def __init__(self) -> None:
-        self.embedding_provider = build_embedding_provider()
-        self.parser = PDFParser()
-        self.chunker = HybridChunker(self.embedding_provider)
-        self.fact_extractor = FactExtractor()
-        self.milvus = MilvusStore()
-        self.milvus.connect()
-        self.milvus.ensure_collections()
+    def __init__(self, *, recreate_hybrid_collections: bool = False) -> None:
+        self.logger = logging.getLogger("uvicorn.error")
+        self.fact_extractor_mode = (settings.fact_extractor_mode or "llm").strip().lower()
+        self.milvus = HybridMilvusStore()
+        self._milvus_ready = False
+        self._recreate_hybrid_collections = recreate_hybrid_collections
+        if self.milvus.enabled:
+            try:
+                self.milvus.connect()
+            except Exception as exc:
+                self.logger.warning("ingest.milvus.disabled reason=%s", exc)
+                self.milvus.enabled = False
 
     def ingest_all(self, db: Session) -> tuple[int, int, int]:
         pdf_paths = sorted(Path(settings.data_dir).glob("*.pdf"))
         plans_processed = 0
         chunks_written = 0
         facts_written = 0
+        workers = max(1, int(settings.ingest_parallel_workers))
+        self.logger.info(
+            "ingest.all.start docs=%d workers=%d fact_extractor_mode=%s",
+            len(pdf_paths),
+            workers,
+            self.fact_extractor_mode,
+        )
 
-        for pdf_path in pdf_paths:
-            p_count, c_count, f_count = self.ingest_one(db, pdf_path)
-            plans_processed += p_count
-            chunks_written += c_count
-            facts_written += f_count
+        if workers == 1 or len(pdf_paths) <= 1:
+            for pdf_path in pdf_paths:
+                prepared = self._prepare_doc(pdf_path)
+                p_count, c_count, f_count = self._persist_prepared(db, prepared)
+                plans_processed += p_count
+                chunks_written += c_count
+                facts_written += f_count
+            return plans_processed, chunks_written, facts_written
 
+        with ThreadPoolExecutor(max_workers=workers) as executor:
+            futures = {executor.submit(self._prepare_doc, pdf_path): pdf_path for pdf_path in pdf_paths}
+            for future in as_completed(futures):
+                prepared = future.result()
+                p_count, c_count, f_count = self._persist_prepared(db, prepared)
+                plans_processed += p_count
+                chunks_written += c_count
+                facts_written += f_count
+
+        self.logger.info(
+            "ingest.all.done plans=%d chunks=%d facts=%d",
+            plans_processed,
+            chunks_written,
+            facts_written,
+        )
         return plans_processed, chunks_written, facts_written
 
     def ingest_one(self, db: Session, pdf_path: Path) -> tuple[int, int, int]:
-        parsed = self.parser.parse(pdf_path)
+        prepared = self._prepare_doc(pdf_path)
+        return self._persist_prepared(db, prepared)
+
+    def _build_fact_extractor(self):
+        # if self.fact_extractor_mode == "rule":
+        #     return FactExtractor()
+        if self.fact_extractor_mode in {"llm", "hybrid"}:
+            return LLMFactExtractor(mode=self.fact_extractor_mode, fallback=FactExtractor())
+        self.logger.info("ingest.fact_extractor.unknown_mode mode=%s fallback=rule", self.fact_extractor_mode)
+        return FactExtractor()
+
+    def _prepare_doc(self, pdf_path: Path) -> PreparedPolicyDoc:
+        t0 = perf_counter()
+        parser = PDFParser()
+        embedding_provider = build_embedding_provider()
+        chunker = HybridChunker(embedding_provider)
+        fact_extractor = self._build_fact_extractor()
+
+        parsed = parser.parse(pdf_path)
+        chunk_docs = chunker.chunk_policy(parsed)
+        facts = fact_extractor.extract_from_chunks(
+            chunk_docs,
+            plan_name=parsed.plan_name,
+            source_file=str(pdf_path),
+        )
+        self.logger.info(
+            "ingest.prepare.done file=%s plan=%s chunks=%d facts=%d elapsed=%.3fs",
+            pdf_path.name,
+            parsed.plan_name,
+            len(chunk_docs),
+            len(facts),
+            perf_counter() - t0,
+        )
+        return PreparedPolicyDoc(pdf_path=pdf_path, parsed=parsed, chunk_docs=chunk_docs, facts=facts)
+
+    def _persist_prepared(self, db: Session, prepared: PreparedPolicyDoc) -> tuple[int, int, int]:
+        pdf_path = prepared.pdf_path
+        parsed = prepared.parsed
+        chunk_docs = prepared.chunk_docs
+        facts = prepared.facts
 
         existing = db.execute(select(Plan).where(Plan.source_file == str(pdf_path))).scalar_one_or_none()
         if existing:
@@ -68,7 +151,6 @@ class IngestionService:
             db.add(plan)
             db.flush()
 
-        chunk_docs = self.chunker.chunk_policy(parsed)
         chunks: list[PolicyChunk] = []
         for chunk_doc in chunk_docs:
             chunk = PolicyChunk(
@@ -87,11 +169,31 @@ class IngestionService:
             chunks.append(chunk)
         db.flush()
 
-        facts = self.fact_extractor.extract_from_chunks(chunk_docs)
+        dim_counts = Counter(f.dimension_key for f in facts)
+        self.logger.info(
+            "ingest.facts.extracted plan=%s fact_count=%d dim_counts=%s",
+            parsed.plan_name,
+            len(facts),
+            dict(dim_counts),
+        )
+        premium_terms = sorted(
+            {
+                int(term)
+                for fact in facts
+                if fact.dimension_key == "premium_payment"
+                for term in (fact.metadata_json or {}).get("payment_terms_years", [])
+                if isinstance(term, int) or (isinstance(term, str) and str(term).isdigit())
+            }
+        )
+        if premium_terms:
+            self.logger.info("ingest.facts.premium_terms plan=%s terms=%s", parsed.plan_name, premium_terms)
+
         fact_models: list[PolicyFact] = []
         chunk_by_page: dict[int, PolicyChunk] = {c.page_start or -1: c for c in chunks}
         for fact in facts:
             source_chunk = chunk_by_page.get(fact.source_page or -1)
+            metadata = dict(fact.metadata_json or {})
+            metadata["source_file"] = str(pdf_path)
             model = PolicyFact(
                 fact_id=uuid4().hex,
                 plan_id=plan.plan_id,
@@ -107,16 +209,14 @@ class IngestionService:
                 source_section=fact.source_section,
                 source_quote=fact.source_quote,
                 confidence=fact.confidence,
-                metadata_json={"source_file": str(pdf_path)},
+                metadata_json=metadata,
             )
             db.add(model)
             fact_models.append(model)
 
         db.flush()
-
         self._dump_parse_output(pdf_path=pdf_path, parsed=parsed, chunk_docs=chunk_docs, facts=facts)
         self._sync_milvus(plan, chunks, fact_models)
-
         return 1, len(chunks), len(fact_models)
 
     def _dump_parse_output(
@@ -133,6 +233,11 @@ class IngestionService:
         out_root.mkdir(parents=True, exist_ok=True)
         doc_dir = out_root / pdf_path.stem
         doc_dir.mkdir(parents=True, exist_ok=True)
+        # Always rewrite output artifacts from scratch for each ingestion run.
+        for file_name in ("document.md", "facts.json", "fats.json", "facts_grouped.json"):
+            fpath = doc_dir / file_name
+            if fpath.exists():
+                fpath.unlink()
 
         parsed_json = {
             "plan_name": parsed.plan_name,
@@ -180,25 +285,65 @@ class IngestionService:
                 "source_page": f.source_page,
                 "source_section": f.source_section,
                 "source_quote": f.source_quote,
+                "metadata_json": f.metadata_json,
             }
             for f in facts
         ]
-        (doc_dir / "facts.json").write_text(json.dumps(facts_json, ensure_ascii=False, indent=2), encoding="utf-8")
+        facts_payload = json.dumps(facts_json, ensure_ascii=False, indent=2)
+        (doc_dir / "facts.json").write_text(facts_payload, encoding="utf-8")
+        (doc_dir / "fats.json").write_text(facts_payload, encoding="utf-8")
+        grouped: dict[str, list[dict[str, object]]] = {}
+        for row in facts_json:
+            key = str(row.get("dimension_key") or "")
+            if not key:
+                continue
+            grouped.setdefault(key, []).append(row)
+        (doc_dir / "facts_grouped.json").write_text(
+            json.dumps(grouped, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
 
     def _sync_milvus(self, plan: Plan, chunks: list[PolicyChunk], facts: list[PolicyFact]) -> None:
         if not self.milvus.enabled:
             return
 
-        chunk_embedding_map: dict[str, list[float]] = {
-            c.chunk_id: (c.embedding or [0.0] * settings.embedding_dim) for c in chunks
-        }
+        detected_dim = settings.embedding_dim
+        for c in chunks:
+            emb = c.embedding or []
+            if emb:
+                detected_dim = len(emb)
+                break
+
+        if not self._milvus_ready:
+            self.milvus.dim = detected_dim
+            self.milvus.ensure_collections(recreate=self._recreate_hybrid_collections)
+            self._milvus_ready = True
+            self._recreate_hybrid_collections = False
+
+        target_dim = int(self.milvus.dim)
+
+        def _norm_dense(v: list[float] | None) -> list[float]:
+            data = list(v or [])
+            if len(data) > target_dim:
+                return data[:target_dim]
+            if len(data) < target_dim:
+                return data + [0.0] * (target_dim - len(data))
+            return data
+
+        chunk_tokens = [tokenize(c.text or "") for c in chunks]
+        bm25 = BM25SparseEncoder(chunk_tokens, k1=1.5, b=0.75)
+
+        chunk_embedding_map: dict[str, list[float]] = {}
+        chunk_sparse_map: dict[str, dict[int, float]] = {}
+        for c, toks in zip(chunks, chunk_tokens):
+            chunk_embedding_map[c.chunk_id] = _norm_dense(c.embedding)
+            chunk_sparse_map[c.chunk_id] = bm25.encode_doc(toks)
 
         chunk_records = [
             {
                 "chunk_id": c.chunk_id,
                 "plan_id": plan.plan_id,
                 "plan_name": plan.name,
-                "product_version": plan.product_version or "unknown",
                 "section_path": c.section_path or "",
                 "page_start": c.page_start or -1,
                 "page_end": c.page_end or -1,
@@ -206,7 +351,8 @@ class IngestionService:
                 "language": plan.language or "zh",
                 "text": c.text[:8192],
                 "created_at": self.milvus.now_ts(),
-                "embedding": chunk_embedding_map[c.chunk_id],
+                "dense_embedding": chunk_embedding_map[c.chunk_id],
+                "sparse_embedding": chunk_sparse_map.get(c.chunk_id, {}),
             }
             for c in chunks
         ]
@@ -215,10 +361,11 @@ class IngestionService:
             {
                 "fact_id": f.fact_id,
                 "plan_id": plan.plan_id,
+                "plan_name": (plan.name or "")[:255],
                 "dimension_key": f.dimension_key,
                 "dimension_label": f.dimension_label,
                 "value_text": (f.value_text or "")[:2048],
-                "normalized_value": (f.normalized_value or "")[:1024],
+                "normalized_value": (f.normalized_value or "")[:2048],
                 "unit": f.unit or "",
                 "condition_text": (f.condition_text or "")[:1024],
                 "applicability": f.applicability or "",
@@ -227,10 +374,35 @@ class IngestionService:
                 "source_section": (f.source_section or "")[:512],
                 "confidence": float(f.confidence),
                 "created_at": self.milvus.now_ts(),
-                "embedding": chunk_embedding_map.get(f.source_chunk_id or "", [0.0] * settings.embedding_dim),
+                "dense_embedding": chunk_embedding_map.get(f.source_chunk_id or "", [0.0] * target_dim),
+                "sparse_embedding": chunk_sparse_map.get(f.source_chunk_id or "", {}),
             }
             for f in facts
         ]
 
-        self.milvus.upsert_chunks(chunk_records)
-        self.milvus.upsert_facts(fact_records)
+        chunk_count = 0
+        fact_count = 0
+        chunk_err: Exception | None = None
+        fact_err: Exception | None = None
+
+        try:
+            chunk_count = self.milvus.upsert_chunks(chunk_records)
+        except Exception as exc:
+            chunk_err = exc
+            self.logger.warning("ingest.milvus.chunk_sync_failed plan=%s err=%s", plan.name, exc)
+
+        try:
+            fact_count = self.milvus.upsert_facts(fact_records)
+        except Exception as exc:
+            fact_err = exc
+            self.logger.warning("ingest.milvus.fact_sync_failed plan=%s err=%s", plan.name, exc)
+
+        if chunk_err or fact_err:
+            self.logger.warning(
+                "ingest.milvus.partial_sync plan=%s chunk_ok=%d/%d fact_ok=%d/%d",
+                plan.name,
+                chunk_count,
+                len(chunk_records),
+                fact_count,
+                len(fact_records),
+            )

@@ -1,0 +1,1110 @@
+{
+  "coverage_hospitalization": [
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "于香港及澳门，选择「睿选指定医院」住院可享舒适病房级别2；于中国内地，可从两组「睿选指定医院」中选择，分别提供标准私家房（组别A）或半私家房（组别B）住院",
+      "normalized_value": "住院病房级别2/半私家房/标准私家房",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 3,
+      "source_section": "page-3",
+      "source_quote": "于香港及澳门，当您选择于「睿选指定医院」 1 住院，您可享 更舒适病房级别 2\n‧ 于中国内地，您可从两组「睿选指定医院」 1 中选择入住的医院，而两组「睿选指定医院」 1 均提供 舒适病房级别\n当     您于香港的 「睿选指定医院」 1 住院，\n于住院期间提供医疗服务的所有主诊注册医生及外科医生皆为 「睿选医疗网络」 * 的网络医生 及     于住院期间所招致的所有医疗费用均获预先批核 ^, ※ ，您可于 半私家房 2 住院\n于中国内地\n于「睿选指定医院」 1 提供贴心保障 5 ，另设专属支援，助享优越的医疗体验\n我们于中国内地精选两组「睿选指定医院」 1 供您选择，按您入住的「睿选指定",
+      "metadata_json": {
+        "page_start": 3,
+        "section_path": "page-3",
+        "extractor": "llm_qwen",
+        "chunk_index": 3
+      }
+    },
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "覆盖亚洲5的住院保障；于香港、澳门及中国内地可选择入住「睿选指定医院」并享舒适病房级别2；于中国内地仅限「睿选指定医院」（组别A标准私家房／组别B半私家房）住院才获保障",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 4,
+      "source_section": "page-4",
+      "source_quote": "‧ 复盖亚洲 5 的住院及手术保障\n此计划于亚洲 5 提供普通房保障。此外，于香港、澳门及中国内地，您更可选择于 「睿选指定医院」 1 住院，并享舒适病房级别 2 。\n‧ 于中国内地 ，我们精选两组「睿选指定医院」 1 供您选择 – 组别 A 的医院主要位于大湾区，而组别 B 的医院则复盖中国内地。按您入住的「睿选指定医院」 1 之组别，您可于 组别 A 的医院 之 标准私家房 住院或于 组别 B 的医院 之 半私家房 住院。\n此计划并不为于中国内地之非「睿选指定医院」 1 住院及接受或进行医疗服务提供保障。就于中国内地之非「睿选指定医院」 1 住院及／或接受医疗服务而言，此计划将不予赔偿。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 5
+      }
+    },
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "于香港「睿选指定医院」住院可享半私家房；于澳门「睿选指定医院」住院可入住半私家房；于中国内地「睿选指定医院」住院，组别A医院提供标准私家房，组别B医院提供半私家房",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "为符合于香港「睿选指定医院」住院期间的半私家房的资格，必须符合以下所有条件……于澳门的「睿选指定医院」住院，受保人可入住半私家房。于中国内地的「睿选指定医院」住院，受保病房会按照相关「睿选指定医院」所属的医院组别决定，于组别 A 的医院可提供标准私家房供住院或于组别 B 的医院可提供半私家房供住院。",
+      "metadata_json": {
+        "page_start": 10,
+        "section_path": "page-10",
+        "chunk_index": 18,
+        "extractor": "llm_qwen"
+      }
+    },
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "受保病房依地域及医院类型区分：香港「睿选指定医院」且主诊医生为网络医生时为半私家房；其他情况（如非指定医院、非网络医生、澳门、中国内地组别B或亚洲其他地区）为普通房；中国内地非指定医院不予赔偿。",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "受保病房\n地域保障范围内\n香港 3 ：\n(a) 于「睿选指定医院」住院，在住院期间向受保人提供医疗服务的所有主诊注册医生及\n外科医生皆为「睿选医疗网络」的网络医生： 半私家房 4\n(b) 于「睿选指定医院」住院，在住院期间向受保人提供医疗服务的任何主诊注册医生及\n外科医生并非为「睿选医疗网络」的网络医生： 普通房\n(c) 于非「睿选指定医院」住院： 普通房\n澳门 3 ：\n(a) 于「睿选指定医院」住院： 半私家房\n(b) 于非「睿选指定医院」住院： 普通房\n中国内地 3 ：\n(a) 于组别 A 5 内的「睿选指定医院」住院： 标准私家房\n(b) 于组别 B 5 内的「睿选指定医院」住院： 半私",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 21
+      }
+    },
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "于香港及澳门，选择「睿选指定医院」住院可享舒适病房级别2；于中国内地，可从两组「睿选指定医院」中选择，分别提供标准私家房（组别A）或半私家房（组别B）住院；于香港「睿选指定医院」住院可享半私家房；于澳门「睿选指定医院」住院可入住半私家房；于中国内地「睿选指定医院」住院，组别A医院提供标准私家房，组别B医院提供半私家房；覆盖亚洲5的住院保障；于香港、澳门及中国内地可选择入住「睿选指定医院」并享舒适病房级别2；于中国内地仅限「睿选指定医院」（组别A标准私家房／组别B半私家房）住院才获保障；受保病房依地域及医院类型区分：香港「睿选指定医院」且主诊医生为网络医生时为半私家房；其他情况（如非指定医院、非网络医生、澳门、中国内地组别B或亚洲其他地区）为普通房；中国内地非指定医院不予赔偿。",
+      "normalized_value": "住院病房级别2/半私家房/标准私家房|于香港「睿选指定医院」住院可享半私家房；于澳门「睿选指定医院」住院可入住半私家房；于中国内地「睿选指定医院」住院，组别a医院提供标准私家房，组别b医院提供半私家房|覆盖亚洲5的住院保障；于香港、澳门及中国内地可选择入住「睿选指定医院」并享舒适病房级别2；于中国内地仅限「睿选指定医院」（组别a标准私家房／组别b半私家房）住院才获保障|受保病房依地域及医院类型区分：香港「睿选指定医院」且主诊医生为网络医生时为半私家房；其他情况（如非指定医院、非网络医生、澳门、中国内地组别b或亚洲其他地区）为普通房；中国内地非指定医院不予赔偿。",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 3,
+      "source_section": "page-3",
+      "source_quote": "于香港及澳门，当您选择于「睿选指定医院」 1 住院，您可享 更舒适病房级别 2\n‧ 于中国内地，您可从两组「睿选指定医院」 1 中选择入住的医院，而两组「睿选指定医院」 1 均提供 舒适病房级别\n当     您于香港的 「睿选指定医院」 1 住院，\n于住院期间提供医疗服务的所有主诊注册医生及外科医生皆为 「睿选医疗网络」 * 的网络医生 及     于住院期间所招致的所有医疗费用均获预先批核 ^, ※ ，您可于 半私家房 2 住院\n于中国内地\n于「睿选指定医院」 1 提供贴心保障 5 ，另设专属支援，助享优越的医疗体验\n我们于中国内地精选两组「睿选指定医院」 1 供您选择，按您入住的「睿选指定",
+      "metadata_json": {
+        "value_list": [
+          "于香港及澳门，选择「睿选指定医院」住院可享舒适病房级别2；于中国内地，可从两组「睿选指定医院」中选择，分别提供标准私家房（组别A）或半私家房（组别B）住院",
+          "于香港「睿选指定医院」住院可享半私家房；于澳门「睿选指定医院」住院可入住半私家房；于中国内地「睿选指定医院」住院，组别A医院提供标准私家房，组别B医院提供半私家房",
+          "覆盖亚洲5的住院保障；于香港、澳门及中国内地可选择入住「睿选指定医院」并享舒适病房级别2；于中国内地仅限「睿选指定医院」（组别A标准私家房／组别B半私家房）住院才获保障",
+          "受保病房依地域及医院类型区分：香港「睿选指定医院」且主诊医生为网络医生时为半私家房；其他情况（如非指定医院、非网络医生、澳门、中国内地组别B或亚洲其他地区）为普通房；中国内地非指定医院不予赔偿。"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "coverage_surgery": [
+    {
+      "dimension_key": "coverage_surgery",
+      "dimension_label": "手术保障",
+      "value_text": "覆盖亚洲5的手术保障",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 4,
+      "source_section": "page-4",
+      "source_quote": "‧ 复盖亚洲 5 的住院及手术保障",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 5
+      }
+    }
+  ],
+  "annual_limit": [
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "每年保障限额高达1,200万港元或150万美元",
+      "normalized_value": "12000000",
+      "numeric_value": 12000000.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 0.98,
+      "source_page": 4,
+      "source_section": "page-4",
+      "source_quote": "‧ 终身保障限额高达 6,000 万港元或 750 万美元，以及每年保障限额高达 1,200 万港元或 150 万美元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 5,
+        "limit_values": [
+          "1,200"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "每年保障限额：12,000,000港元／1,500,000美元，以每保单年度计，适用于保障项目I（a）至（r）及II（a）至（i）、（k）至（m）",
+      "normalized_value": "12000000",
+      "numeric_value": 12000000.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 0.99,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "每年保障限额\n适用于保障项目 I （ a ）至（ r ）及 II （ a ）至（ i ）、（ k ）至（ m ）\n12,000,000\n以每保单年度计\n1,500,000\n以每保单年度计",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 21,
+        "limit_values": [
+          "12,000,000港元",
+          "1,500,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "个人最高赔偿限额为5,000,000港元／625,000美元（环球紧急支援服务）",
+      "normalized_value": "5000000",
+      "numeric_value": 5000000.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 13,
+      "source_section": "page-13",
+      "source_quote": "n.\n环球紧急支援服务\n5,000,000\n以个人计\n625,000\n以个人计",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 26,
+        "limit_values": [
+          "5,000,000港元",
+          "625,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "每年保障限额：12,000,000港元／1,500,000美元，以每保单年度计，适用于保障项目I（a）至（r）及II（a）至（i）、（k）至（m）；个人最高赔偿限额为5,000,000港元／625,000美元（环球紧急支援服务）",
+      "normalized_value": "12000000|5000000",
+      "numeric_value": 12000000.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "每年保障限额\n适用于保障项目 I （ a ）至（ r ）及 II （ a ）至（ i ）、（ k ）至（ m ）\n12,000,000\n以每保单年度计\n1,500,000\n以每保单年度计",
+      "metadata_json": {
+        "value_list": [
+          "每年保障限额：12,000,000港元／1,500,000美元，以每保单年度计，适用于保障项目I（a）至（r）及II（a）至（i）、（k）至（m）",
+          "个人最高赔偿限额为5,000,000港元／625,000美元（环球紧急支援服务）"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "itemized_limit": [
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "主要医疗费用不设分项赔偿限额",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 4,
+      "source_section": "page-4",
+      "source_quote": "‧ 广泛保障，主要医疗费用更不设分项赔偿限额 3",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 5
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "紧急牙齿治疗费用赔偿：全数赔偿（意外发生后3个月内）；身故恩恤赔偿：10,000港元／1,250美元；优化赔偿津贴惠益：每日600港元／75美元，每保单年度最多90日；交通费用津贴惠益：每日500港元／63美元，每保单年度最多4日；妊娠并发症惠益：全数赔偿（等候期300日）",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 13,
+      "source_section": "page-13",
+      "source_quote": "i.\n紧急牙齿治疗费用赔偿\n意外发生后 3 个月内的治疗\n全数赔偿 *\nj.\n身故恩恤赔偿\n如受保人不幸身故，我们将支付此赔偿予受益人\n10,000\n1,250\nk.\n优化赔偿津贴惠益\n如住院或日间手术的部分索赔已在其他保险公\n司成功索赔后，而索赔的余额于本计划下作出\n赔偿，此惠益应予支付\n每日 600\n每日 75\n每保单年度最多 90 日\nl.\n交通费用津贴惠益\n当保障项目 I （ a ）至（ k ）及（ m ）至（ q ）于中国内\n地接受非急症治疗的医疗服务应予赔偿时适用\n每日 500\n每日 63\n每保单年度最多 4 日\nm. 妊娠并发症惠益 9,18\n医院住院及／或进行手术\n(等候期：于",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 26,
+        "limit_values": [
+          "10,000港元",
+          "1,250美元",
+          "600港元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "主要医疗费用不设分项赔偿限额；紧急牙齿治疗费用赔偿：全数赔偿（意外发生后3个月内）；身故恩恤赔偿：10,000港元／1,250美元；优化赔偿津贴惠益：每日600港元／75美元，每保单年度最多90日；交通费用津贴惠益：每日500港元／63美元，每保单年度最多4日；妊娠并发症惠益：全数赔偿（等候期300日）",
+      "normalized_value": "主要医疗费用不设分项赔偿限额|紧急牙齿治疗费用赔偿：全数赔偿（意外发生后3个月内）；身故恩恤赔偿：10,000港元／1,250美元；优化赔偿津贴惠益：每日600港元／75美元，每保单年度最多90日；交通费用津贴惠益：每日500港元／63美元，每保单年度最多4日；妊娠并发症惠益：全数赔偿（等候期300日）",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 4,
+      "source_section": "page-4",
+      "source_quote": "‧ 广泛保障，主要医疗费用更不设分项赔偿限额 3",
+      "metadata_json": {
+        "value_list": [
+          "主要医疗费用不设分项赔偿限额",
+          "紧急牙齿治疗费用赔偿：全数赔偿（意外发生后3个月内）；身故恩恤赔偿：10,000港元／1,250美元；优化赔偿津贴惠益：每日600港元／75美元，每保单年度最多90日；交通费用津贴惠益：每日500港元／63美元，每保单年度最多4日；妊娠并发症惠益：全数赔偿（等候期300日）"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "于中国内地之非「睿选指定医院」住院及/或接受医疗服务不予赔偿",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 4,
+      "source_section": "page-4",
+      "source_quote": "此计划并不为于中国内地之非「睿选指定医院」 1 住院及接受或进行医疗服务提供保障。就于中国内地之非「睿选指定医院」 1 住院及／或接受医疗服务而言，此计划将不予赔偿。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 5
+      }
+    },
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "主要不保事项详见本产品简介第27页",
+      "normalized_value": "详见第27页主要不保事项",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "有关详情，请参阅本产品简介第 20 至 26 页的保障表及第 27 页的主要不保事项。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 17
+      }
+    },
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "于中国内地之非「睿选指定医院」住院及/或接受医疗服务不予赔偿；主要不保事项详见本产品简介第27页",
+      "normalized_value": "于中国内地之非「睿选指定医院」住院及/或接受医疗服务不予赔偿|详见第27页主要不保事项",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 4,
+      "source_section": "page-4",
+      "source_quote": "此计划并不为于中国内地之非「睿选指定医院」 1 住院及接受或进行医疗服务提供保障。就于中国内地之非「睿选指定医院」 1 住院及／或接受医疗服务而言，此计划将不予赔偿。",
+      "metadata_json": {
+        "value_list": [
+          "于中国内地之非「睿选指定医院」住院及/或接受医疗服务不予赔偿",
+          "主要不保事项详见本产品简介第27页"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "deductible_copay": [
+    {
+      "dimension_key": "deductible_copay",
+      "dimension_label": "自付额与共付",
+      "value_text": "每年自付费金额可选：0 / 8,800 / 18,000 / 30,000 / 55,000 港元；或 0 / 1,100 / 2,250 / 3,750 / 6,875 美元",
+      "normalized_value": "8800,18000,30000,55000 HKD; 1100,2250,3750,6875 USD",
+      "numeric_value": 8800.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 0.98,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "每年自付费金额选择\n港元\n美元\n0\n0\n8,800\n1,100\n18,000\n2,250\n30,000\n3,750\n55,000\n6,875",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 17
+      }
+    },
+    {
+      "dimension_key": "deductible_copay",
+      "dimension_label": "自付额与共付",
+      "value_text": "每年自付费选择",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "每年自付费选择",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 21
+      }
+    },
+    {
+      "dimension_key": "deductible_copay",
+      "dimension_label": "自付额与共付",
+      "value_text": "长者癌症支援 – 指定癌症豁免自付费；如受保人年届75岁或以上、罹患指定癌症、因该指定癌症而接受任何医疗服务，则相关保单年度内与该癌症引起的医疗服务有关的每年自付费余额将被减少至$0",
+      "normalized_value": "0",
+      "numeric_value": 0.0,
+      "unit": "美元",
+      "condition_text": "卵巢癌（指定癌症）",
+      "confidence": 0.95,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "长者癌症支援 – 指定癌症豁免自付费 6\n如受保人：\n‧ 年届 75 岁或以上；\n‧ 罹患指定癌症 7 ；及\n‧ 因该指定癌症 7 而接受任何医疗服务，\n在相关保单年度与受保人罹患的指定癌症 7 所引起的该医疗服务有关的每年自付费余额（如\n有）将被减少至 $0",
+      "metadata_json": {
+        "footnote_ref": "6,7",
+        "extractor": "llm_qwen",
+        "chunk_index": 22
+      }
+    },
+    {
+      "dimension_key": "deductible_copay",
+      "dimension_label": "自付额与共付",
+      "value_text": "每年自付费（未说明具体金额）",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.6,
+      "source_page": 13,
+      "source_section": "page-13",
+      "source_quote": "赔偿金额以保障表所列明的保障限额为限，包括每年保\n障限额、终身保障限额及每年自付费。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 26
+      }
+    },
+    {
+      "dimension_key": "deductible_copay",
+      "dimension_label": "自付额与共付",
+      "value_text": "每年自付费金额可选：0 / 8,800 / 18,000 / 30,000 / 55,000 港元；或 0 / 1,100 / 2,250 / 3,750 / 6,875 美元；长者癌症支援 – 指定癌症豁免自付费；如受保人年届75岁或以上、罹患指定癌症、因该指定癌症而接受任何医疗服务，则相关保单年度内与该癌症引起的医疗服务有关的每年自付费余额将被减少至$0；每年自付费选择；每年自付费（未说明具体金额）",
+      "normalized_value": "8800,18000,30000,55000 hkd; 1100,2250,3750,6875 usd|0|每年自付费选择|每年自付费（未说明具体金额）",
+      "numeric_value": 8800.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "每年自付费金额选择\n港元\n美元\n0\n0\n8,800\n1,100\n18,000\n2,250\n30,000\n3,750\n55,000\n6,875",
+      "metadata_json": {
+        "value_list": [
+          "每年自付费金额可选：0 / 8,800 / 18,000 / 30,000 / 55,000 港元；或 0 / 1,100 / 2,250 / 3,750 / 6,875 美元",
+          "长者癌症支援 – 指定癌症豁免自付费；如受保人年届75岁或以上、罹患指定癌症、因该指定癌症而接受任何医疗服务，则相关保单年度内与该癌症引起的医疗服务有关的每年自付费余额将被减少至$0",
+          "每年自付费选择",
+          "每年自付费（未说明具体金额）"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "riders_benefits": [
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "可作为指定基本计划的附加契约；提供已有病症保障（自首个保单年度第31日起）",
+      "normalized_value": "附加契约; 已有病症保障",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "您亦可选择独立投保 「睿选明珠」医疗计划 ，或作为指定基本计划的附加契约。\n保障未知的\n已有病症\n由首个保单年度第 31 日开始提供保障 3 。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 17
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "优化赔偿津贴惠益（住院或日间手术余额赔偿）、交通费用津贴惠益（内地非急症治疗）、妊娠并发症惠益、环球紧急支援服务（含紧急医疗运送、运返遗体、家属探访、送返未成年人、24小时全球电话咨询）",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 13,
+      "source_section": "page-13",
+      "source_quote": "k.\n优化赔偿津贴惠益\n如住院或日间手术的部分索赔已在其他保险公\n司成功索赔后，而索赔的余额于本计划下作出\n赔偿，此惠益应予支付\n每日 600\n每日 75\n每保单年度最多 90 日\nl.\n交通费用津贴惠益\n当保障项目 I （ a ）至（ k ）及（ m ）至（ q ）于中国内\n地接受非急症治疗的医疗服务应予赔偿时适用\n每日 500\n每日 63\n每保单年度最多 4 日\nm. 妊娠并发症惠益 9,18\n医院住院及／或进行手术\n(等候期：于保单生效后起计 300 日）\n全数赔偿 *\nn.\n环球紧急支援服务\n5,000,000\n以个人计\n625,000\n以个人计\n(i) 紧急医疗运送\n(ii) 运返遗",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 26
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "可作为指定基本计划的附加契约；提供已有病症保障（自首个保单年度第31日起）；优化赔偿津贴惠益（住院或日间手术余额赔偿）、交通费用津贴惠益（内地非急症治疗）、妊娠并发症惠益、环球紧急支援服务（含紧急医疗运送、运返遗体、家属探访、送返未成年人、24小时全球电话咨询）",
+      "normalized_value": "附加契约; 已有病症保障|优化赔偿津贴惠益（住院或日间手术余额赔偿）、交通费用津贴惠益（内地非急症治疗）、妊娠并发症惠益、环球紧急支援服务（含紧急医疗运送、运返遗体、家属探访、送返未成年人、24小时全球电话咨询）",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "您亦可选择独立投保 「睿选明珠」医疗计划 ，或作为指定基本计划的附加契约。\n保障未知的\n已有病症\n由首个保单年度第 31 日开始提供保障 3 。",
+      "metadata_json": {
+        "value_list": [
+          "可作为指定基本计划的附加契约；提供已有病症保障（自首个保单年度第31日起）",
+          "优化赔偿津贴惠益（住院或日间手术余额赔偿）、交通费用津贴惠益（内地非急症治疗）、妊娠并发症惠益、环球紧急支援服务（含紧急医疗运送、运返遗体、家属探访、送返未成年人、24小时全球电话咨询）"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "premium_payment": [
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "保费缴付模式：年缴／半年缴／季缴／月缴",
+      "normalized_value": "yearly|semi-annually|quarterly|monthly",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.98,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "保费缴付模式\n年缴／半年缴／季缴／月缴",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 21,
+        "payment_modes": [
+          "年缴",
+          "半年缴",
+          "季缴",
+          "月缴"
+        ]
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "此崭新医疗计划让您以可持续及相宜保费享有医疗保障，若您在香港、澳门或中国内地选择于「睿选指定医院」 1 住院并符合指",
+      "normalized_value": "此崭新医疗计划让您以可持续及相宜保费享有医疗保障，若您在香港、澳门或中国内地选择于「睿选指定医院」 1 住院并符合指",
+      "numeric_value": 1.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 2,
+      "source_section": "page-2",
+      "source_quote": "此崭新医疗计划让您以可持续及相宜保费享有医疗保障，若您在香港、澳门或中国内地选择于「睿选指定医院」 1 住院并符合指",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "以可持续及相宜保费，享有入住舒适病房级别 2 的",
+      "normalized_value": "以可持续及相宜保费，享有入住舒适病房级别 2 的",
+      "numeric_value": 2.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 3,
+      "source_section": "page-3",
+      "source_quote": "以可持续及相宜保费，享有入住舒适病房级别 2 的",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "以可持续及相宜保费  享有入住舒适病房级别 2 的选项",
+      "normalized_value": "以可持续及相宜保费  享有入住舒适病房级别 2 的选项",
+      "numeric_value": 2.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 4,
+      "source_section": "page-4",
+      "source_quote": "以可持续及相宜保费  享有入住舒适病房级别 2 的选项",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "长者癌症支援 – 指定癌症 7 豁免自付费",
+      "normalized_value": "长者癌症支援 – 指定癌症 7 豁免自付费",
+      "numeric_value": 7.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 5,
+      "source_section": "page-5",
+      "source_quote": "长者癌症支援 – 指定癌症 7 豁免自付费",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "络」 * 整合您在医疗旅程中各个关键环节，从搜寻医生、诊断、治疗、缴费到复",
+      "normalized_value": "络」 * 整合您在医疗旅程中各个关键环节，从搜寻医生、诊断、治疗、缴费到复",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 6,
+      "source_section": "page-6",
+      "source_quote": "络」 * 整合您在医疗旅程中各个关键环节，从搜寻医生、诊断、治疗、缴费到复",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "机构 11 ， 节省您为缴付",
+      "normalized_value": "机构 11 ， 节省您为缴付",
+      "numeric_value": 11.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 6,
+      "source_section": "page-6",
+      "source_quote": "机构 11 ， 节省您为缴付",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "在指定医院 11 住院可就医疗费用享方便的出院免找数服务 †, ※ ，让您毋须为缴费及索赔程序而操心。",
+      "normalized_value": "在指定医院 11 住院可就医疗费用享方便的出院免找数服务 †, ※ ，让您毋须为缴费及索赔程序而操心。",
+      "numeric_value": 11.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 7,
+      "source_section": "page-7",
+      "source_quote": "在指定医院 11 住院可就医疗费用享方便的出院免找数服务 †, ※ ，让您毋须为缴费及索赔程序而操心。",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "核，我们将为您直接缴付获批的日",
+      "normalized_value": "核，我们将为您直接缴付获批的日",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 8,
+      "source_section": "page-8",
+      "source_quote": "核，我们将为您直接缴付获批的日",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "加入                          即享首年保费 9 折",
+      "normalized_value": "加入                          即享首年保费 9 折",
+      "numeric_value": 9.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 8,
+      "source_section": "page-8",
+      "source_quote": "加入                          即享首年保费 9 折",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "因此，他决定投保 「睿选明珠」医疗计划 ，并选择每年自付费",
+      "normalized_value": "因此，他决定投保 「睿选明珠」医疗计划 ，并选择每年自付费",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 9,
+      "source_section": "page-9",
+      "source_quote": "因此，他决定投保 「睿选明珠」医疗计划 ，并选择每年自付费",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "出。举例说，假如您选择 8,800 港元之每年自付费，而您的",
+      "normalized_value": "出。举例说，假如您选择 8,800 港元之每年自付费，而您的",
+      "numeric_value": 8800.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "出。举例说，假如您选择 8,800 港元之每年自付费，而您的",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "身保障限额及每年自付费。请亦参阅本产品简介第 28 页之「产品限制」第 1 项有关「合理及惯常」和「医疗所需」的详情及定义。与住院有关的可赔偿的",
+      "normalized_value": "身保障限额及每年自付费。请亦参阅本产品简介第 28 页之「产品限制」第 1 项有关「合理及惯常」和「医疗所需」的详情及定义。与住院有关的可赔偿的",
+      "numeric_value": 28.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "身保障限额及每年自付费。请亦参阅本产品简介第 28 页之「产品限制」第 1 项有关「合理及惯常」和「医疗所需」的详情及定义。与住院有关的可赔偿的",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "此长者癌症支援 － 指定癌症豁免自付费不适用于每年自付费选项为 $0 的保单。有关长者癌症支援 － 指定癌症豁免自付费的更多详情，请参阅本产品",
+      "normalized_value": "此长者癌症支援 － 指定癌症豁免自付费不适用于每年自付费选项为 $0 的保单。有关长者癌症支援 － 指定癌症豁免自付费的更多详情，请参阅本产品",
+      "numeric_value": 0.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "此长者癌症支援 － 指定癌症豁免自付费不适用于每年自付费选项为 $0 的保单。有关长者癌症支援 － 指定癌症豁免自付费的更多详情，请参阅本产品",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "缴费方式：年缴 / 半年缴 / 季缴 / 月缴",
+      "normalized_value": "payment_modes:年缴,半年缴,季缴,月缴",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "年缴／半年缴／季缴／月缴",
+      "metadata_json": {
+        "annual_premium_values": [],
+        "payment_terms_years": [],
+        "payment_modes": [
+          "年缴",
+          "半年缴",
+          "季缴",
+          "月缴"
+        ],
+        "derived_from": "plan_aggregate",
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "在相关保单年度与受保人罹患的指定癌症 7 所引起的该医疗服务有关的每年自付费余额（如",
+      "normalized_value": "在相关保单年度与受保人罹患的指定癌症 7 所引起的该医疗服务有关的每年自付费余额（如",
+      "numeric_value": 7.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "在相关保单年度与受保人罹患的指定癌症 7 所引起的该医疗服务有关的每年自付费余额（如",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "障限额、终身保障限额及每年自付费。有关「合理及惯常」和「医疗所需」的定义，请参阅本产品简介第 28 页之「产品限制」第 1 项。与住院有关的可赔偿",
+      "normalized_value": "障限额、终身保障限额及每年自付费。有关「合理及惯常」和「医疗所需」的定义，请参阅本产品简介第 28 页之「产品限制」第 1 项。与住院有关的可赔偿",
+      "numeric_value": 28.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 13,
+      "source_section": "page-13",
+      "source_quote": "障限额、终身保障限额及每年自付费。有关「合理及惯常」和「医疗所需」的定义，请参阅本产品简介第 28 页之「产品限制」第 1 项。与住院有关的可赔偿",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "简介第 29 页之「产品限制」第 10 项）及每年自付费选择（如适用）所限；及（ b ）于保障项目 I （ l ）至（ r ）及 II （ a ）至（ i ）、（ k ）、（ l ）及（ m ）下的保障将不予",
+      "normalized_value": "简介第 29 页之「产品限制」第 10 项）及每年自付费选择（如适用）所限；及（ b ）于保障项目 i （ l ）至（ r ）及 ii （ a ）至（ i ）、（ k ）、（ l ）及（ m ）下的保障将不予",
+      "numeric_value": 29.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 14,
+      "source_section": "page-14",
+      "source_quote": "简介第 29 页之「产品限制」第 10 项）及每年自付费选择（如适用）所限；及（ b ）于保障项目 I （ l ）至（ r ）及 II （ a ）至（ i ）、（ k ）、（ l ）及（ m ）下的保障将不予",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "付的赔偿。若保单持有人或受保人在保单生效起计首 90 日内已察觉或理应察觉该指定癌症，此豁免自付费将不适用。若受保人确诊患有指定癌症以外",
+      "normalized_value": "付的赔偿。若保单持有人或受保人在保单生效起计首 90 日内已察觉或理应察觉该指定癌症，此豁免自付费将不适用。若受保人确诊患有指定癌症以外",
+      "numeric_value": 90.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 14,
+      "source_section": "page-14",
+      "source_quote": "付的赔偿。若保单持有人或受保人在保单生效起计首 90 日内已察觉或理应察觉该指定癌症，此豁免自付费将不适用。若受保人确诊患有指定癌症以外",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "受保人接受器官或骨髓移植的手术所招致的合资格费用及／或受保费用。为免生疑问，此保障不包括从作为捐赠者的受保人身上摘取器官或抽取骨髓",
+      "normalized_value": "受保人接受器官或骨髓移植的手术所招致的合资格费用及／或受保费用。为免生疑问，此保障不包括从作为捐赠者的受保人身上摘取器官或抽取骨髓",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 14,
+      "source_section": "page-14",
+      "source_quote": "受保人接受器官或骨髓移植的手术所招致的合资格费用及／或受保费用。为免生疑问，此保障不包括从作为捐赠者的受保人身上摘取器官或抽取骨髓",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "本计划为保险计划，并不包括任何储蓄成分。所有缴付的保费都",
+      "normalized_value": "本计划为保险计划，并不包括任何储蓄成分。所有缴付的保费都",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 15,
+      "source_section": "page-15",
+      "source_quote": "本计划为保险计划，并不包括任何储蓄成分。所有缴付的保费都",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "为了持续向您提供保障，我们会每年复核您计划下的保费，如",
+      "normalized_value": "为了持续向您提供保障，我们会每年复核您计划下的保费，如",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 15,
+      "source_section": "page-15",
+      "source_quote": "为了持续向您提供保障，我们会每年复核您计划下的保费，如",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "付费余额前）之后，应付赔偿（于扣除每年自付费余额前）不",
+      "normalized_value": "付费余额前）之后，应付赔偿（于扣除每年自付费余额前）不",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 16,
+      "source_section": "page-16",
+      "source_quote": "付费余额前）之后，应付赔偿（于扣除每年自付费余额前）不",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "您有权以书面通知我们取消保单并取回已缴保费及保费征费。有",
+      "normalized_value": "您有权以书面通知我们取消保单并取回已缴保费及保费征费。有",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 16,
+      "source_section": "page-16",
+      "source_quote": "您有权以书面通知我们取消保单并取回已缴保费及保费征费。有",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "AIA 精心打造 「睿选」医疗系列 1 ，以可持续及相宜的保费为您提供医疗保障。当您选择于 「睿选指定医院」 2 住院时，此计",
+      "normalized_value": "aia 精心打造 「睿选」医疗系列 1 ，以可持续及相宜的保费为您提供医疗保障。当您选择于 「睿选指定医院」 2 住院时，此计",
+      "numeric_value": 1.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 18,
+      "source_section": "page-18",
+      "source_quote": "AIA 精心打造 「睿选」医疗系列 1 ，以可持续及相宜的保费为您提供医疗保障。当您选择于 「睿选指定医院」 2 住院时，此计",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    }
+  ],
+  "coverage_outpatient": [
+    {
+      "dimension_key": "coverage_outpatient",
+      "dimension_label": "门诊保障",
+      "value_text": "‧ 入院前／日间手术前的门诊",
+      "normalized_value": "‧ 入院前／日间手术前的门诊",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 5,
+      "source_section": "page-5",
+      "source_quote": "‧ 入院前／日间手术前的门诊",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "coverage_outpatient",
+      "dimension_label": "门诊保障",
+      "value_text": "的门诊护理 9,10",
+      "normalized_value": "的门诊护理 9,10",
+      "numeric_value": 9.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 6,
+      "source_section": "page-6",
+      "source_quote": "的门诊护理 9,10",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "coverage_outpatient",
+      "dimension_label": "门诊保障",
+      "value_text": "此计划就于中国内地的「睿选指定医院」 1 接受入院前或出院后／日间手术前后的门诊护理 9 或中医的门诊护理 9 提",
+      "normalized_value": "此计划就于中国内地的「睿选指定医院」 1 接受入院前或出院后／日间手术前后的门诊护理 9 或中医的门诊护理 9 提",
+      "numeric_value": 1.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 7,
+      "source_section": "page-7",
+      "source_quote": "此计划就于中国内地的「睿选指定医院」 1 接受入院前或出院后／日间手术前后的门诊护理 9 或中医的门诊护理 9 提",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "coverage_outpatient",
+      "dimension_label": "门诊保障",
+      "value_text": "门诊护理 9,10,~",
+      "normalized_value": "门诊护理 9,10,~",
+      "numeric_value": 9.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 9,
+      "source_section": "page-9",
+      "source_quote": "门诊护理 9,10,~",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "coverage_outpatient",
+      "dimension_label": "门诊保障",
+      "value_text": "‧ 网络保障 的出院后的门诊护理 9,10,~",
+      "normalized_value": "‧ 网络保障 的出院后的门诊护理 9,10,~",
+      "numeric_value": 9.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 9,
+      "source_section": "page-9",
+      "source_quote": "‧ 网络保障 的出院后的门诊护理 9,10,~",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "coverage_outpatient",
+      "dimension_label": "门诊保障",
+      "value_text": "入院前或出院后／日间手术前后的门诊护理、中医的门诊护理及日间手术现金惠益皆受选择医疗服务提供者（包括医院及网络医生（视情况而定）的选",
+      "normalized_value": "入院前或出院后／日间手术前后的门诊护理、中医的门诊护理及日间手术现金惠益皆受选择医疗服务提供者（包括医院及网络医生（视情况而定）的选",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "入院前或出院后／日间手术前后的门诊护理、中医的门诊护理及日间手术现金惠益皆受选择医疗服务提供者（包括医院及网络医生（视情况而定）的选",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "coverage_outpatient",
+      "dimension_label": "门诊保障",
+      "value_text": "‧ 所有门诊（每次住院或日间手术前 30 日内）",
+      "normalized_value": "‧ 所有门诊（每次住院或日间手术前 30 日内）",
+      "numeric_value": 30.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "‧ 所有门诊（每次住院或日间手术前 30 日内）",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "coverage_outpatient",
+      "dimension_label": "门诊保障",
+      "value_text": "意外急症门诊治疗费用赔偿",
+      "normalized_value": "意外急症门诊治疗费用赔偿",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "意外急症门诊治疗费用赔偿",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "coverage_outpatient",
+      "dimension_label": "门诊保障",
+      "value_text": "于中医的门诊护理及中风辅助惠益（详见保障表保障项目第",
+      "normalized_value": "于中医的门诊护理及中风辅助惠益（详见保障表保障项目第",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 15,
+      "source_section": "page-15",
+      "source_quote": "于中医的门诊护理及中风辅助惠益（详见保障表保障项目第",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "coverage_outpatient",
+      "dimension_label": "门诊保障",
+      "value_text": "的门诊护理 9,10；门诊护理 9,10,~；‧ 网络保障 的出院后的门诊护理 9,10,~；‧ 所有门诊（每次住院或日间手术前 30 日内）",
+      "normalized_value": "的门诊护理 9,10|门诊护理 9,10,~|‧ 网络保障 的出院后的门诊护理 9,10,~|‧ 所有门诊（每次住院或日间手术前 30 日内）",
+      "numeric_value": 9.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.86,
+      "source_page": 6,
+      "source_section": "page-6",
+      "source_quote": "的门诊护理 9,10",
+      "metadata_json": {
+        "value_list": [
+          "的门诊护理 9,10",
+          "门诊护理 9,10,~",
+          "‧ 网络保障 的出院后的门诊护理 9,10,~",
+          "‧ 所有门诊（每次住院或日间手术前 30 日内）"
+        ],
+        "derived_from": "plan_dimension_group",
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "coverage_outpatient",
+      "dimension_label": "门诊保障",
+      "value_text": "的门诊护理 9,10；门诊护理 9,10,~；‧ 网络保障 的出院后的门诊护理 9,10,~；‧ 所有门诊（每次住院或日间手术前 30 日内）；的门诊护理 9,10；门诊护理 9,10,~；意外急症门诊治疗费用赔偿",
+      "normalized_value": "的门诊护理 9,10|门诊护理 9,10,~|‧ 网络保障 的出院后的门诊护理 9,10,~|‧ 所有门诊（每次住院或日间手术前 30 日内）|的门诊护理 9,10|门诊护理 9,10,~|意外急症门诊治疗费用赔偿",
+      "numeric_value": 9.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.94,
+      "source_page": 6,
+      "source_section": "page-6",
+      "source_quote": "的门诊护理 9,10",
+      "metadata_json": {
+        "value_list": [
+          "的门诊护理 9,10；门诊护理 9,10,~；‧ 网络保障 的出院后的门诊护理 9,10,~；‧ 所有门诊（每次住院或日间手术前 30 日内）",
+          "的门诊护理 9,10",
+          "门诊护理 9,10,~",
+          "意外急症门诊治疗费用赔偿"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ]
+}

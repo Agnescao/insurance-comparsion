@@ -57,7 +57,7 @@ class PolicyFact(Base):
     dimension_key: Mapped[str] = mapped_column(String(128), index=True)
     dimension_label: Mapped[str] = mapped_column(String(255), nullable=False)
     value_text: Mapped[str] = mapped_column(Text, nullable=False)
-    normalized_value: Mapped[str | None] = mapped_column(String(1024), nullable=True)
+    normalized_value: Mapped[str | None] = mapped_column(String(2048), nullable=True)
     numeric_value: Mapped[float | None] = mapped_column(Float, nullable=True)
     unit: Mapped[str | None] = mapped_column(String(64), nullable=True)
     condition_text: Mapped[str | None] = mapped_column(String(1024), nullable=True)

@@ -1,0 +1,314 @@
+{
+  "premium_payment": [
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "年度保费：1,377美元；缴费方式：年缴；缴费期：25年",
+      "normalized_value": "1377",
+      "numeric_value": 1377.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 7,
+      "source_section": "page-7",
+      "source_quote": "年度保费：\n1,377 美元\n( 25 年保费缴付期，并选择年缴保\n费模式）",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 10,
+        "annual_premium_values": [
+          "1,377美元"
+        ],
+        "payment_modes": [
+          "年缴"
+        ],
+        "payment_terms_years": [
+          25
+        ]
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "年度保费：1,997美元；缴费期：18年；缴费方式：年缴",
+      "normalized_value": "1997 USD per year for 18 years",
+      "numeric_value": 1997.0,
+      "unit": "USD",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 7,
+      "source_section": "page-7",
+      "source_quote": "年度保费：\n1,997 美元\n( 18 年保费缴付期，并选择年\n缴保费模式）",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 11,
+        "annual_premium_values": [
+          "1,997美元"
+        ],
+        "payment_modes": [
+          "年缴"
+        ],
+        "payment_terms_years": [
+          18
+        ]
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "保费缴付期：10年/18年/25年；保费缴付模式：年缴／半年缴／季缴／月缴",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 8,
+      "source_section": "page-8",
+      "source_quote": "保费缴付期\n10 年\n18 年\n25 年\n...\n保费缴付模式\n年缴／半年缴／季缴／月缴",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 12,
+        "payment_modes": [
+          "年缴",
+          "半年缴",
+          "季缴",
+          "月缴"
+        ],
+        "payment_terms_years": [
+          10,
+          18,
+          25
+        ]
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "年度保费：1,377美元 / 1,997美元；缴费方式：年缴 / 半年缴 / 季缴 / 月缴",
+      "normalized_value": "annual_premium_values:1,377美元,1,997美元|payment_modes:年缴,半年缴,季缴,月缴",
+      "numeric_value": 1377.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.995,
+      "source_page": 7,
+      "source_section": "page-7",
+      "source_quote": "年度保费：\n1,377 美元\n( 25 年保费缴付期，并选择年缴保\n费模式）",
+      "metadata_json": {
+        "annual_premium_values": [
+          "1,377美元",
+          "1,997美元"
+        ],
+        "payment_terms_years": [
+          10,
+          18,
+          25
+        ],
+        "payment_modes": [
+          "年缴",
+          "半年缴",
+          "季缴",
+          "月缴"
+        ],
+        "derived_from": "plan_aggregate"
+      }
+    }
+  ],
+  "annual_limit": [
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "个人最高赔偿限额为168,000美元（即原有保额的280%）",
+      "normalized_value": "168000",
+      "numeric_value": 168000.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 7,
+      "source_section": "page-7",
+      "source_quote": "保单下应付的总赔偿： 168,000 美元\n即原有保额的 280% ，加上非保证终期分红（如有）。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 10,
+        "limit_values": [
+          "168,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "原有保额：50,000美元；身故赔偿为原有保额的140%（即70,000美元）",
+      "normalized_value": "70000 USD",
+      "numeric_value": 70000.0,
+      "unit": "USD",
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 7,
+      "source_section": "page-7",
+      "source_quote": "原有保额：\n50,000 美元\n...\n应支付总赔偿 =\n原有保额的 140%\n12\n...\n作为保单的受益人， Ryan 的妻子获\n70,000 美元赔偿",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 11,
+        "limit_values": [
+          "50,000美元",
+          "70,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "个人最高赔偿限额为168,000美元（即原有保额的280%）；原有保额：50,000美元；身故赔偿为原有保额的140%（即70,000美元）",
+      "normalized_value": "168000|70000 usd",
+      "numeric_value": 168000.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.9299999999999999,
+      "source_page": 7,
+      "source_section": "page-7",
+      "source_quote": "保单下应付的总赔偿： 168,000 美元\n即原有保额的 280% ，加上非保证终期分红（如有）。",
+      "metadata_json": {
+        "value_list": [
+          "个人最高赔偿限额为168,000美元（即原有保额的280%）",
+          "原有保额：50,000美元；身故赔偿为原有保额的140%（即70,000美元）"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "coverage_surgery": [
+    {
+      "dimension_key": "coverage_surgery",
+      "dimension_label": "手术保障",
+      "value_text": "涵盖子宫颈癌及心脏病相关治疗，含预支赔偿及额外升级保障",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": "子宫颈癌、心脏病",
+      "confidence": 0.7,
+      "source_page": 7,
+      "source_section": "page-7",
+      "source_quote": "Christine 确诊子宫颈癌。\n首次索赔\n严重疾病赔偿\n预支赔偿\n60,000 美元\n...\n4 年后， Christine 确诊心脏病。\n第 2 次索赔\n三大危疾守护赔偿\n额外赔偿\n60,000 美元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 10
+      }
+    }
+  ],
+  "riders_benefits": [
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "盛年危疾额外升级保障（额外40%保额）、终身身故额外升级保障（额外40%保额）、三大危疾守护赔偿",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 7,
+      "source_section": "page-7",
+      "source_quote": "盛年危疾额外升级保障\n额外赔偿\n24,000 美元\n相等于额外升级保障金额的 100% ，\n即原有保额的 40%\n...\n终身身故额外升级保障\n额外升级保障金额的 100%\n(即原有保额的 40% ）",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 10
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "当总预支赔偿达原有保额100%，现时保额递减至零，此后无须缴付基本保单保费，且不再提供任何终期分红，保证现金价值递减至零",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 7,
+      "source_section": "page-7",
+      "source_quote": "请注意，当保单下所支付的总预支赔偿合共已达至原有保额 100% ，本保单将不会再提供任何终期分红，保证现金价值和现时保额 7 将递减至零。...当总预支赔偿达原有保额的 100% ，现时保额\n将递减至零及此后无须缴付基本保单的保费。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 10
+      }
+    }
+  ],
+  "coverage_hospitalization": [
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "该等保障可能于身故、退保或在发生个别情况下（如住院或被诊",
+      "normalized_value": "该等保障可能于身故、退保或在发生个别情况下（如住院或被诊",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "该等保障可能于身故、退保或在发生个别情况下（如住院或被诊",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "此条文并不适用于任何提供意外、住院或残废保障的附加契约。",
+      "normalized_value": "此条文并不适用于任何提供意外、住院或残废保障的附加契约。",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "此条文并不适用于任何提供意外、住院或残废保障的附加契约。",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "该等保障可能于身故、退保或在发生个别情况下（如住院或被诊；此条文并不适用于任何提供意外、住院或残废保障的附加契约。",
+      "normalized_value": "该等保障可能于身故、退保或在发生个别情况下（如住院或被诊|此条文并不适用于任何提供意外、住院或残废保障的附加契约。",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.86,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "该等保障可能于身故、退保或在发生个别情况下（如住院或被诊",
+      "metadata_json": {
+        "value_list": [
+          "该等保障可能于身故、退保或在发生个别情况下（如住院或被诊",
+          "此条文并不适用于任何提供意外、住院或残废保障的附加契约。"
+        ],
+        "derived_from": "plan_dimension_group",
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "该等保障可能于身故、退保或在发生个别情况下（如住院或被诊；此条文并不适用于任何提供意外、住院或残废保障的附加契约。；该等保障可能于身故、退保或在发生个别情况下（如住院或被诊；此条文并不适用于任何提供意外、住院或残废保障的附加契约。",
+      "normalized_value": "该等保障可能于身故、退保或在发生个别情况下（如住院或被诊|此条文并不适用于任何提供意外、住院或残废保障的附加契约。|该等保障可能于身故、退保或在发生个别情况下（如住院或被诊|此条文并不适用于任何提供意外、住院或残废保障的附加契约。",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.94,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "该等保障可能于身故、退保或在发生个别情况下（如住院或被诊",
+      "metadata_json": {
+        "value_list": [
+          "该等保障可能于身故、退保或在发生个别情况下（如住院或被诊；此条文并不适用于任何提供意外、住院或残废保障的附加契约。",
+          "该等保障可能于身故、退保或在发生个别情况下（如住院或被诊",
+          "此条文并不适用于任何提供意外、住院或残废保障的附加契约。"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ]
+}

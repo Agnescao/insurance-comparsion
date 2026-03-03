@@ -1,0 +1,767 @@
+{
+  "annual_limit": [
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "个人最高赔偿限额为 50,000 美元",
+      "normalized_value": "50000",
+      "numeric_value": 50000.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 7,
+      "source_section": "page-7",
+      "source_quote": "d. 儿童成长保障下的专注力不足 / 过度活跃症及妥瑞症，及严重儿童疾病下的自闭症的总赔偿额不能超过原有保额的 20% ，个人最高赔偿限额为 50,000 美元。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 11,
+        "limit_values": [
+          "50,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "无明确年度限额说明",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.3,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "保单应付的总赔偿： 38,250 美元\n已于第 1 次至第 3 次索赔中获赔偿，加上非保证终期分红（如有）。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 19
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "个人最高赔偿限额为100,000美元",
+      "normalized_value": "100000",
+      "numeric_value": 100000.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "原有保额： 100,000 美元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 20,
+        "limit_values": [
+          "100,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "个人最高赔偿限额为 50,000 美元",
+      "normalized_value": "50000",
+      "numeric_value": 50000.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 14,
+      "source_section": "page-14",
+      "source_quote": "儿童成长保障下的专注力不足 / 过度活跃症及妥瑞症，及严重儿童疾病下的自闭症的总赔偿额不能超过原有保额的 20% ，个人最高赔偿限额为 50,000 美元。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 29,
+        "limit_values": [
+          "50,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "个人最高赔偿限额 50,000 美元",
+      "normalized_value": "50000",
+      "numeric_value": 50000.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 15,
+      "source_section": "page-15",
+      "source_quote": "就级别一深切治疗保障赔偿而言，个人最高赔偿限额 50,000 美元。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 34,
+        "limit_values": [
+          "50,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "每项疾病个人最高赔偿限额为 50,000 美元",
+      "normalized_value": "50000",
+      "numeric_value": 50000.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 17,
+      "source_section": "page-17",
+      "source_quote": "每项疾病个人最高赔偿限额为 50,000 美元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 40,
+        "limit_values": [
+          "50,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "个人最高赔偿限额为 50,000 美元",
+      "normalized_value": "50000",
+      "numeric_value": 50000.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 17,
+      "source_section": "page-17",
+      "source_quote": "个人最高赔偿限额为 50,000 美元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 41,
+        "limit_values": [
+          "50,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "个人最高赔偿限额 50,000 美元；个人最高赔偿限额为100,000美元；无明确年度限额说明",
+      "normalized_value": "50000|100000|无明确年度限额说明",
+      "numeric_value": 50000.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 15,
+      "source_section": "page-15",
+      "source_quote": "就级别一深切治疗保障赔偿而言，个人最高赔偿限额 50,000 美元。",
+      "metadata_json": {
+        "value_list": [
+          "个人最高赔偿限额 50,000 美元",
+          "个人最高赔偿限额为100,000美元",
+          "无明确年度限额说明"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "itemized_limit": [
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "入住香港及澳门的深切治疗病房的赔偿额以 5,000 美元为限",
+      "normalized_value": "5000",
+      "numeric_value": 5000.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 7,
+      "source_section": "page-7",
+      "source_quote": "f. 受保子女出生后首 90 日内，应支付两个级别的深切治疗保障赔偿（包括级别二深切治疗保障赔偿应付的任何升级保障），将降至应付金额的 20% ，并受限于：（ i ）入住香港及澳门的深切治疗病房的赔偿额以 5,000 美元为限，（ ii ）入住香港及澳门以外地区的深切治疗病房，则以 2,500 美元为限。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 11,
+        "limit_values": [
+          "5,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "入住香港及澳门以外地区的深切治疗病房的赔偿额以 2,500 美元为限",
+      "normalized_value": "2500",
+      "numeric_value": 2500.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 7,
+      "source_section": "page-7",
+      "source_quote": "f. 受保子女出生后首 90 日内，应支付两个级别的深切治疗保障赔偿（包括级别二深切治疗保障赔偿应付的任何升级保障），将降至应付金额的 20% ，并受限于：（ i ）入住香港及澳门的深切治疗病房的赔偿额以 5,000 美元为限，（ ii ）入住香港及澳门以外地区的深切治疗病房，则以 2,500 美元为限。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 11,
+        "limit_values": [
+          "2,500美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "严重黄疸保障：每日住院额外支付原有保额的0.1%（即150美元/日）；儿童成长保障：原有保额的5%（7,500美元）；严重儿童疾病赔偿：原有保额的20%（30,000美元）",
+      "normalized_value": "150 USD per day; 7500 USD; 30000 USD",
+      "numeric_value": 150.0,
+      "unit": "USD",
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "严重黄疸保障\n就每日住院额外支\n付原有保额的 0.1%\n750 美元\n原有保额的 0.1% X 5 日\n第 2 次索赔\n儿童成长保障\n原有保额的 5%\n预支赔偿\n7,500 美元\n第 3 次索赔\n严重儿童疾病赔偿\n原有保额的 20%\n预支赔偿\n30,000 美元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 19,
+        "limit_values": [
+          "7,500美元",
+          "30,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "个人最高赔偿限额每日 250 美元",
+      "normalized_value": "250",
+      "numeric_value": 250.0,
+      "unit": "美元/日",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 14,
+      "source_section": "page-14",
+      "source_quote": "受限于个人最高赔偿限额每日 250 美元。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 29
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "个人最高赔偿限额 35,000 美元",
+      "normalized_value": "35000",
+      "numeric_value": 35000.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 14,
+      "source_section": "page-14",
+      "source_quote": "我们将于此保障下额外支付相等于原有保额的 10% 赔偿，受限于个人最高赔偿限额 35,000 美元。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 29,
+        "limit_values": [
+          "35,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "级别一深切治疗保障赔偿的预支赔偿将减少至原有保额 10%",
+      "normalized_value": "0.1",
+      "numeric_value": 0.1,
+      "unit": "fraction",
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 15,
+      "source_section": "page-15",
+      "source_quote": "如受保人入住香港及澳门以外地区的深切治疗病房，级别一深切治疗保障赔偿的预支赔偿将减少至原有保额 10% 。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 34
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "每项疾病个人最高赔偿限额为 50,000 美元",
+      "normalized_value": "50000",
+      "numeric_value": 50000.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 17,
+      "source_section": "page-17",
+      "source_quote": "每项疾病个人最高赔偿限额为 50,000 美元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 40,
+        "limit_values": [
+          "50,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "个人最高赔偿限额为 50,000 美元",
+      "normalized_value": "50000",
+      "numeric_value": 50000.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 17,
+      "source_section": "page-17",
+      "source_quote": "个人最高赔偿限额为 50,000 美元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 41,
+        "limit_values": [
+          "50,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "每项疾病个人最高赔偿限额为 12,500 美元；每项疾病个人最高赔偿限额为 50,000 美元；个人最高赔偿限额以每天 250 美元为限，最多 7 日；个人最高赔偿限额为 35,000 美元",
+      "normalized_value": "12500,50000,250,35000",
+      "numeric_value": 12500.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 18,
+      "source_section": "page-18",
+      "source_quote": "每项疾病个人最高赔偿限额为 12,500 美元\n每项疾病个人最高赔偿限额为 50,000 美元\n个人最高赔偿限额以每天 250 美元为限，最多 7 日\n个人最高赔偿限额为 35,000 美元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 42,
+        "limit_values": [
+          "12,500美元",
+          "50,000美元",
+          "35,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "个人最高赔偿限额每日 250 美元；个人最高赔偿限额 35,000 美元；个人最高赔偿限额为 50,000 美元；每项疾病个人最高赔偿限额为 12,500 美元；每项疾病个人最高赔偿限额为 50,000 美元；个人最高赔偿限额以每天 250 美元为限，最多 7 日；个人最高赔偿限额为 35,000 美元",
+      "normalized_value": "250|35000|50000|12500,50000,250,35000",
+      "numeric_value": 250.0,
+      "unit": "美元/日",
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 14,
+      "source_section": "page-14",
+      "source_quote": "受限于个人最高赔偿限额每日 250 美元。",
+      "metadata_json": {
+        "value_list": [
+          "个人最高赔偿限额每日 250 美元",
+          "个人最高赔偿限额 35,000 美元",
+          "个人最高赔偿限额为 50,000 美元",
+          "每项疾病个人最高赔偿限额为 12,500 美元；每项疾病个人最高赔偿限额为 50,000 美元；个人最高赔偿限额以每天 250 美元为限，最多 7 日；个人最高赔偿限额为 35,000 美元"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "受保子女出生后首 90 日内，深切治疗保障赔偿将降至应付金额的 20%",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 7,
+      "source_section": "page-7",
+      "source_quote": "f. 受保子女出生后首 90 日内，应支付两个级别的深切治疗保障赔偿（包括级别二深切治疗保障赔偿应付的任何升级保障），将降至应付金额的 20% ，并受限于：（ i ）入住香港及澳门的深切治疗病房的赔偿额以 5,000 美元为限，（ ii ）入住香港及澳门以外地区的深切治疗病房，则以 2,500 美元为限。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 11
+      }
+    },
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "1年等候期",
+      "normalized_value": "1年",
+      "numeric_value": 1.0,
+      "unit": "年",
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "1 年等候期",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 20
+      }
+    },
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "如索赔同时符合（ i ）级别一深切治疗保障赔偿及（ ii ）早期危疾赔偿、严重儿童疾病赔偿或儿童成长保障（视情况而定），将只就早期危疾赔偿、严重儿童疾病赔偿或儿童成长保障（视情况而定）支付赔偿，除当级别一深切治疗保障赔偿较高时，我们将会支付级别一深切治疗保障赔偿。如索赔同时符合（ i ）级别二深切治疗保障赔偿及（ ii ）危疾赔偿（除了就须作手术之脑动脉瘤索赔的情况），将只就危疾赔偿支付赔偿。如索赔同时符合（ i ）级别二深切治疗保障赔偿及（ ii ）须作手术之脑动脉瘤索赔的情况的危疾赔偿，将只就级别二深切治疗保障赔偿支付赔偿。",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 15,
+      "source_section": "page-15",
+      "source_quote": "11. 如索赔同时符合（ i ）级别一深切治疗保障赔偿及（ ii ）早期危疾赔偿、严重儿童疾病赔偿或儿童成长保障（视情况而定），将只就早期危疾赔偿、严重儿童疾病赔偿或儿童成长保障（视情况而定）支付赔偿，除当级别一深切治疗保障赔偿较高时，我们将会支付级别一深切治疗保障赔偿。如索赔同时符合（ i ）级别二深切治疗保障赔偿及（ ii ）危疾赔偿（除了就须作手术之脑动脉瘤索赔的情况），将只就危疾赔偿支付赔偿。如索赔同时符合（ i ）级别二深切治疗保障赔偿及（ ii ）须作手术之脑动脉瘤索赔的情况的危疾赔偿，将只就级别二深切治疗保障赔偿支付赔偿。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 34
+      }
+    },
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "早期危疾赔偿下的原位癌赔偿有可能就于两个不同器官出现的原位癌支付两次预支赔偿",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 17,
+      "source_section": "page-17",
+      "source_quote": "早期危疾赔偿下的原位癌赔偿有可能就于两个不同器官出现的原位癌支付两次预支赔偿",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 40
+      }
+    },
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "1年等候期；如索赔同时符合（ i ）级别一深切治疗保障赔偿及（ ii ）早期危疾赔偿、严重儿童疾病赔偿或儿童成长保障（视情况而定），将只就早期危疾赔偿、严重儿童疾病赔偿或儿童成长保障（视情况而定）支付赔偿，除当级别一深切治疗保障赔偿较高时，我们将会支付级别一深切治疗保障赔偿。如索赔同时符合（ i ）级别二深切治疗保障赔偿及（ ii；受保子女出生后首 90 日内，深切治疗保障赔偿将降至应付金额的 20%；早期危疾赔偿下的原位癌赔偿有可能就于两个不同器官出现的原位癌支付两次预支赔偿",
+      "normalized_value": "1年|如索赔同时符合（ i ）级别一深切治疗保障赔偿及（ ii ）早期危疾赔偿、严重儿童疾病赔偿或儿童成长保障（视情况而定），将只就早期危疾赔偿、严重儿童疾病赔偿或儿童成长保障（视情况而定）支付赔偿，除当级别一深切治疗保障赔偿较高时，我们将会支付级别一深切治疗保障赔偿。如索赔同时符合（ i ）级别二深切治疗保障赔偿及（ ii ）危疾赔偿（除了就须作手术之脑动脉瘤索赔的情况），将只就危疾赔偿支付赔偿。如索赔同时符合（ i ）级别二深切治疗保障赔偿及（ ii ）须作手术之脑动脉瘤索赔的情况的危疾赔偿，将只就级别二深切治疗保障赔偿支付赔偿。|受保子女出生后首 90 日内，深切治疗保障赔偿将降至应付金额的 20%|早期危疾赔偿下的原位癌赔偿有可能就于两个不同器官出现的原位癌支付两次预支赔偿",
+      "numeric_value": 1.0,
+      "unit": "年",
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "1 年等候期",
+      "metadata_json": {
+        "value_list": [
+          "1年等候期",
+          "如索赔同时符合（ i ）级别一深切治疗保障赔偿及（ ii ）早期危疾赔偿、严重儿童疾病赔偿或儿童成长保障（视情况而定），将只就早期危疾赔偿、严重儿童疾病赔偿或儿童成长保障（视情况而定）支付赔偿，除当级别一深切治疗保障赔偿较高时，我们将会支付级别一深切治疗保障赔偿。如索赔同时符合（ i ）级别二深切治疗保障赔偿及（ ii",
+          "受保子女出生后首 90 日内，深切治疗保障赔偿将降至应付金额的 20%",
+          "早期危疾赔偿下的原位癌赔偿有可能就于两个不同器官出现的原位癌支付两次预支赔偿"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "riders_benefits": [
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "父母身故豁免缴付保费保障；配偶身故豁免缴付保费保障；脐带血干细胞移植保障；严重黄疸保障；儿童成长保障；严重儿童疾病保障",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 7,
+      "source_section": "page-7",
+      "source_quote": "@ 父母身故豁免缴付保费保障只适用于（ i ） 「爱伴航 – 首护挚宝」保险计划 2 及（ ii ）受保人于投保 「爱伴航」保险计划 2 时为 18 岁以下。配偶身故豁免缴付保费保障只适用于投保 「爱伴航」保险计划 2 时受保人为 18 岁或以上。... c. 脐带血干细胞移植保障及严重黄疸保障只会每保单各支付一次。 d. 儿童成长保障下的专注力不足 / 过度活跃症及妥瑞症，及严重儿童疾病下的自闭症的总赔偿额不能超过原有保额的 20% ，个人最高赔偿限额为 50,000 美元。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 11
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "额外保费保障：缴付额外保费后，于整个保费缴付期总共节省11,439美元（13%）；第2个保单年度可获额外赔偿3,259美元",
+      "normalized_value": "额外保费保障",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "已缴额外保费：\n20,367 美元\n赔偿 =\n3,259 美元\n20,367 美元（额外保费） x\n20% （保额基数百分比） x\n80% （第 2 个保单年度\n基数百分比）\n额外保费保障\nBob 于保单缮发时同时缴付定期保费及额外保费。对比只缴付定期保费（没有额外保费），他于整个保费缴付期总共\n节省 11,439 美元 （ 13% ） * 的保费金额。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 20
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "儿童成长保障、严重黄疸保障、脐带血干细胞移植保障、唐氏综合症豁免缴付保费保障、升级保障",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 14,
+      "source_section": "page-14",
+      "source_quote": "儿童成长保障\n• 如受保子女被诊断患有任何一项受保儿童疾病，我们将根据保障疾病赔偿一览表 22 的赔偿金额作预支赔偿。……\n严重黄疸保障\n如受保子女于怀孕第 37 周或以后出生并患有严重黄疸，……\n脐带血干细胞移植保障\n若受保子女被诊断患上癌症，且已支付或应支付严重疾病赔偿或 10X 多重危疾赔偿，……\n唐氏综合症豁免缴付保费保障\n如受保子女被诊断患上唐氏综合症，……\n升级保障\n升级保障是额外金额，并将在首 10 个保单年度内支付严重疾病赔偿、非严重疾病赔偿、级别二",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 29
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "早期危疾赔偿、双倍早期危疾赔偿、严重儿童疾病赔偿、10X 多重危疾赔偿、持续癌症现金选项、脑退化疾病 / 柏金逊终身年金赔偿",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 17,
+      "source_section": "page-17",
+      "source_quote": "我们会就下列每种受保疾病支付 1 次赔偿（早期危疾赔偿下的原位癌赔偿有可能就于两个不同器官出现的原位癌支付两次预支赔偿、 10X 多重危疾赔偿、持续癌症现金选项及脑退化疾病 / 柏金逊终身年金赔偿除外）",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 40
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "儿童成长保障、严重黄疸保障、脐带血干细胞移植保障（仅适用于「爱伴航 – 首护挚宝」保险计划 2）",
+      "normalized_value": "儿童成长保障;严重黄疸保障;脐带血干细胞移植保障",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.98,
+      "source_page": 18,
+      "source_section": "page-18",
+      "source_quote": "儿童成长保障 （只适用于 「爱伴航 – 首护挚宝」保险计划 2 ）\n严重黄疸保障 （只适用于 「爱伴航 – 首护挚宝」保险计划 2 ）\n脐带血干细胞移植保障 （只适用于 「爱伴航 – 首护挚宝」保险计划 2 ）",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 42
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "儿童成长保障、严重黄疸保障、脐带血干细胞移植保障（仅适用于「爱伴航 – 首护挚宝」保险计划 2）；父母身故豁免缴付保费保障；配偶身故豁免缴付保费保障；脐带血干细胞移植保障；严重黄疸保障；儿童成长保障；严重儿童疾病保障；儿童成长保障、严重黄疸保障、脐带血干细胞移植保障、唐氏综合症豁免缴付保费保障、升级保障；早期危疾赔偿、双倍早期危疾赔偿、严重儿童疾病赔偿、10X 多重危疾赔偿、持续癌症现金选项、脑退化疾病 / 柏金逊终身年金赔偿",
+      "normalized_value": "儿童成长保障;严重黄疸保障;脐带血干细胞移植保障|父母身故豁免缴付保费保障；配偶身故豁免缴付保费保障；脐带血干细胞移植保障；严重黄疸保障；儿童成长保障；严重儿童疾病保障|儿童成长保障、严重黄疸保障、脐带血干细胞移植保障、唐氏综合症豁免缴付保费保障、升级保障|早期危疾赔偿、双倍早期危疾赔偿、严重儿童疾病赔偿、10x 多重危疾赔偿、持续癌症现金选项、脑退化疾病 / 柏金逊终身年金赔偿",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 18,
+      "source_section": "page-18",
+      "source_quote": "儿童成长保障 （只适用于 「爱伴航 – 首护挚宝」保险计划 2 ）\n严重黄疸保障 （只适用于 「爱伴航 – 首护挚宝」保险计划 2 ）\n脐带血干细胞移植保障 （只适用于 「爱伴航 – 首护挚宝」保险计划 2 ）",
+      "metadata_json": {
+        "value_list": [
+          "儿童成长保障、严重黄疸保障、脐带血干细胞移植保障（仅适用于「爱伴航 – 首护挚宝」保险计划 2）",
+          "父母身故豁免缴付保费保障；配偶身故豁免缴付保费保障；脐带血干细胞移植保障；严重黄疸保障；儿童成长保障；严重儿童疾病保障",
+          "儿童成长保障、严重黄疸保障、脐带血干细胞移植保障、唐氏综合症豁免缴付保费保障、升级保障",
+          "早期危疾赔偿、双倍早期危疾赔偿、严重儿童疾病赔偿、10X 多重危疾赔偿、持续癌症现金选项、脑退化疾病 / 柏金逊终身年金赔偿"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "premium_payment": [
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "保费缴付期：10年；缴费方式：年缴；可选择仅缴付定期保费，或于保单缮发时同时缴付定期保费及额外保费",
+      "normalized_value": "年缴，10年缴付期，含额外保费选项",
+      "numeric_value": 10.0,
+      "unit": "年",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 8,
+      "source_section": "page-8",
+      "source_quote": "您可于保单开始时，因应您的财务状况和需要选择适合您的保费缴付方式。您可以选择（ i ）在整个保费缴付期内缴付定期保费，或（ ii ）保费缴付期内缴付定期保费及在保单缮发时同时缴付额外保费。",
+      "metadata_json": {
+        "payment_mode": "年缴",
+        "pay_period_years": 10,
+        "extra_premium_option": true,
+        "extractor": "llm_qwen",
+        "chunk_index": 13,
+        "payment_modes": [
+          "年缴"
+        ],
+        "payment_terms_years": [
+          10
+        ]
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "年度保费：1,778美元；缴费期：25年；缴费方式：年缴",
+      "normalized_value": "1778 USD per year for 25 years",
+      "numeric_value": 1778.0,
+      "unit": "USD",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "年度保费：\n1,778 美元\n（ 25 年保费缴付期，并选择\n年缴保费模式）",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 19,
+        "annual_premium_values": [
+          "1,778美元"
+        ],
+        "payment_modes": [
+          "年缴"
+        ],
+        "payment_terms_years": [
+          25
+        ]
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "年缴保费：4,650美元；缴费期：18年；缴费模式：年缴",
+      "normalized_value": "4650",
+      "numeric_value": 4650.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "年缴保费： 4,650 美元\n（ 18 年保费缴付期，并选择年缴保费模式）",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 20,
+        "annual_premium_values": [
+          "4,650美元"
+        ],
+        "payment_modes": [
+          "年缴"
+        ],
+        "payment_terms_years": [
+          18
+        ]
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "年度保费：1,778美元 / 4,650美元；缴费方式：年缴",
+      "normalized_value": "annual_premium_values:1,778美元,4,650美元|payment_modes:年缴",
+      "numeric_value": 1778.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.995,
+      "source_page": 8,
+      "source_section": "page-8",
+      "source_quote": "您可于保单开始时，因应您的财务状况和需要选择适合您的保费缴付方式。您可以选择（ i ）在整个保费缴付期内缴付定期保费，或（ ii ）保费缴付期内缴付定期保费及在保单缮发时同时缴付额外保费。",
+      "metadata_json": {
+        "annual_premium_values": [
+          "1,778美元",
+          "4,650美元"
+        ],
+        "payment_terms_years": [
+          10,
+          18,
+          25
+        ],
+        "payment_modes": [
+          "年缴"
+        ],
+        "derived_from": "plan_aggregate"
+      }
+    }
+  ],
+  "coverage_hospitalization": [
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "入住香港及澳门深切治疗病房赔偿额上限为5,000美元；入住香港及澳门以外地区深切治疗病房赔偿额上限为2,500美元",
+      "normalized_value": "5000",
+      "numeric_value": 5000.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 1.0,
+      "source_page": 13,
+      "source_section": "page-13",
+      "source_quote": "于下列条件：（ i ）入住香港及澳门的深切治疗病房的赔偿额以 5,000 美元为限，及（ ii ）入住香港及澳门以外地区的深切治疗病房，赔偿额则以 2,500 美元为限。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 28
+      }
+    }
+  ],
+  "coverage_surgery": [
+    {
+      "dimension_key": "coverage_surgery",
+      "dimension_label": "手术保障",
+      "value_text": "入住深切治疗病房及使用侵入性维生支持连续 120 小时或以上，并接受复杂手术",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 17,
+      "source_section": "page-17",
+      "source_quote": "入住深切治疗病房及使用侵入性维生支持连续 120 小时或以上，并接受复杂手术",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 41
+      }
+    }
+  ],
+  "condition_cancer": [
+    {
+      "dimension_key": "condition_cancer",
+      "dimension_label": "疾病场景: cancer",
+      "value_text": "癌症",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 17,
+      "source_section": "page-17",
+      "source_quote": "• 癌症",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 41
+      }
+    }
+  ],
+  "condition_heart_disease": [
+    {
+      "dimension_key": "condition_heart_disease",
+      "dimension_label": "疾病场景: heart disease",
+      "value_text": "心脏病",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 17,
+      "source_section": "page-17",
+      "source_quote": "• 心脏病",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 41
+      }
+    }
+  ],
+  "coverage_outpatient": [
+    {
+      "dimension_key": "coverage_outpatient",
+      "dimension_label": "门诊保障",
+      "value_text": "就医陪诊员服务、优先门诊服务、优先住院服务、特快化验检查、住院护理员服务和家居护理员服务等）以及（ ii ）为合资格",
+      "normalized_value": "就医陪诊员服务、优先门诊服务、优先住院服务、特快化验检查、住院护理员服务和家居护理员服务等）以及（ ii ）为合资格",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 9,
+      "source_section": "page-9",
+      "source_quote": "就医陪诊员服务、优先门诊服务、优先住院服务、特快化验检查、住院护理员服务和家居护理员服务等）以及（ ii ）为合资格",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    }
+  ]
+}

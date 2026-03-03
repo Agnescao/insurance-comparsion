@@ -1,0 +1,767 @@
+{
+  "annual_limit": [
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "个人最高赔偿限额为 400,000 港元/ 50,000 美元",
+      "normalized_value": "400000",
+      "numeric_value": 400000.0,
+      "unit": "港元",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "个人最高赔偿限额为 400,000 港元/ 50,000 美元，包括于糖尿病并发症保障、危疾保障及升级保障下派发之糖尿病视网膜病变赔偿。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 11,
+        "limit_values": [
+          "400,000港元",
+          "50,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "个人最高赔偿限额为312,500美元",
+      "normalized_value": "312500",
+      "numeric_value": 312500.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "Andy 获得总赔偿额： 312,500 美元 4\n即原有保额的 2.5 倍",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 14,
+        "limit_values": [
+          "312,500美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "个人最高赔偿限额为300%原有保额（即375,000美元）",
+      "normalized_value": "375000",
+      "numeric_value": 375000.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 13,
+      "source_section": "page-13",
+      "source_quote": "(于多重疾病保障下，最高索赔额为\n300% 原有保额)",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 16,
+        "limit_values": [
+          "300",
+          "375,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "个人最高赔偿限额为125,000美元（原有保额），升级保障62,500美元，合计187,500美元",
+      "normalized_value": "187500 USD",
+      "numeric_value": 187500.0,
+      "unit": "USD",
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 14,
+      "source_section": "page-14",
+      "source_quote": "合共 187,500 美元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 18,
+        "limit_values": [
+          "125,000美元",
+          "62,500美元",
+          "187,500美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "个人最高赔偿限额为400,000港元/50,000美元",
+      "normalized_value": "400000",
+      "numeric_value": 400000.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 1.0,
+      "source_page": 18,
+      "source_section": "page-18",
+      "source_quote": "个人最高赔偿限额为400,000 港元/ 50,000 美元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 24,
+        "limit_values": [
+          "400,000港元",
+          "50,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "每项疾病个人最高赔偿限额为400,000港元/50,000美元",
+      "normalized_value": "400000",
+      "numeric_value": 400000.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 1.0,
+      "source_page": 19,
+      "source_section": "page-19",
+      "source_quote": "每项疾病个人最高赔偿限额为\n400,000 港元/ 50,000 美元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 25,
+        "limit_values": [
+          "400,000港元",
+          "50,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "个人最高赔偿限额为400,000港元/50,000美元；个人最高赔偿限额为125,000美元（原有保额），升级保障62,500美元，合计187,500美元；个人最高赔偿限额为312,500美元；个人最高赔偿限额为300%原有保额（即375,000美元）",
+      "normalized_value": "400000|187500 usd|312500|375000",
+      "numeric_value": 400000.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 18,
+      "source_section": "page-18",
+      "source_quote": "个人最高赔偿限额为400,000 港元/ 50,000 美元",
+      "metadata_json": {
+        "value_list": [
+          "个人最高赔偿限额为400,000港元/50,000美元",
+          "个人最高赔偿限额为125,000美元（原有保额），升级保障62,500美元，合计187,500美元",
+          "个人最高赔偿限额为312,500美元",
+          "个人最高赔偿限额为300%原有保额（即375,000美元）"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "itemized_limit": [
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "个人最高赔偿限额为 400,000 港元/ 50,000 美元，包括于糖尿病并发症保障、危疾保障及升级保障下派发之糖尿病视网膜病变赔偿。",
+      "normalized_value": "400000",
+      "numeric_value": 400000.0,
+      "unit": "港元",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "个人最高赔偿限额为 400,000 港元/ 50,000 美元，包括于糖尿病并发症保障、危疾保障及升级保障下派发之糖尿病视网膜病变赔偿。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 11,
+        "limit_values": [
+          "400,000港元",
+          "50,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "乳癌首次索赔：100%原有保额（125,000美元）；升级保障：50%原有保额（62,500美元）；合计187,500美元（150%原有保额）",
+      "normalized_value": "187500",
+      "numeric_value": 187500.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 13,
+      "source_section": "page-13",
+      "source_quote": "Monica 获得总赔偿额： 187,500 美元\n即原有保额的 1.5 倍\n...\n100% 原有保额：\n125,000 美元\n+\n升级保障：\n62,500 美元\n（即 50% 原有保额）\n...\n合共 187,500 美元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 16,
+        "limit_values": [
+          "125,000美元",
+          "62,500美元",
+          "187,500美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "原有保额：125,000美元；首15个保单年度的升级保障：62,500美元（即50%原有保额）",
+      "normalized_value": "125000 USD base + 62500 USD upgrade",
+      "numeric_value": 125000.0,
+      "unit": "USD",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 14,
+      "source_section": "page-14",
+      "source_quote": "原有保额：\n125,000 美元\n首 15 个保单年度的\n升级保障：\n62,500 美元\n（即 50% 原有保额）",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 18,
+        "limit_values": [
+          "125,000美元",
+          "62,500美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "每项疾病个人最高赔偿限额为400,000港元/50,000美元",
+      "normalized_value": "400000",
+      "numeric_value": 400000.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 1.0,
+      "source_page": 18,
+      "source_section": "page-18",
+      "source_quote": "每项疾病个人最高赔偿限额为400,000 港元/ 50,000 美元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 24,
+        "limit_values": [
+          "400,000港元",
+          "50,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "糖尿病视网膜病变的个人最高赔偿限额为400,000港元/50,000美元",
+      "normalized_value": "400000",
+      "numeric_value": 400000.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 1.0,
+      "source_page": 19,
+      "source_section": "page-19",
+      "source_quote": "糖尿病视网膜病变的\n个人最高赔偿限额为\n400,000 港元/ 50,000 美元，\n包括于糖尿病并发症保障、\n危疾保障及升级保障下\n派发之糖尿病视网膜\n病变赔偿)",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 25,
+        "limit_values": [
+          "400,000港元",
+          "50,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "每项疾病个人最高赔偿限额为400,000港元/50,000美元；原有保额：125,000美元；首15个保单年度的升级保障：62,500美元（即50%原有保额）；乳癌首次索赔：100%原有保额（125,000美元）；升级保障：50%原有保额（62,500美元）；合计187,500美元（150%原有保额）",
+      "normalized_value": "400000|125000 usd base + 62500 usd upgrade|187500",
+      "numeric_value": 400000.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 18,
+      "source_section": "page-18",
+      "source_quote": "每项疾病个人最高赔偿限额为400,000 港元/ 50,000 美元",
+      "metadata_json": {
+        "value_list": [
+          "每项疾病个人最高赔偿限额为400,000港元/50,000美元",
+          "原有保额：125,000美元；首15个保单年度的升级保障：62,500美元（即50%原有保额）",
+          "乳癌首次索赔：100%原有保额（125,000美元）；升级保障：50%原有保额（62,500美元）；合计187,500美元（150%原有保额）"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "riders_benefits": [
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "早期升级保障、糖尿病并发症保障（含预支20%保额）、转换权（可转为终身寿险或危疾保障终身寿险）",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "早期升级保障\n「多重智倍保」 在保单首 10 年或 15 年(视乎受保人投保时的年龄)间提供升级保障...因糖尿病所引致的早期危疾...▽ 包括每份保单 1 次的预支原有保额20%的糖尿病并发症保障。...您可选择从升级保障有效期最后一年起...把升级保障的结余转换为终身寿险或危疾保障终身寿险计划(须额外缴付保费)...",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 11
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "升级保障（首15个保单年度提供50%原有保额，首次严重疾病索赔后继续享有600%原有保额至85岁）；良性病变保障",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "首 15 个保单年度的\n升级保障：\n62,500 美元\n（即 50% 原有保额）\n...\nAndy 已康复\nAndy\n继续享有\n600% 3\n原有保额至\n85 岁\n...\n计划同时特设创新的良性病变保障，为良性病变引发的癌症\n提供保障，有效填补保障缺口",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 14
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "良性乳房病变保障：如恶化为乳癌，可获20%原有保额赔偿；若维持稳定，乳癌保障提升至100%原有保额",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 13,
+      "source_section": "page-13",
+      "source_quote": "如 Monica 的乳腺纤维腺瘤\n恶化为乳癌 ，她将可获得的\n赔偿为 20% 原有保额\n...\n由良性乳房病变导致乳癌之\n保障 提升为 ：\n100% 原有保额",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 16
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "先天性疾病儿童保障、付款人身故保障（保单持有人于75岁前身故）、失聪赔偿（125,000美元+62,500美元）、首次严重疾病索赔后豁免保费并继续享有保障",
+      "normalized_value": "congenital disease coverage, payor death benefit, hearing loss benefit, premium waiver after first critical illness",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 14,
+      "source_section": "page-14",
+      "source_quote": "先天性疾病儿童保障\n及付款人身故保障\n(如保单持有人于\n75 岁前身故)\n失聪赔偿\nKatie 上学后， David 察觉女儿的\n听觉有障碍并进行听觉检查，\n发现有先天性失聪\n100% 原有保额：\n125,000 美元\n+\n升级保障：\n62,500 美元\n（即 50% 原有保额）\n首次严重疾病索赔后，毋须缴付保费，\n并继续享有多重疾病保障",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 18
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "预支升级保障金额：额外50%（首15个保单年度，保单缮发时≤40岁）或额外50%（首10个保单年度，保单缮发时≥41岁）；早期危疾保障含44种；非严重疾病保障含1种；严重疾病保障含56种",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 18,
+      "source_section": "page-18",
+      "source_quote": "额外 50%\n（预支升级保障金额）\n额外 10%\n（预支升级保障金额）\n每项疾病\n预支 20% 保额\n额外 10%\n（预支升级保障金额）\n每项疾病\n预支 20% 保额\n预支 10% 保额\n额外 5%\n（预支升级保障金额）\n* 保单缮发时为 40 岁或以下的受保人，于首 15 个保单年度可享高达额外 50% 原有保额的升级保障。\n保单缮发时为 41 岁或以上的受保人，于首 10 个保单年度可享高达额外 50% 原有保额的升级保障。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 24
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "良性乳房病变保障：如恶化为乳癌，可获20%原有保额赔偿；若维持稳定，乳癌保障提升至100%原有保额；早期升级保障、糖尿病并发症保障（含预支20%保额）、转换权（可转为终身寿险或危疾保障终身寿险）；升级保障（首15个保单年度提供50%原有保额，首次严重疾病索赔后继续享有600%原有保额至85岁）；良性病变保障；先天性疾病儿童保障、付款人身故保障（保单持有人于75岁前身故）、失聪赔偿（125,000美元+62,500美元）、首次严重疾病索赔后豁免保费并继续享有保障",
+      "normalized_value": "良性乳房病变保障：如恶化为乳癌，可获20%原有保额赔偿；若维持稳定，乳癌保障提升至100%原有保额|早期升级保障、糖尿病并发症保障（含预支20%保额）、转换权（可转为终身寿险或危疾保障终身寿险）|升级保障（首15个保单年度提供50%原有保额，首次严重疾病索赔后继续享有600%原有保额至85岁）；良性病变保障|congenital disease coverage, payor death benefit, hearing loss benefit, premium waiver after first critical illness",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 13,
+      "source_section": "page-13",
+      "source_quote": "如 Monica 的乳腺纤维腺瘤\n恶化为乳癌 ，她将可获得的\n赔偿为 20% 原有保额\n...\n由良性乳房病变导致乳癌之\n保障 提升为 ：\n100% 原有保额",
+      "metadata_json": {
+        "value_list": [
+          "良性乳房病变保障：如恶化为乳癌，可获20%原有保额赔偿；若维持稳定，乳癌保障提升至100%原有保额",
+          "早期升级保障、糖尿病并发症保障（含预支20%保额）、转换权（可转为终身寿险或危疾保障终身寿险）",
+          "升级保障（首15个保单年度提供50%原有保额，首次严重疾病索赔后继续享有600%原有保额至85岁）；良性病变保障",
+          "先天性疾病儿童保障、付款人身故保障（保单持有人于75岁前身故）、失聪赔偿（125,000美元+62,500美元）、首次严重疾病索赔后豁免保费并继续享有保障"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "胰岛素依赖型糖尿病保障于受保人年满18岁时终止",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "* 受保人年满 18 岁时，胰岛素依赖型糖尿病保障将会终止。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 11
+      }
+    },
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "首次严重疾病索赔后豁免后续保费，但继续享有保障",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.8,
+      "source_page": 13,
+      "source_section": "page-13",
+      "source_quote": "首次严重疾病索赔后，\n毋须缴付保费，并继续享有\n多重疾病保障",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 16
+      }
+    },
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "无明确除外责任条款在本段中列出",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.3,
+      "source_page": 18,
+      "source_section": "page-18",
+      "source_quote": "保障疾病赔偿一览表\n严重疾病\n非严重疾病\n早期危疾\n100% 保额\n预支 50% 保额\n额外 50%\n58 种危疾(包括 57 种严重疾病及 1 种非严重疾病)\n44 种早期危疾\n•\n56 种严重疾病\n•\n不能独立生活\n•\n须作手术之脑动脉瘤\n•\n原位癌\n•\n早期恶性肿瘤\n•\n经皮穿刺冠状动脉介入 (俗称\n「通波仔」)\n•\n微创进行直接的冠状动脉搭桥手术\n•\n周围动脉疾病的血管介入治疗\n•\n糖尿病视网膜病变\n•\n严重阻塞性睡眠窒息症\n•\n严重中枢神经性睡眠窒息症或\n混合性睡眠窒息症\n•\n严重精神病\n•\n骨质疏松症连骨折\n•\n34 种早期危疾\n(不包括以上的早期危疾）",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 24
+      }
+    },
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "除癌症及与心脏相关之疾病外，严重疾病赔偿将不可多于原有保额的100%，并将扣除任何在相应的危疾类别下的非严重疾病、早期危疾(包括任何因糖尿病并发症保障支付的赔偿)及/或严重儿童疾病已预支的赔偿",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 19,
+      "source_section": "page-19",
+      "source_quote": "除癌症及与心脏相关之疾病外，严重疾病赔偿将不可多于原有保额的 100% ，并将扣除任何在相应的危疾类别下的非严重疾病、早期危疾(包括任何因糖尿\n病并发症保障支付的赔偿)及 / 或严重儿童疾病已预支的赔偿。就癌症而言，赔偿将相等于原有保额的 100% ，或在第 1 类(癌症)的赔偿上限(即 300% )扣除\n因先前的癌症、原位癌及早期恶性肿瘤之已付或应付赔偿后的剩余赔偿额，以较低者为准。就心脏相关疾病而言，赔偿将相等于原有保额的 100% ，或在\n第 2 类(与心脏相关之疾病)的赔偿上限(即 200% )扣除因先前的心脏相关之严重疾病、早期危疾及 / 或严重儿童疾病之已付或应付赔偿后的剩余赔偿额",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 25
+      }
+    },
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "胰岛素依赖型糖尿病保障于受保人年满18岁时终止；除癌症及与心脏相关之疾病外，严重疾病赔偿将不可多于原有保额的100%，并将扣除任何在相应的危疾类别下的非严重疾病、早期危疾(包括任何因糖尿病并发症保障支付的赔偿)及/或严重儿童疾病已预支的赔偿；首次严重疾病索赔后豁免后续保费，但继续享有保障；无明确除外责任条款在本段中列出",
+      "normalized_value": "胰岛素依赖型糖尿病保障于受保人年满18岁时终止|除癌症及与心脏相关之疾病外，严重疾病赔偿将不可多于原有保额的100%，并将扣除任何在相应的危疾类别下的非严重疾病、早期危疾(包括任何因糖尿病并发症保障支付的赔偿)及/或严重儿童疾病已预支的赔偿|首次严重疾病索赔后豁免后续保费，但继续享有保障|无明确除外责任条款在本段中列出",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "* 受保人年满 18 岁时，胰岛素依赖型糖尿病保障将会终止。",
+      "metadata_json": {
+        "value_list": [
+          "胰岛素依赖型糖尿病保障于受保人年满18岁时终止",
+          "除癌症及与心脏相关之疾病外，严重疾病赔偿将不可多于原有保额的100%，并将扣除任何在相应的危疾类别下的非严重疾病、早期危疾(包括任何因糖尿病并发症保障支付的赔偿)及/或严重儿童疾病已预支的赔偿",
+          "首次严重疾病索赔后豁免后续保费，但继续享有保障",
+          "无明确除外责任条款在本段中列出"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "premium_payment": [
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "3种保费缴付期：10年、18年、25年；缴费方式：年缴/半年缴/季缴/月缴；保单货币可选美元或港元",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "3 种保费缴付期\n「多重智倍保」 提供 3 种保费缴付期选择，为受保人提供\n终身寿险及终身危疾保障。\n此计划提供不同的保费缴付模式，包括年缴、半年缴、\n季缴和月缴。\n...\n保费缴付期\n10 年\n18 年\n25 年",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 13,
+        "payment_modes": [
+          "年缴",
+          "半年缴",
+          "季缴",
+          "月缴"
+        ],
+        "payment_terms_years": [
+          10,
+          18,
+          25
+        ]
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "年度保费：4,920美元；缴费期：18年",
+      "normalized_value": "4920",
+      "numeric_value": 4920.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "年度保费：\n4,920 美元\n（ 18 年保费缴付期）",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 14,
+        "annual_premium_values": [
+          "4,920美元"
+        ],
+        "payment_terms_years": [
+          18
+        ]
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "年度保费：4,765美元；缴费期：18年",
+      "normalized_value": "4765",
+      "numeric_value": 4765.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 13,
+      "source_section": "page-13",
+      "source_quote": "年度保费：\n4,765 美元\n（ 18 年保费缴付期）",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 16,
+        "annual_premium_values": [
+          "4,765美元"
+        ],
+        "payment_terms_years": [
+          18
+        ]
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "年度保费：2,180美元；缴费期：18年",
+      "normalized_value": "2180 USD per year for 18 years",
+      "numeric_value": 2180.0,
+      "unit": "USD",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 14,
+      "source_section": "page-14",
+      "source_quote": "年度保费：\n2,180 美元\n（ 18 年保费缴付期）",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 18,
+        "annual_premium_values": [
+          "2,180美元"
+        ],
+        "payment_terms_years": [
+          18
+        ]
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "年度保费：4,920美元 / 4,765美元 / 2,180美元；缴费方式：年缴 / 半年缴 / 季缴 / 月缴",
+      "normalized_value": "annual_premium_values:4,920美元,4,765美元,2,180美元|payment_modes:年缴,半年缴,季缴,月缴",
+      "numeric_value": 4920.0,
+      "unit": "美元",
+      "condition_text": null,
+      "confidence": 0.995,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "3 种保费缴付期\n「多重智倍保」 提供 3 种保费缴付期选择，为受保人提供\n终身寿险及终身危疾保障。\n此计划提供不同的保费缴付模式，包括年缴、半年缴、\n季缴和月缴。\n...\n保费缴付期\n10 年\n18 年\n25 年",
+      "metadata_json": {
+        "annual_premium_values": [
+          "4,920美元",
+          "4,765美元",
+          "2,180美元"
+        ],
+        "payment_terms_years": [
+          10,
+          18,
+          25
+        ],
+        "payment_modes": [
+          "年缴",
+          "半年缴",
+          "季缴",
+          "月缴"
+        ],
+        "derived_from": "plan_aggregate"
+      }
+    }
+  ],
+  "coverage_surgery": [
+    {
+      "dimension_key": "coverage_surgery",
+      "dimension_label": "手术保障",
+      "value_text": "经皮穿刺冠状动脉介入（俗称「通波仔」）属于保障范围",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.8,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "Andy 接受经皮穿刺\n冠状动脉介入(俗称\n「通波仔」)，\n以治疗心脏问题",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 14
+      }
+    },
+    {
+      "dimension_key": "coverage_surgery",
+      "dimension_label": "手术保障",
+      "value_text": "须作手术之脑动脉瘤、经皮穿刺冠状动脉介入（俗称「通波仔」）、微创进行直接的冠状动脉搭桥手术、周围动脉疾病的血管介入治疗",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 18,
+      "source_section": "page-18",
+      "source_quote": "•\n须作手术之脑动脉瘤\n•\n经皮穿刺冠状动脉介入 (俗称\n「通波仔」)\n•\n微创进行直接的冠状动脉搭桥手术\n•\n周围动脉疾病的血管介入治疗",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 24
+      }
+    },
+    {
+      "dimension_key": "coverage_surgery",
+      "dimension_label": "手术保障",
+      "value_text": "须作手术之脑动脉瘤、经皮穿刺冠状动脉介入（俗称「通波仔」）、微创进行直接的冠状动脉搭桥手术、周围动脉疾病的血管介入治疗；经皮穿刺冠状动脉介入（俗称「通波仔」）属于保障范围",
+      "normalized_value": "须作手术之脑动脉瘤、经皮穿刺冠状动脉介入（俗称「通波仔」）、微创进行直接的冠状动脉搭桥手术、周围动脉疾病的血管介入治疗|经皮穿刺冠状动脉介入（俗称「通波仔」）属于保障范围",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 18,
+      "source_section": "page-18",
+      "source_quote": "•\n须作手术之脑动脉瘤\n•\n经皮穿刺冠状动脉介入 (俗称\n「通波仔」)\n•\n微创进行直接的冠状动脉搭桥手术\n•\n周围动脉疾病的血管介入治疗",
+      "metadata_json": {
+        "value_list": [
+          "须作手术之脑动脉瘤、经皮穿刺冠状动脉介入（俗称「通波仔」）、微创进行直接的冠状动脉搭桥手术、周围动脉疾病的血管介入治疗",
+          "经皮穿刺冠状动脉介入（俗称「通波仔」）属于保障范围"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "condition_ovarian_cancer": [
+    {
+      "dimension_key": "condition_ovarian_cancer",
+      "dimension_label": "疾病场景: ovarian cancer",
+      "value_text": "卵巢癌确诊后首次获赔125,000美元（100%原有保额）；康复后第二次卵巢癌获赔125,000美元",
+      "normalized_value": "125000 USD per ovarian cancer claim",
+      "numeric_value": 125000.0,
+      "unit": "USD",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 14,
+      "source_section": "page-14",
+      "source_quote": "第二次\n癌症赔偿\nKatie 仍患有\n卵巢癌\n100%\n原有保额：\n125,000 美元\n首次\n癌症赔偿\nKatie 被确诊\n卵巢癌\n100%\n原有保额：\n125,000 美元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 18
+      }
+    }
+  ],
+  "coverage_hospitalization": [
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "该等保障可能于身故、退保或在发生个别情况下(如住院或被诊",
+      "normalized_value": "该等保障可能于身故、退保或在发生个别情况下(如住院或被诊",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 21,
+      "source_section": "page-21",
+      "source_quote": "该等保障可能于身故、退保或在发生个别情况下(如住院或被诊",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "此条文并不适用于任何提供意外、住院或残废保障的附加契约。",
+      "normalized_value": "此条文并不适用于任何提供意外、住院或残废保障的附加契约。",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 23,
+      "source_section": "page-23",
+      "source_quote": "此条文并不适用于任何提供意外、住院或残废保障的附加契约。",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "该等保障可能于身故、退保或在发生个别情况下(如住院或被诊；此条文并不适用于任何提供意外、住院或残废保障的附加契约。",
+      "normalized_value": "该等保障可能于身故、退保或在发生个别情况下(如住院或被诊|此条文并不适用于任何提供意外、住院或残废保障的附加契约。",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.86,
+      "source_page": 21,
+      "source_section": "page-21",
+      "source_quote": "该等保障可能于身故、退保或在发生个别情况下(如住院或被诊",
+      "metadata_json": {
+        "value_list": [
+          "该等保障可能于身故、退保或在发生个别情况下(如住院或被诊",
+          "此条文并不适用于任何提供意外、住院或残废保障的附加契约。"
+        ],
+        "derived_from": "plan_dimension_group",
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "该等保障可能于身故、退保或在发生个别情况下(如住院或被诊；此条文并不适用于任何提供意外、住院或残废保障的附加契约。；该等保障可能于身故、退保或在发生个别情况下(如住院或被诊；此条文并不适用于任何提供意外、住院或残废保障的附加契约。",
+      "normalized_value": "该等保障可能于身故、退保或在发生个别情况下(如住院或被诊|此条文并不适用于任何提供意外、住院或残废保障的附加契约。|该等保障可能于身故、退保或在发生个别情况下(如住院或被诊|此条文并不适用于任何提供意外、住院或残废保障的附加契约。",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.94,
+      "source_page": 21,
+      "source_section": "page-21",
+      "source_quote": "该等保障可能于身故、退保或在发生个别情况下(如住院或被诊",
+      "metadata_json": {
+        "value_list": [
+          "该等保障可能于身故、退保或在发生个别情况下(如住院或被诊；此条文并不适用于任何提供意外、住院或残废保障的附加契约。",
+          "该等保障可能于身故、退保或在发生个别情况下(如住院或被诊",
+          "此条文并不适用于任何提供意外、住院或残废保障的附加契约。"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ]
+}

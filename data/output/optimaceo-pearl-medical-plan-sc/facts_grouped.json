@@ -1,0 +1,1655 @@
+{
+  "annual_limit": [
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "每年限额：30,000,000 港元",
+      "normalized_value": "30000000",
+      "numeric_value": 30000000.0,
+      "unit": "港元",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 9,
+      "source_section": "page-9",
+      "source_quote": "每年限额：\n30,000,000 港元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 12,
+        "limit_values": [
+          "30,000,000港元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "未明确说明年度限额数值",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.3,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "终身续保\n灵活计划\n配合预算\n灵活调减垫底费\n倍添安心",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 14
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "每年限额：30,000,000港元（以每保单年度计）；额外每年限额：10,000,000港元（以每保单年度计）",
+      "normalized_value": "30000000",
+      "numeric_value": 30000000.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "每年限额\n涵盖第 1 至 25 项、 28 至 31 项\n30,000,000\n以每保单年度计\n额外每年限额：\n10,000,000\n以每保单年度计 (a)",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 15,
+        "limit_values": [
+          "30,000,000港元",
+          "10,000,000港元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "善终关怀服务惠益：个人最高赔偿限额320,000港元／每保单一次",
+      "normalized_value": "320000",
+      "numeric_value": 320000.0,
+      "unit": "港元",
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "14\n善终关怀服务惠益 (e)\n320,000\n以个人计\n每保单一次",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 17,
+        "limit_values": [
+          "320,000港元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "每保单年度 500,000",
+      "normalized_value": "500000",
+      "numeric_value": 500000.0,
+      "unit": null,
+      "condition_text": "癌症的临床试验药物惠益",
+      "confidence": 0.95,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "癌症的临床试验药物惠益 (c),(e),(i)\n每保单年度 500,000",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 19,
+        "limit_values": [
+          "500,000"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "环球紧急支援服务最高保障额：5,000,000港元／625,000美元（以个人计）",
+      "normalized_value": "global emergency assistance limit 5000000 HKD / 625000 USD per person",
+      "numeric_value": 5000000.0,
+      "unit": "HKD/person",
+      "condition_text": null,
+      "confidence": 0.98,
+      "source_page": 13,
+      "source_section": "page-13",
+      "source_quote": "26\n环球紧急支援服务\n5,000,000\n以个人计\n625,000\n以个人计\ni)\n紧急医疗运送\nii)\n运返遗体\niii)\n安排一名直属家属探望\n如需连续住院超过 5 日\niv)\n送返未满 18 岁之儿童",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 20,
+        "limit_values": [
+          "5,000,000港元",
+          "625,000美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "每保单年度 500,000 港元或 62,500 美元",
+      "normalized_value": "500000",
+      "numeric_value": 500000.0,
+      "unit": "港元",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 16,
+      "source_section": "page-16",
+      "source_quote": "在计算应付赔偿总额时，该招致的合理及惯常的收费将减少至 60% ，且不多于每保单年度 500,000 港元或 62,500 美元。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 32,
+        "limit_values": [
+          "500,000港元",
+          "62,500美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "保单限额高达 100,000 港元",
+      "normalized_value": "100000",
+      "numeric_value": 100000.0,
+      "unit": "港元",
+      "condition_text": null,
+      "confidence": 0.98,
+      "source_page": 17,
+      "source_section": "page-17",
+      "source_quote": "初生宝宝将获享 即时住院及手术保障，并涵盖先天性疾病 ，保单限额高达 100,000 港元，垫底费为16,000 港元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 35,
+        "limit_values": [
+          "100,000港元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "保单限额：100,000港元（约12,500美元），以每保单计算",
+      "normalized_value": "100000",
+      "numeric_value": 100000.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 19,
+      "source_section": "page-19",
+      "source_quote": "保单限额\n涵盖第 1 至 9 项\n100,000\n以每保单计算\n12,500\n以每保单计算",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 39,
+        "limit_values": [
+          "100,000港元",
+          "12,500美元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "annual_limit",
+      "dimension_label": "年度限额",
+      "value_text": "保单限额高达 100,000 港元；环球紧急支援服务最高保障额：5,000,000港元／625,000美元（以个人计）；善终关怀服务惠益：个人最高赔偿限额320,000港元／每保单一次；每保单年度 500,000",
+      "normalized_value": "100000|global emergency assistance limit 5000000 hkd / 625000 usd per person|320000|500000",
+      "numeric_value": 100000.0,
+      "unit": "港元",
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 17,
+      "source_section": "page-17",
+      "source_quote": "初生宝宝将获享 即时住院及手术保障，并涵盖先天性疾病 ，保单限额高达 100,000 港元，垫底费为16,000 港元",
+      "metadata_json": {
+        "value_list": [
+          "保单限额高达 100,000 港元",
+          "环球紧急支援服务最高保障额：5,000,000港元／625,000美元（以个人计）",
+          "善终关怀服务惠益：个人最高赔偿限额320,000港元／每保单一次",
+          "每保单年度 500,000"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "itemized_limit": [
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "额外每年限额：10,000,000 港元",
+      "normalized_value": "10000000",
+      "numeric_value": 10000000.0,
+      "unit": "港元",
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 9,
+      "source_section": "page-9",
+      "source_quote": "额外每年限额 10 ：\n10,000,000 港元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 12,
+        "limit_values": [
+          "10,000,000港元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "未在本段中明确说明分项限额",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.2,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "无论您需要一份广泛的医疗保障计划，或是有意为现\n有医疗计划加添保障，每年垫底费选项可让您指定您\n索赔前愿意支付的金额。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 14
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "个人终身赔偿限额：70,000,000港元（以个人计）；额外每年限额：1,250,000港元（以每保单年度计）",
+      "normalized_value": "70000000",
+      "numeric_value": 70000000.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "个人终身赔偿限额\n涵盖第 1 至 25 项、 28 至 31 项\n70,000,000\n以个人计\n额外每年限额：\n1,250,000\n以每保单年度计 (a)",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 15,
+        "limit_values": [
+          "70,000,000港元",
+          "1,250,000港元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "脊骨神经科医生／物理治疗师／言语治疗师／职业治疗师：网络保障全数受保，非网络保障1,000港元／次；中医：网络保障880港元／次，非网络保障600港元／次；注册营养师：网络保障680港元／次，非网络保障85港元／次",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": "港元",
+      "condition_text": null,
+      "confidence": 0.98,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "i)\n脊骨神经科医生／物理治疗师／言语治疗师／职业治疗师 (e)\n咨询及／或诊疗\n网络保障：\n全数受保 (f)\n非网络保障：\n1,000\n以每次诊症计\nii)\n中医\n咨询、诊疗及／或处方药物\n网络保障：\n880\n以每次诊症计\n非网络保障：\n600\n以每次诊症计\niii)\n注册营养师 (e)\n只限出院后／日间手术后 90 日内的咨询\n680\n以每次诊症计\n...非网络保障：\n85\n以每次诊症计",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 17,
+        "limit_values": [
+          "1,000港元",
+          "880港元",
+          "600港元"
+        ]
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "每保单年度 62,500",
+      "normalized_value": "62500",
+      "numeric_value": 62500.0,
+      "unit": null,
+      "condition_text": "癌症的临床试验药物惠益",
+      "confidence": 0.95,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "癌症的临床试验药物惠益 (c),(e),(i)\n每保单年度 62,500",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 19,
+        "limit_values": [
+          "62,500"
+        ]
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "日间手术现金惠益：每保单年度限1次；住院现金惠益：每保单年度最多90日；次级病房现金惠益：每次住院最多10日",
+      "normalized_value": "day surgery: 1 per policy year; inpatient cash: 90 days/year; sub-standard ward: 10 days per admission",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.92,
+      "source_page": 13,
+      "source_section": "page-13",
+      "source_quote": "29\n住院现金惠益\n...每保单年度 90 日\n30\n次级病房现金惠益\n...每次住院 10 日\n31\n日间手术现金惠益\n...每保单年度 1 次手术",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 20
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "不设分项赔偿限额",
+      "normalized_value": "none",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 16,
+      "source_section": "page-16",
+      "source_quote": "全数赔偿是指不设分项赔偿限额及索赔金额受限于保单的个人终身赔偿限额、每年限额、额外每年限额（如适用），以及受限于每年垫底费的金额。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 32
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "私家看护费用：每保单年度30日",
+      "normalized_value": "30日/保单年度",
+      "numeric_value": 30.0,
+      "unit": "日",
+      "condition_text": null,
+      "confidence": 0.96,
+      "source_page": 19,
+      "source_section": "page-19",
+      "source_quote": "6\n私家看护费用 (b)\n适用于受保人住院期间在手术后或调出深切治疗病房后的护理服务\n全数受保 (c)\n每保单年度 30 日",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 39
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "器官捐赠者及器官受赠者之移植手术费用总和的30%",
+      "normalized_value": "30% of combined transplant costs",
+      "numeric_value": 30.0,
+      "unit": "%",
+      "condition_text": "器官移植手术",
+      "confidence": 0.97,
+      "source_page": 19,
+      "source_section": "page-19",
+      "source_quote": "器官捐赠者及器官受赠者之\n移植手术费用总和的 30% (d)",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 40
+      }
+    },
+    {
+      "dimension_key": "itemized_limit",
+      "dimension_label": "分项限额",
+      "value_text": "脊骨神经科医生／物理治疗师／言语治疗师／职业治疗师：网络保障全数受保，非网络保障1,000港元／次；中医：网络保障880港元／次，非网络保障600港元／次；注册营养师：网络保障680港元／次，非网络保障85港元／次；器官捐赠者及器官受赠者之移植手术费用总和的30%；私家看护费用：每保单年度30日；每保单年度 62,500",
+      "normalized_value": "脊骨神经科医生／物理治疗师／言语治疗师／职业治疗师：网络保障全数受保，非网络保障1,000港元／次；中医：网络保障880港元／次，非网络保障600港元／次；注册营养师：网络保障680港元／次，非网络保障85港元／次|30% of combined transplant costs|30日/保单年度|62500",
+      "numeric_value": null,
+      "unit": "港元",
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "i)\n脊骨神经科医生／物理治疗师／言语治疗师／职业治疗师 (e)\n咨询及／或诊疗\n网络保障：\n全数受保 (f)\n非网络保障：\n1,000\n以每次诊症计\nii)\n中医\n咨询、诊疗及／或处方药物\n网络保障：\n880\n以每次诊症计\n非网络保障：\n600\n以每次诊症计\niii)\n注册营养师 (e)\n只限出院后／日间手术后 90 日内的咨询\n680\n以每次诊症计\n...非网络保障：\n85\n以每次诊症计",
+      "metadata_json": {
+        "value_list": [
+          "脊骨神经科医生／物理治疗师／言语治疗师／职业治疗师：网络保障全数受保，非网络保障1,000港元／次；中医：网络保障880港元／次，非网络保障600港元／次；注册营养师：网络保障680港元／次，非网络保障85港元／次",
+          "器官捐赠者及器官受赠者之移植手术费用总和的30%",
+          "私家看护费用：每保单年度30日",
+          "每保单年度 62,500"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "coverage_surgery": [
+    {
+      "dimension_key": "coverage_surgery",
+      "dimension_label": "手术保障",
+      "value_text": "日间手术前门诊咨询；日间手术惠益",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 9,
+      "source_section": "page-9",
+      "source_quote": "‧ 日间手术前门诊咨询\n‧ 日间手术惠益",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 12
+      }
+    },
+    {
+      "dimension_key": "coverage_surgery",
+      "dimension_label": "手术保障",
+      "value_text": "未在本段中提及手术保障",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.1,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "本计划特设不同选项供您选择，以切合您的个人医疗需\n要：",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 14
+      }
+    },
+    {
+      "dimension_key": "coverage_surgery",
+      "dimension_label": "手术保障",
+      "value_text": "涵盖日间手术及复杂或大型手术后的门诊随访保障",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "每次出院／完成日间手术（分类为复杂或大型的手术 (h) ）后 365 日内所有跟\n进门诊（注册营养师咨询门诊除外）",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 17
+      }
+    },
+    {
+      "dimension_key": "coverage_surgery",
+      "dimension_label": "手术保障",
+      "value_text": "医院住院及进行手术",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "医院住院及进行手术",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 19
+      }
+    },
+    {
+      "dimension_key": "coverage_surgery",
+      "dimension_label": "手术保障",
+      "value_text": "日间手术现金惠益：每次手术1,600港元／200美元，每保单年度限1次",
+      "normalized_value": "day surgery cash benefit 1600 HKD/200 USD per procedure, max 1 per policy year",
+      "numeric_value": 1600.0,
+      "unit": "HKD/per surgery",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 13,
+      "source_section": "page-13",
+      "source_quote": "31\n日间手术现金惠益\n当手术可获保单下的日间手术惠益赔偿时适用\n每次手术 1,600\n每次手术 200\n每保单年度 1 次手术",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 20
+      }
+    },
+    {
+      "dimension_key": "coverage_surgery",
+      "dimension_label": "手术保障",
+      "value_text": "初生宝宝将获享即时住院及手术保障，并涵盖先天性疾病",
+      "normalized_value": "手术保障覆盖初生宝宝，含先天性疾病",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 17,
+      "source_section": "page-17",
+      "source_quote": "初生宝宝将获享 即时住院及手术保障，并涵盖先天性疾病 ，保单限额高达 100,000 港元，垫底费为16,000 港元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 35
+      }
+    },
+    {
+      "dimension_key": "coverage_surgery",
+      "dimension_label": "手术保障",
+      "value_text": "出生当日及出生后90日内，提供住院及手术费用赔偿",
+      "normalized_value": "手术费用赔偿限于受保婴孩出生当日及出生后90日内",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.98,
+      "source_page": 19,
+      "source_section": "page-19",
+      "source_quote": "出生当日及出生后 90 日内，提供住院及手术费用赔偿",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 39
+      }
+    },
+    {
+      "dimension_key": "coverage_surgery",
+      "dimension_label": "手术保障",
+      "value_text": "包括外科医生费、麻醉师费、手术室费用及使用手术室期间所应用之物品及设备的费用；全数受保；涵盖器官移植（心脏、肾脏、肝脏、肺或骨髓）作为受赠者；器官捐赠者及受赠者移植手术费用总和的30%",
+      "normalized_value": "full coverage for surgical fees; 30% coverage for combined donor and recipient transplant costs",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": "仅限受保婴孩出生当日及出生后90日内；器官移植限于心脏、肾脏、肝脏、肺或骨髓",
+      "confidence": 0.98,
+      "source_page": 19,
+      "source_section": "page-19",
+      "source_quote": "B. 手术费用赔偿\n（仅限受保婴孩出生当日及出生后 90 日内）\n手术惠益\n包括外科医生费、麻醉师费、手术室费用及使用手术室期间所应用之物品及设备的费用\n全数受保 (c)\ni)\n所有手术\n包括受保人为器官受赠者，接受器官移植的手术费用\nii)\n为器官捐赠者进行的手术\n如受保人为器官受赠者，适用于心脏、肾脏、肝脏、肺或骨髓的器官移植手术\n器官捐赠者及器官受赠者之\n移植手术费用总和的 30% (d)",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 40
+      }
+    },
+    {
+      "dimension_key": "coverage_surgery",
+      "dimension_label": "手术保障",
+      "value_text": "出生当日及出生后90日内，提供住院及手术费用赔偿；包括外科医生费、麻醉师费、手术室费用及使用手术室期间所应用之物品及设备的费用；全数受保；涵盖器官移植（心脏、肾脏、肝脏、肺或骨髓）作为受赠者；器官捐赠者及受赠者移植手术费用总和的30%；初生宝宝将获享即时住院及手术保障，并涵盖先天性疾病；日间手术现金惠益：每次手术1,600港元／200美元，每保单年度限1次",
+      "normalized_value": "手术费用赔偿限于受保婴孩出生当日及出生后90日内|full coverage for surgical fees; 30% coverage for combined donor and recipient transplant costs|手术保障覆盖初生宝宝，含先天性疾病|day surgery cash benefit 1600 hkd/200 usd per procedure, max 1 per policy year",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 19,
+      "source_section": "page-19",
+      "source_quote": "出生当日及出生后 90 日内，提供住院及手术费用赔偿",
+      "metadata_json": {
+        "value_list": [
+          "出生当日及出生后90日内，提供住院及手术费用赔偿",
+          "包括外科医生费、麻醉师费、手术室费用及使用手术室期间所应用之物品及设备的费用；全数受保；涵盖器官移植（心脏、肾脏、肝脏、肺或骨髓）作为受赠者；器官捐赠者及受赠者移植手术费用总和的30%",
+          "初生宝宝将获享即时住院及手术保障，并涵盖先天性疾病",
+          "日间手术现金惠益：每次手术1,600港元／200美元，每保单年度限1次"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "coverage_outpatient": [
+    {
+      "dimension_key": "coverage_outpatient",
+      "dimension_label": "门诊保障",
+      "value_text": "日间手术前门诊咨询；大肠镜检查费用",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.8,
+      "source_page": 9,
+      "source_section": "page-9",
+      "source_quote": "‧ 日间手术前门诊咨询\n‧ 日间手术惠益\n...\n精选医疗团队 # 的肠胃肝脏科医生助 Timothy 的大\n肠镜检查费用申请医疗费用预先批核",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 12
+      }
+    },
+    {
+      "dimension_key": "coverage_outpatient",
+      "dimension_label": "门诊保障",
+      "value_text": "未在本段中提及门诊保障",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.1,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "您可每个保单年度续保直至终身。续保保费将按续保时\n当时之保费率及受保人的实际年龄厘定，但非基于您\n曾作出的任何索赔或受保人的身体状况的任何改变而厘\n定。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 14
+      }
+    },
+    {
+      "dimension_key": "coverage_outpatient",
+      "dimension_label": "门诊保障",
+      "value_text": "每次出院／完成日间手术后90日内所有跟进门诊；每次出院／完成日间手术（分类为复杂或大型的手术）后365日内所有跟进门诊（注册营养师咨询门诊除外）",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "•\n每次出院／完成日间手术后 90 日内所有跟进门诊\n每次出院／完成日间手术（分类为复杂或大型的手术 (h) ）后 365 日内所有跟\n进门诊（注册营养师咨询门诊除外）",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 17
+      }
+    },
+    {
+      "dimension_key": "coverage_outpatient",
+      "dimension_label": "门诊保障",
+      "value_text": "每次出院／完成日间手术后90日内所有跟进门诊；每次出院／完成日间手术（分类为复杂或大型的手术）后365日内所有跟进门诊（注册营养师咨询门诊除外）；日间手术前门诊咨询；大肠镜检查费用；未在本段中提及门诊保障",
+      "normalized_value": "每次出院／完成日间手术后90日内所有跟进门诊；每次出院／完成日间手术（分类为复杂或大型的手术）后365日内所有跟进门诊（注册营养师咨询门诊除外）|日间手术前门诊咨询；大肠镜检查费用|未在本段中提及门诊保障",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "•\n每次出院／完成日间手术后 90 日内所有跟进门诊\n每次出院／完成日间手术（分类为复杂或大型的手术 (h) ）后 365 日内所有跟\n进门诊（注册营养师咨询门诊除外）",
+      "metadata_json": {
+        "value_list": [
+          "每次出院／完成日间手术后90日内所有跟进门诊；每次出院／完成日间手术（分类为复杂或大型的手术）后365日内所有跟进门诊（注册营养师咨询门诊除外）",
+          "日间手术前门诊咨询；大肠镜检查费用",
+          "未在本段中提及门诊保障"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "riders_benefits": [
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "健康赏惠益下的日间手术现金惠益",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 9,
+      "source_section": "page-9",
+      "source_quote": "Timothy 获健康赏惠益下的日间手术现\n金惠益，相关金额存入他保单的 「健康\n赏」 。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 12
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "可作为指定基本计划的附加契约；亦可独立投保极臻‧至尊明珠医疗计划",
+      "normalized_value": "附加契约",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "您亦可选择独立投保 极臻‧至尊明珠医疗计划 ，或作\n为指定基本计划的附加契约。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 14
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "妊娠并发症惠益",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "妊娠并发症惠益 (e)",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 19
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "癌症的临床试验药物惠益",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": "癌症",
+      "confidence": 0.95,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "癌症的临床试验药物惠益 (c),(e),(i)",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 19
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "健康赏惠益：精选医疗团队服务已赔偿总费用的5%；网络治疗奖赏惠益；无索偿奖赏惠益：连续3个保单年度无索赔，返还前一年保费的5%",
+      "normalized_value": "health reward: 5% of reimbursed amount for services from selected medical team; no-claim bonus: 5% of prior year's premium after 3 consecutive claim-free years",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.96,
+      "source_page": 13,
+      "source_section": "page-13",
+      "source_quote": "G. 健康赏惠益\n...就精选医疗团队作出的医疗服务或治疗\n已赔偿总费用的 5% (a)\n28\n网络治疗奖赏惠益\n...\n32\n无索偿奖赏惠益 (k)\n在连续 3 个保单年度期间...没有支付赔偿...适用\n在紧接之前的一个保单年度\n就 极臻‧至尊明珠医疗计划 保单所缴交之\n保费总额的 5%",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 20
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "特惠恩恤退还保费赔偿，相等于已付基本保费总和的105%",
+      "normalized_value": "退还已缴保费的105%",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 17,
+      "source_section": "page-17",
+      "source_quote": "若于怀孕期间不幸流产、接受注册专科医生建议而终止怀孕、胎死腹中或受保准妈妈与其胎儿身故，我们将赔偿相等于 已付基本保费总和 2 的 105% 3",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 35
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "特惠恩恤退还保费赔偿：已付基本保费总和的105%；适用情形包括流产、医生建议终止怀孕、胎死腹中、怀孕期间母胎身故、初生宝宝在保单年期内身故",
+      "normalized_value": "105% of paid base premium as compassionate premium refund",
+      "numeric_value": 105.0,
+      "unit": "%",
+      "condition_text": "流产、医生建议终止怀孕、胎死腹中、怀孕期间母胎身故、初生宝宝在保单年期内身故",
+      "confidence": 0.96,
+      "source_page": 19,
+      "source_section": "page-19",
+      "source_quote": "10\n特惠恩恤退还保费赔偿\n‧ 若（ i ）受保准妈妈不幸流产、接受注册专科医生建议而终止怀孕；或\n（ ii ）受保准妈妈胎死腹中，\n此赔偿应支付予保单持有人\n‧ 若（ i ）于怀孕期间受保准妈妈与其胎儿不幸身故；或\n（ ii ）受保初生宝宝在保单年期内不幸身故，\n此赔偿应支付予受益人\n已付基本保费总和的 105% (e)",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 40
+      }
+    },
+    {
+      "dimension_key": "riders_benefits",
+      "dimension_label": "附加险与附加福利",
+      "value_text": "特惠恩恤退还保费赔偿，相等于已付基本保费总和的105%；健康赏惠益：精选医疗团队服务已赔偿总费用的5%；网络治疗奖赏惠益；无索偿奖赏惠益：连续3个保单年度无索赔，返还前一年保费的5%；特惠恩恤退还保费赔偿：已付基本保费总和的105%；适用情形包括流产、医生建议终止怀孕、胎死腹中、怀孕期间母胎身故、初生宝宝在保单年期内身故；癌症的临床试验药物惠益",
+      "normalized_value": "退还已缴保费的105%|health reward: 5% of reimbursed amount for services from selected medical team; no-claim bonus: 5% of prior year's premium after 3 consecutive claim-free years|105% of paid base premium as compassionate premium refund|癌症的临床试验药物惠益",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 17,
+      "source_section": "page-17",
+      "source_quote": "若于怀孕期间不幸流产、接受注册专科医生建议而终止怀孕、胎死腹中或受保准妈妈与其胎儿身故，我们将赔偿相等于 已付基本保费总和 2 的 105% 3",
+      "metadata_json": {
+        "value_list": [
+          "特惠恩恤退还保费赔偿，相等于已付基本保费总和的105%",
+          "健康赏惠益：精选医疗团队服务已赔偿总费用的5%；网络治疗奖赏惠益；无索偿奖赏惠益：连续3个保单年度无索赔，返还前一年保费的5%",
+          "特惠恩恤退还保费赔偿：已付基本保费总和的105%；适用情形包括流产、医生建议终止怀孕、胎死腹中、怀孕期间母胎身故、初生宝宝在保单年期内身故",
+          "癌症的临床试验药物惠益"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "赔偿金额受限于保单的个人终身赔偿限额、每年限额及额外每年限额（如适用），亦受限于每年垫底费的金额。若实际住院费用超出保障上限，您需要支付有关差额。",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 9,
+      "source_section": "page-9",
+      "source_quote": "^^ 赔偿金额受限于保单的个人终身赔偿限额、每年限额及额外每年限额（如适用），亦受限于每年垫底费的金额。若实际住院费用超出保障上限，您需要支\n付有关差额。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 12
+      }
+    },
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "未在本段中列明除外责任",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.1,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "当受保人年满 50 、 55 、 60 或 65 岁，您可于您的\n极臻‧至尊明珠医疗计划 之保单周年日，毋须再\n次提交受保人健康状况的详情而选择调低每年垫\n底费金额至 极臻‧至尊明珠医疗计划 提供的指定\n金额。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 14
+      }
+    },
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "保单生效日起计首 90 日内已察觉或理应察觉的癌症不适用豁免垫底费；豁免垫底费不适用于每年垫底费为 $0 的保单",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.92,
+      "source_page": 16,
+      "source_section": "page-16",
+      "source_quote": "若保单持有人或受保人在保单生效日起计首 90 日内已察觉或理应察觉该癌症，此长者癌症支援 - 豁免垫底费将不适用。此豁免垫底费将不适用于每年垫底费为 $0 的保单。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 32
+      }
+    },
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "于任何时候，只限一位人士受保；如怀有双胞胎，须为每个胎儿投保一份独立保单",
+      "normalized_value": "单胎限制；双胞胎需分别投保",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.96,
+      "source_page": 17,
+      "source_section": "page-17",
+      "source_quote": "于任何时候，只限一位人士受保于 极臻‧至尊明珠医疗计划 – 首护挚宝 保单。如准妈妈怀有双胞胎，她须为每个胎儿投保一份独立的 极臻‧至尊明珠医疗计划 – 首护挚宝 保单。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 35
+      }
+    },
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "地域保障范围：全球（除美国以外）；保障仅限于受保婴孩出生当日及出生后90日内；须符合医疗所需和合理及惯常的原则",
+      "normalized_value": "不保障美国；仅限出生当日+90日；须符合理性及惯常医疗原则",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.94,
+      "source_page": 19,
+      "source_section": "page-19",
+      "source_quote": "地域保障范围\n全球（除美国以外）\n...\n赔偿项目第 1 - 9 项均须符合医疗所需和合理及惯常的原则作出赔偿。",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 39
+      }
+    },
+    {
+      "dimension_key": "exclusions",
+      "dimension_label": "除外责任与特殊条件",
+      "value_text": "于任何时候，只限一位人士受保；如怀有双胞胎，须为每个胎儿投保一份独立保单；地域保障范围：全球（除美国以外）；保障仅限于受保婴孩出生当日及出生后90日内；须符合医疗所需和合理及惯常的原则；保单生效日起计首 90 日内已察觉或理应察觉的癌症不适用豁免垫底费；豁免垫底费不适用于每年垫底费为 $0 的保单；赔偿金额受限于保单的个人终身赔偿限额、每年限额及额外每年限额（如适用），亦受限于每年垫底费的金额。若实际住院费用超出保障上限，您需要支付有关差额。",
+      "normalized_value": "单胎限制；双胞胎需分别投保|不保障美国；仅限出生当日+90日；须符合理性及惯常医疗原则|保单生效日起计首 90 日内已察觉或理应察觉的癌症不适用豁免垫底费；豁免垫底费不适用于每年垫底费为 $0 的保单|赔偿金额受限于保单的个人终身赔偿限额、每年限额及额外每年限额（如适用），亦受限于每年垫底费的金额。若实际住院费用超出保障上限，您需要支付有关差额。",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 17,
+      "source_section": "page-17",
+      "source_quote": "于任何时候，只限一位人士受保于 极臻‧至尊明珠医疗计划 – 首护挚宝 保单。如准妈妈怀有双胞胎，她须为每个胎儿投保一份独立的 极臻‧至尊明珠医疗计划 – 首护挚宝 保单。",
+      "metadata_json": {
+        "value_list": [
+          "于任何时候，只限一位人士受保；如怀有双胞胎，须为每个胎儿投保一份独立保单",
+          "地域保障范围：全球（除美国以外）；保障仅限于受保婴孩出生当日及出生后90日内；须符合医疗所需和合理及惯常的原则",
+          "保单生效日起计首 90 日内已察觉或理应察觉的癌症不适用豁免垫底费；豁免垫底费不适用于每年垫底费为 $0 的保单",
+          "赔偿金额受限于保单的个人终身赔偿限额、每年限额及额外每年限额（如适用），亦受限于每年垫底费的金额。若实际住院费用超出保障上限，您需要支付有关差额。"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "premium_payment": [
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "基本计划：年缴／半年缴／季缴／月缴；附加契约：根据所附加于的基本计划而定",
+      "normalized_value": "年缴/半年缴/季缴/月缴",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "保费缴付模式\n基本计划：年缴／半年缴／季缴／月缴\n附加契约：根据所附加于的基本计划而定",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 14,
+        "payment_modes": [
+          "年缴",
+          "半年缴",
+          "季缴",
+          "月缴"
+        ]
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "一笔过保费",
+      "normalized_value": "一次性缴付",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.99,
+      "source_page": 19,
+      "source_section": "page-19",
+      "source_quote": "保费缴付模式\n一笔过保费",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 39
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "‧ 加入 AIA Vitality 健康程式 即享保费折扣，并以奖赏",
+      "normalized_value": "‧ 加入 aia vitality 健康程式 即享保费折扣，并以奖赏",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 3,
+      "source_section": "page-3",
+      "source_quote": "‧ 加入 AIA Vitality 健康程式 即享保费折扣，并以奖赏",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "缴费方式：年缴",
+      "normalized_value": "payment_modes:年缴",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.82,
+      "source_page": 4,
+      "source_section": "page-4",
+      "source_quote": "12. 「具指定计划选项的 极臻‧至尊明珠医疗计划 保单」指年缴保费缴付模式的 极臻‧至尊明珠医疗计划 保单。在此指定计划选项下，只要 极臻‧至尊明珠",
+      "metadata_json": {
+        "payment_modes": [
+          "年缴"
+        ],
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "直接向有关医院缴付住院期间的医疗开支，让您专注康",
+      "normalized_value": "直接向有关医院缴付住院期间的医疗开支，让您专注康",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 7,
+      "source_section": "page-7",
+      "source_quote": "直接向有关医院缴付住院期间的医疗开支，让您专注康",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "即享首年保费 9 折",
+      "normalized_value": "即享首年保费 9 折",
+      "numeric_value": 9.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 8,
+      "source_section": "page-8",
+      "source_quote": "即享首年保费 9 折",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "划 首年保费 9 折。只要坚持健康生活，更可享每年保费",
+      "normalized_value": "划 首年保费 9 折。只要坚持健康生活，更可享每年保费",
+      "numeric_value": 9.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 8,
+      "source_section": "page-8",
+      "source_quote": "划 首年保费 9 折。只要坚持健康生活，更可享每年保费",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "缴费方式：年缴 / 半年缴 / 季缴 / 月缴",
+      "normalized_value": "payment_modes:年缴,半年缴,季缴,月缴",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.82,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "基本计划：年缴／半年缴／季缴／月缴",
+      "metadata_json": {
+        "payment_modes": [
+          "年缴",
+          "半年缴",
+          "季缴",
+          "月缴"
+        ],
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "保费总额的 5%",
+      "normalized_value": "保费总额的 5%",
+      "numeric_value": 5.0,
+      "unit": "%",
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 13,
+      "source_section": "page-13",
+      "source_quote": "保费总额的 5%",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "现金，亦不能用以支付任何保单的任何保费。于保单取消或终止时，「健康赏」中的任何余额将会即时丧失。",
+      "normalized_value": "现金，亦不能用以支付任何保单的任何保费。于保单取消或终止时，「健康赏」中的任何余额将会即时丧失。",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 14,
+      "source_section": "page-14",
+      "source_quote": "现金，亦不能用以支付任何保单的任何保费。于保单取消或终止时，「健康赏」中的任何余额将会即时丧失。",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "本计划为保险计划，并不包括任何储蓄成分。所有缴付的保费都",
+      "normalized_value": "本计划为保险计划，并不包括任何储蓄成分。所有缴付的保费都",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 14,
+      "source_section": "page-14",
+      "source_quote": "本计划为保险计划，并不包括任何储蓄成分。所有缴付的保费都",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "缴费方式：年缴",
+      "normalized_value": "payment_modes:年缴",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.82,
+      "source_page": 14,
+      "source_section": "page-14",
+      "source_quote": "详情，请参阅由您的财务策划顾问所提供之年缴保费表）。",
+      "metadata_json": {
+        "payment_modes": [
+          "年缴"
+        ],
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "为了持续向您提供保障，我们会每年复核您计划下的保费。",
+      "normalized_value": "为了持续向您提供保障，我们会每年复核您计划下的保费。",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 15,
+      "source_section": "page-15",
+      "source_quote": "为了持续向您提供保障，我们会每年复核您计划下的保费。",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "您有权以书面通知我们取消保单并取回已缴保费及保费征费。有",
+      "normalized_value": "您有权以书面通知我们取消保单并取回已缴保费及保费征费。有",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 15,
+      "source_section": "page-15",
+      "source_quote": "您有权以书面通知我们取消保单并取回已缴保费及保费征费。有",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "起 120 日后，「健康赏」中的金额可随时用作兑换指定奖赏。「健康赏」中的金额不能被退还或兑换为现金，亦不能用以支付任何保单的任何保费。于 极臻‧",
+      "normalized_value": "起 120 日后，「健康赏」中的金额可随时用作兑换指定奖赏。「健康赏」中的金额不能被退还或兑换为现金，亦不能用以支付任何保单的任何保费。于 极臻‧",
+      "numeric_value": 120.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 16,
+      "source_section": "page-16",
+      "source_quote": "起 120 日后，「健康赏」中的金额可随时用作兑换指定奖赏。「健康赏」中的金额不能被退还或兑换为现金，亦不能用以支付任何保单的任何保费。于 极臻‧",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "保费总和 2 的 105% 3",
+      "normalized_value": "保费总和 2 的 105% 3",
+      "numeric_value": 2.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 17,
+      "source_section": "page-17",
+      "source_quote": "保费总和 2 的 105% 3",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "特惠恩恤退还保费赔偿",
+      "normalized_value": "特惠恩恤退还保费赔偿",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 17,
+      "source_section": "page-17",
+      "source_quote": "特惠恩恤退还保费赔偿",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "妈妈与其胎儿身故，提供特惠恩恤退还保费赔偿 3",
+      "normalized_value": "妈妈与其胎儿身故，提供特惠恩恤退还保费赔偿 3",
+      "numeric_value": 3.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 19,
+      "source_section": "page-19",
+      "source_quote": "妈妈与其胎儿身故，提供特惠恩恤退还保费赔偿 3",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "已付基本保费总和的 105% (e)",
+      "normalized_value": "已付基本保费总和的 105% (e)",
+      "numeric_value": 105.0,
+      "unit": "%",
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 19,
+      "source_section": "page-19",
+      "source_quote": "已付基本保费总和的 105% (e)",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "(e) 「已付基本保费总和」是指由保单日期开始计算直至第 1 个保单年度完结为止本公司就 极臻‧至尊明珠医疗计划 – 首护挚宝 保单已收妥的到期及需缴付",
+      "normalized_value": "(e) 「已付基本保费总和」是指由保单日期开始计算直至第 1 个保单年度完结为止本公司就 极臻‧至尊明珠医疗计划 – 首护挚宝 保单已收妥的到期及需缴付",
+      "numeric_value": 1.0,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 20,
+      "source_section": "page-20",
+      "source_quote": "(e) 「已付基本保费总和」是指由保单日期开始计算直至第 1 个保单年度完结为止本公司就 极臻‧至尊明珠医疗计划 – 首护挚宝 保单已收妥的到期及需缴付",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "付特惠恩恤退还保费赔偿。",
+      "normalized_value": "付特惠恩恤退还保费赔偿。",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 20,
+      "source_section": "page-20",
+      "source_quote": "付特惠恩恤退还保费赔偿。",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "恤退还保费赔偿除外（详见 极臻‧至尊明珠医疗计划 – 首护",
+      "normalized_value": "恤退还保费赔偿除外（详见 极臻‧至尊明珠医疗计划 – 首护",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 21,
+      "source_section": "page-21",
+      "source_quote": "恤退还保费赔偿除外（详见 极臻‧至尊明珠医疗计划 – 首护",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "缴费方式：年缴",
+      "normalized_value": "payment_modes:年缴",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.82,
+      "source_page": 21,
+      "source_section": "page-21",
+      "source_quote": "为准妈妈，而她须为现行有效年缴保费缴付模式的具指定",
+      "metadata_json": {
+        "payment_modes": [
+          "年缴"
+        ],
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "您有权以书面通知我们取消保单并取回已缴保费及保费征费。",
+      "normalized_value": "您有权以书面通知我们取消保单并取回已缴保费及保费征费。",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.74,
+      "source_page": 21,
+      "source_section": "page-21",
+      "source_quote": "您有权以书面通知我们取消保单并取回已缴保费及保费征费。",
+      "metadata_json": {
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "缴费方式：年缴",
+      "normalized_value": "payment_modes:年缴",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.82,
+      "source_page": 22,
+      "source_section": "page-22",
+      "source_quote": "4. 「具指定计划选项的 极臻‧至尊明珠医疗计划 保单」指年缴保费缴付模式的 极臻‧至尊明珠医疗计划 保单。在此指定计划选项下，只要 极臻‧至尊明珠",
+      "metadata_json": {
+        "payment_modes": [
+          "年缴"
+        ],
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "缴费方式：年缴 / 半年缴 / 季缴 / 月缴",
+      "normalized_value": "payment_modes:年缴,半年缴,季缴,月缴",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 4,
+      "source_section": "page-4",
+      "source_quote": "12. 「具指定计划选项的 极臻‧至尊明珠医疗计划 保单」指年缴保费缴付模式的 极臻‧至尊明珠医疗计划 保单。在此指定计划选项下，只要 极臻‧至尊明珠",
+      "metadata_json": {
+        "annual_premium_values": [],
+        "payment_terms_years": [],
+        "payment_modes": [
+          "年缴",
+          "半年缴",
+          "季缴",
+          "月缴"
+        ],
+        "derived_from": "plan_aggregate",
+        "extractor": "rule_backfill",
+        "backfill_reason": "llm_missing_dimension"
+      }
+    },
+    {
+      "dimension_key": "premium_payment",
+      "dimension_label": "保费与支付方式",
+      "value_text": "缴费方式：年缴 / 半年缴 / 季缴 / 月缴",
+      "normalized_value": "payment_modes:年缴,半年缴,季缴,月缴",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 19,
+      "source_section": "page-19",
+      "source_quote": "保费缴付模式\n一笔过保费",
+      "metadata_json": {
+        "annual_premium_values": [],
+        "payment_terms_years": [],
+        "payment_modes": [
+          "年缴",
+          "半年缴",
+          "季缴",
+          "月缴"
+        ],
+        "derived_from": "plan_aggregate"
+      }
+    }
+  ],
+  "deductible_copay": [
+    {
+      "dimension_key": "deductible_copay",
+      "dimension_label": "自付额与共付",
+      "value_text": "每年垫底费可选：0 / 16,000港元 / 25,000港元 / 50,000港元 / 88,000港元（对应0 / 2,000美元 / 3,125美元 / 6,250美元 / 11,000美元）",
+      "normalized_value": "16000",
+      "numeric_value": 16000.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 0.98,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "每年垫底费选择\n港元\n美元\n0\n0\n16,000\n2,000\n25,000\n3,125\n50,000\n6,250\n88,000\n11,000",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 14
+      }
+    },
+    {
+      "dimension_key": "deductible_copay",
+      "dimension_label": "自付额与共付",
+      "value_text": "每年垫底费选择：0 / 16,000 / 25,000 / 50,000 / 88,000港元（涵盖第1至25项，第21 iii）项除外）；长者癌症支援 – 癌症豁免垫底费",
+      "normalized_value": "0",
+      "numeric_value": 0.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 0.9,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "每年垫底费选择\n涵盖第 1 至 25 项（第 21 iii ）项除外）\n0 / 16,000 / 25,000 /\n50,000 / 88,000\n长者癌症支援 – 癌症豁免垫底费 (b)\n如受保人：\n‧ 年 满 75 岁或以上；\n‧ 患上癌症 (c) ；及\n‧ 直接因该癌症 (c) 而接受任何医疗服务，\n在相关保单年度就癌症 (c) 所引起的该医疗服务余下的\n每年垫底费余额（如有）将被减少至 $0",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 15
+      }
+    },
+    {
+      "dimension_key": "deductible_copay",
+      "dimension_label": "自付额与共付",
+      "value_text": "网络保障下多项门诊服务全数受保；非网络保障设每次诊症固定限额，无明确自付额或共付比例描述",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "网络保障：\n全数受保 (f)\n非网络保障：\n1,000\n以每次诊症计",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 17
+      }
+    },
+    {
+      "dimension_key": "deductible_copay",
+      "dimension_label": "自付额与共付",
+      "value_text": "无明确自付额或共付比例条款；意外急症门诊治疗费用赔偿为全数受保",
+      "normalized_value": "no deductible or copay specified; emergency outpatient treatment for accident is 100% covered",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 13,
+      "source_section": "page-13",
+      "source_quote": "24\n意外急症门诊治疗费用赔偿\n受保的意外发生后 24 小时内接受的治疗\n全数受保 (f)",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 20
+      }
+    },
+    {
+      "dimension_key": "deductible_copay",
+      "dimension_label": "自付额与共付",
+      "value_text": "垫底费为16,000 港元",
+      "normalized_value": "16000",
+      "numeric_value": 16000.0,
+      "unit": "港元",
+      "condition_text": null,
+      "confidence": 0.99,
+      "source_page": 17,
+      "source_section": "page-17",
+      "source_quote": "初生宝宝将获享 即时住院及手术保障，并涵盖先天性疾病 ，保单限额高达 100,000 港元，垫底费为16,000 港元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 35
+      }
+    },
+    {
+      "dimension_key": "deductible_copay",
+      "dimension_label": "自付额与共付",
+      "value_text": "每年垫底费：16,000港元（约2,000美元）",
+      "normalized_value": "16000",
+      "numeric_value": 16000.0,
+      "unit": "HKD",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 19,
+      "source_section": "page-19",
+      "source_quote": "每年垫底费\n涵盖第 1 至 9 项\n16,000\n2,000",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 39
+      }
+    },
+    {
+      "dimension_key": "deductible_copay",
+      "dimension_label": "自付额与共付",
+      "value_text": "垫底费为16,000 港元；每年垫底费选择：0 / 16,000 / 25,000 / 50,000 / 88,000港元（涵盖第1至25项，第21 iii）项除外）；长者癌症支援 – 癌症豁免垫底费；无明确自付额或共付比例条款；意外急症门诊治疗费用赔偿为全数受保；网络保障下多项门诊服务全数受保；非网络保障设每次诊症固定限额，无明确自付额或共付比例描述",
+      "normalized_value": "16000|0|no deductible or copay specified; emergency outpatient treatment for accident is 100% covered|网络保障下多项门诊服务全数受保；非网络保障设每次诊症固定限额，无明确自付额或共付比例描述",
+      "numeric_value": 16000.0,
+      "unit": "港元",
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 17,
+      "source_section": "page-17",
+      "source_quote": "初生宝宝将获享 即时住院及手术保障，并涵盖先天性疾病 ，保单限额高达 100,000 港元，垫底费为16,000 港元",
+      "metadata_json": {
+        "value_list": [
+          "垫底费为16,000 港元",
+          "每年垫底费选择：0 / 16,000 / 25,000 / 50,000 / 88,000港元（涵盖第1至25项，第21 iii）项除外）；长者癌症支援 – 癌症豁免垫底费",
+          "无明确自付额或共付比例条款；意外急症门诊治疗费用赔偿为全数受保",
+          "网络保障下多项门诊服务全数受保；非网络保障设每次诊症固定限额，无明确自付额或共付比例描述"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ],
+  "coverage_hospitalization": [
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "未在本段中明确描述住院保障范围或内容",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.2,
+      "source_page": 10,
+      "source_section": "page-10",
+      "source_quote": "医疗保障\n17\n产品性质\n医疗保障保险计划（实报实销）\n计划类别\n基本计划／附加契约",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 14
+      }
+    },
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "A. 住院赔偿：1) 每日病房及膳食费用赔偿（全数受保）；2) 医生巡房费；3) 专科医生费用；4) 住院杂费赔偿；5) 深切治疗费用赔偿；6) 私家看护费用",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 11,
+      "source_section": "page-11",
+      "source_quote": "A. 住院赔偿\n最高保障额\n港元\n美元\n1\n每日病房及膳食费用赔偿\n全数受保 (f)\n2\n医生巡房费\n3\n专科医生费用 (e)\n4\n住院杂费赔偿\n5\n深切治疗费用赔偿 (e)\n6\n私家看护费用 (e)",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 15
+      }
+    },
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "医院住院及进行手术",
+      "normalized_value": null,
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.85,
+      "source_page": 12,
+      "source_section": "page-12",
+      "source_quote": "医院住院及进行手术",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 19
+      }
+    },
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "住院现金惠益：每日800港元／100美元，每保单年度最多90日；次级病房现金惠益：每日2,000港元／250美元，每次住院最多10日",
+      "normalized_value": "住院现金津贴800 HKD/100 USD per day, max 90 days/year; sub-standard ward cash benefit 2000 HKD/250 USD per day, max 10 days per hospitalization",
+      "numeric_value": 800.0,
+      "unit": "HKD/day",
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 13,
+      "source_section": "page-13",
+      "source_quote": "29\n住院现金惠益\n入住政府医院或毋须收费的医院\n每日 800\n每日 100\n每保单年度 90 日\n30\n次级病房现金惠益\n入住香港或澳门之私家医院低于标准私家房级别的病房\n每日 2,000\n每日 250\n每次住院 10 日",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 20
+      }
+    },
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "初生宝宝将获享即时住院及手术保障，并涵盖先天性疾病",
+      "normalized_value": "住院保障覆盖初生宝宝，含先天性疾病",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 17,
+      "source_section": "page-17",
+      "source_quote": "初生宝宝将获享 即时住院及手术保障，并涵盖先天性疾病 ，保单限额高达 100,000 港元，垫底费为16,000 港元",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 35
+      }
+    },
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "出生当日及出生后90日内，提供住院及手术费用赔偿；涵盖每日病房及膳食费用、医生巡房费、专科医生费用、住院杂费、深切治疗费用、私家看护费用（每保单年度30日）",
+      "normalized_value": "住院保障限于受保婴孩出生当日及出生后90日内；覆盖病房膳食、巡房、专科、杂费、ICU、私家看护（30日/年）",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 19,
+      "source_section": "page-19",
+      "source_quote": "出生当日及出生后 90 日内，提供住院及手术费用赔偿\n1\n每日病房及膳食费用赔偿\n全数受保 (c)\n2\n医生巡房费\n3\n专科医生费用 (b)\n4\n住院杂费赔偿\n5\n深切治疗费用赔偿 (b)\n6\n私家看护费用 (b)\n适用于受保人住院期间在手术后或调出深切治疗病房后的护理服务\n全数受保 (c)\n每保单年度 30 日",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 39
+      }
+    },
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "受保人住院期间，额外一张床位费用；全数受保",
+      "normalized_value": "full coverage for additional bed during hospitalization",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.95,
+      "source_page": 19,
+      "source_section": "page-19",
+      "source_quote": "受保人住院期间，额外一张床位费用\n全数受保 (c)",
+      "metadata_json": {
+        "extractor": "llm_qwen",
+        "chunk_index": 40
+      }
+    },
+    {
+      "dimension_key": "coverage_hospitalization",
+      "dimension_label": "住院保障",
+      "value_text": "受保人住院期间，额外一张床位费用；全数受保；初生宝宝将获享即时住院及手术保障，并涵盖先天性疾病；住院现金惠益：每日800港元／100美元，每保单年度最多90日；次级病房现金惠益：每日2,000港元／250美元，每次住院最多10日；出生当日及出生后90日内，提供住院及手术费用赔偿；涵盖每日病房及膳食费用、医生巡房费、专科医生费用、住院杂费、深切治疗费用、私家看护费用（每保单年度30日）",
+      "normalized_value": "full coverage for additional bed during hospitalization|住院保障覆盖初生宝宝，含先天性疾病|住院现金津贴800 hkd/100 usd per day, max 90 days/year; sub-standard ward cash benefit 2000 hkd/250 usd per day, max 10 days per hospitalization|住院保障限于受保婴孩出生当日及出生后90日内；覆盖病房膳食、巡房、专科、杂费、icu、私家看护（30日/年）",
+      "numeric_value": null,
+      "unit": null,
+      "condition_text": null,
+      "confidence": 0.97,
+      "source_page": 19,
+      "source_section": "page-19",
+      "source_quote": "受保人住院期间，额外一张床位费用\n全数受保 (c)",
+      "metadata_json": {
+        "value_list": [
+          "受保人住院期间，额外一张床位费用；全数受保",
+          "初生宝宝将获享即时住院及手术保障，并涵盖先天性疾病",
+          "住院现金惠益：每日800港元／100美元，每保单年度最多90日；次级病房现金惠益：每日2,000港元／250美元，每次住院最多10日",
+          "出生当日及出生后90日内，提供住院及手术费用赔偿；涵盖每日病房及膳食费用、医生巡房费、专科医生费用、住院杂费、深切治疗费用、私家看护费用（每保单年度30日）"
+        ],
+        "derived_from": "plan_dimension_group"
+      }
+    }
+  ]
+}

@@ -69,6 +69,8 @@ class SessionStateOut(BaseModel):
 class ChatMessageRequest(BaseModel):
     session_id: str
     content: str
+    selected_plans: list[str] | None = None
+    dimensions: list[str] | None = None
 
 
 class ChatTurnOut(BaseModel):

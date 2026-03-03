@@ -1,6 +1,14 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 
-import { createSession, fetchDimensions, fetchPlans, postChatMessage, runCompare, runIngestion } from './api'
+import {
+  createSession,
+  fetchDimensions,
+  fetchPlans,
+  postChatMessage,
+  postChatMessageStream,
+  runCompare,
+  runIngestion,
+} from './api'
 import ChatPanel from './components/ChatPanel'
 import CompareTable from './components/CompareTable'
 import PlanDimensionPanel from './components/PlanDimensionPanel'
@@ -13,10 +21,12 @@ function App() {
   const [compareData, setCompareData] = useState(null)
   const [sessionId, setSessionId] = useState('')
   const [chatTurns, setChatTurns] = useState([])
+  const [streamingReply, setStreamingReply] = useState('')
   const [busy, setBusy] = useState(false)
   const [compareBusy, setCompareBusy] = useState(false)
   const [loadError, setLoadError] = useState('')
   const [toast, setToast] = useState('')
+  const bootstrappedRef = useRef(false)
 
   const planMap = useMemo(() => {
     const mapping = {}
@@ -54,7 +64,9 @@ function App() {
   }
 
   useEffect(() => {
-    let mounted = true
+    if (bootstrappedRef.current) return
+    bootstrappedRef.current = true
+
     async function bootstrap() {
       try {
         setBusy(true)
@@ -63,42 +75,71 @@ function App() {
           await runIngestion()
           planList = await fetchPlans()
         }
-        if (!mounted) return
         setPlans(planList)
         setDimensionDefs(dims)
 
         const session = await createSession()
-        if (!mounted) return
         setSessionId(session.session_id)
         setSelectedPlanIds(session.selected_plans || [])
         setSelectedDimensions(session.dimensions || [])
       } catch (error) {
         setLoadError(error?.response?.data?.detail || '加载失败，请检查后端服务')
       } finally {
-        if (mounted) setBusy(false)
+        setBusy(false)
       }
     }
     bootstrap()
-    return () => {
-      mounted = false
-    }
   }, [])
 
   useEffect(() => {
-    // 保留自动刷新，满足“选择后自动生成比较表”的需求。
     executeCompare({ showError: false })
   }, [selectedPlanIds, selectedDimensions])
 
   const onAskChat = async (content) => {
     if (!sessionId) return
+    setLoadError('')
+    setStreamingReply('')
+
     try {
-      const result = await postChatMessage({ session_id: sessionId, content })
-      setChatTurns(result.turns || [])
-      setSelectedPlanIds(result.state.selected_plans || [])
-      setSelectedDimensions(result.state.dimensions || [])
-      if (result.compare) setCompareData(result.compare)
-    } catch (error) {
-      setLoadError(error?.response?.data?.detail || '聊天请求失败')
+      await postChatMessageStream(
+        {
+          session_id: sessionId,
+          content,
+          selected_plans: selectedPlanIds,
+          dimensions: selectedDimensions,
+        },
+        {
+          onToken: (payload) => {
+            setStreamingReply((prev) => prev + (payload?.text || ''))
+          },
+          onDone: (payload) => {
+            setChatTurns(payload.turns || [])
+            setSelectedPlanIds(payload.state?.selected_plans || [])
+            setSelectedDimensions(payload.state?.dimensions || [])
+            if (payload.compare) setCompareData(payload.compare)
+            setStreamingReply('')
+          },
+          onError: () => {
+            setStreamingReply('')
+          },
+        },
+      )
+    } catch {
+      // Fallback to non-stream endpoint if stream is unavailable.
+      try {
+        const result = await postChatMessage({
+          session_id: sessionId,
+          content,
+          selected_plans: selectedPlanIds,
+          dimensions: selectedDimensions,
+        })
+        setChatTurns(result.turns || [])
+        setSelectedPlanIds(result.state.selected_plans || [])
+        setSelectedDimensions(result.state.dimensions || [])
+        if (result.compare) setCompareData(result.compare)
+      } catch (error) {
+        setLoadError(error?.response?.data?.detail || '聊天请求失败')
+      }
     }
   }
 
@@ -161,7 +202,7 @@ function App() {
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-          <ChatPanel chatTurns={chatTurns} onAsk={onAskChat} />
+          <ChatPanel chatTurns={chatTurns} streamingReply={streamingReply} onAsk={onAskChat} />
         </section>
       </main>
 
