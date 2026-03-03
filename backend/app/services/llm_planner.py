@@ -174,6 +174,81 @@ class LLMPlanner:
             logger.warning("llm.summarize_evidence.failed err=%s", exc)
             return ""
 
+    def extract_retrieval_keywords(
+        self,
+        *,
+        query: str,
+        state: dict[str, Any] | None = None,
+        max_keywords: int = 8,
+    ) -> list[str]:
+        text = (query or "").strip()
+        if not text:
+            return []
+
+        if not self.enabled:
+            return [text]
+
+        state = state or {}
+        messages = [
+            {
+                "role": "system",
+                "content": (
+                    "You are a retrieval keyword extractor for insurance Q&A. "
+                    "Return strict JSON only: "
+                    "{"
+                    "\"keywords\": [\"k1\", \"k2\", \"k3\"]"
+                    "}. "
+                    "Rules: "
+                    "1) Keep only high-signal medical/coverage/product terms. "
+                    "2) Remove filler words and long phrases. "
+                    "3) Prefer concrete disease/procedure/benefit terms. "
+                    "4) Keep each keyword <= 24 chars."
+                ),
+            },
+            {
+                "role": "user",
+                "content": json.dumps(
+                    {
+                        "query": text,
+                        "state": state,
+                    },
+                    ensure_ascii=False,
+                ),
+            },
+        ]
+        try:
+            content = self._chat_completion(
+                model=settings.llm_keyword_model,
+                messages=messages,
+                temperature=0.0,
+                json_mode=True,
+                max_tokens=180,
+            )
+            parsed = self._parse_json(content)
+            if not parsed or not isinstance(parsed, dict):
+                return [text]
+
+            raw_keywords = parsed.get("keywords", [])
+            if not isinstance(raw_keywords, list):
+                raw_keywords = []
+
+            keywords: list[str] = []
+            for item in raw_keywords:
+                kw = str(item or "").strip()
+                if not kw:
+                    continue
+                if len(kw) > 24:
+                    kw = kw[:24]
+                if kw not in keywords:
+                    keywords.append(kw)
+                if len(keywords) >= max(1, int(max_keywords)):
+                    break
+
+            return keywords or [text]
+        except Exception as exc:
+            logger.warning("llm.keyword_extract.failed fallback_to_query err=%s", exc)
+            return [text]
+
     def compare_dimension_from_evidence(
         self,
         *,

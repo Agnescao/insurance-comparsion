@@ -43,6 +43,7 @@ class Settings(BaseSettings):
     llm_base_url: str = "https://dashscope.aliyuncs.com/compatible-mode/v1"
     llm_planner_model: str = "deepseek-v3"
     llm_answer_model: str = "deepseek-v3"
+    llm_keyword_model: str = "qwen-turbo"
     llm_timeout_sec: int = 12
 
     # Fact extraction pipeline
